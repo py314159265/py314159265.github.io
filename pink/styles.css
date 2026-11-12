@@ -483,4 +483,5 @@ details p,
     -webkit-text-fill-color: CanvasText;
   }
   .paw { fill: CanvasText; }
+  .paw-pads { fill: Canvas; }
 }
