@@ -1,0 +1,1110 @@
+{
+ "updated": "2026-11-12T03:41:46Z",
+ "source": "https://thespacedevs.com/llapi",
+ "launches": [
+  {
+   "id": "6aa7b90b-e5ed-45d8-a52e-04fbf399d178",
+   "slug": "falcon-9-block-5-ussf-627",
+   "name": "Falcon 9 Block 5 | USSF-627",
+   "net": "2026-11-12T04:36:30Z",
+   "net_precision": "SEC",
+   "window_start": "2026-11-12T02:35:00Z",
+   "window_end": "2026-11-12T06:35:00Z",
+   "status": {
+    "id": 1,
+    "name": "Go for Launch",
+    "abbrev": "Go"
+   },
+   "provider": {
+    "name": "SpaceX",
+    "abbrev": "SpX"
+   },
+   "rocket": "Falcon 9 Block 5",
+   "mission": {
+    "name": "USSF-627",
+    "type": "Government/Top Secret",
+    "description": "A classified mission for the United States Space Force. It is possibly a batch of classified LEO satellites based on SpaceX’s Starshield satellite bus, based on locations of rocket stage drop zones being exact fits with previous Starlink Group 15 launches.",
+    "orbit": "Low Earth Orbit",
+    "orbit_abbrev": "LEO"
+   },
+   "pad": {
+    "name": "Space Launch Complex 4E",
+    "location": "Vandenberg SFB, CA, USA",
+    "country": "United States of America"
+   },
+   "webcast_live": false,
+   "webcasts": [
+    {
+     "url": "https://x.com/i/broadcasts/2brkWyolnlBbLM",
+     "title": "USSF-627 Mission",
+     "publisher": "X",
+     "type": "Official Webcast",
+     "live": false
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=1jhH0mR5ICA",
+     "title": "GO! - SpaceX - Falcon 9 - USSF-627 - SLC-4E - Vandenberg SFB, CA - Space Affairs Live",
+     "publisher": "SPACE AFFAIRS",
+     "type": "Unofficial Re-stream",
+     "live": false
+    }
+   ],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_liftof_image_thumbnail_20260816171423.jpeg",
+   "image_credit": "SpaceX"
+  },
+  {
+   "id": "e2523821-9760-4cb4-ad1f-7ce2e30419bd",
+   "slug": "kuaizhou-11-unknown-payload",
+   "name": "Kuaizhou 11 | Unknown Payload",
+   "net": "2026-11-12T19:50:00Z",
+   "net_precision": "HR",
+   "window_start": "2026-11-12T19:44:00Z",
+   "window_end": "2026-11-12T20:29:00Z",
+   "status": {
+    "id": 1,
+    "name": "Go for Launch",
+    "abbrev": "Go"
+   },
+   "provider": {
+    "name": "ExPace",
+    "abbrev": "EP"
+   },
+   "rocket": "Kuaizhou 11",
+   "mission": {
+    "name": "Unknown Payload",
+    "type": "Unknown",
+    "description": "Details TBD.",
+    "orbit": "Unknown",
+    "orbit_abbrev": "N/A"
+   },
+   "pad": {
+    "name": "Launch Area 95A",
+    "location": "Jiuquan Satellite Launch Center, People's Republic of China",
+    "country": "China"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/kuaizhou_11_lif_image_thumbnail_20240520155835.jpeg",
+   "image_credit": "中国航天科工"
+  },
+  {
+   "id": "9e27a1ed-e81a-4918-b32b-0380cf3a9f8f",
+   "slug": "mir-demo-flight",
+   "name": "Mir | Demo Flight",
+   "net": "2026-11-13T05:00:00Z",
+   "net_precision": "HR",
+   "window_start": "2026-11-13T05:00:00Z",
+   "window_end": "2026-11-13T09:00:00Z",
+   "status": {
+    "id": 1,
+    "name": "Go for Launch",
+    "abbrev": "Go"
+   },
+   "provider": {
+    "name": "Agency for Defense Development",
+    "abbrev": "ADD"
+   },
+   "rocket": "Mir",
+   "mission": {
+    "name": "Demo Flight",
+    "type": "Test Flight",
+    "description": "Note: Launch vehicle name is provisional.\r\n\r\nFirst orbital full version launch of the South Korean military small satellite launch vehicle, after 2 sub-orbital tests of individual stages on 30 March and 30 December 2022, and 1 orbital test flight without the 2nd stage on 4 December 2023. Details TBD.",
+    "orbit": "Low Earth Orbit",
+    "orbit_abbrev": "LEO"
+   },
+   "pad": {
+    "name": "ADD Offshore launch platform",
+    "location": "Sea Launch",
+    "country": "South Korea"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305192440.png",
+   "image_credit": "Yonhap"
+  },
+  {
+   "id": "ef9850ad-1096-425b-9d27-f7bbd186e61a",
+   "slug": "vulcan-vc6l-amazon-leo-lv-01",
+   "name": "Vulcan VC6L | Amazon Leo (LV-01)",
+   "net": "2026-11-13T17:54:00Z",
+   "net_precision": "MIN",
+   "window_start": "2026-11-13T17:54:00Z",
+   "window_end": "2026-11-13T18:23:00Z",
+   "status": {
+    "id": 1,
+    "name": "Go for Launch",
+    "abbrev": "Go"
+   },
+   "provider": {
+    "name": "United Launch Alliance",
+    "abbrev": "ULA"
+   },
+   "rocket": "Vulcan VC6L",
+   "mission": {
+    "name": "Amazon Leo (LV-01)",
+    "type": "Communications",
+    "description": "Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon. This constellation is planned to be composed of 3,276 satellites. The satellites are projected to be placed in 98 orbital planes in three orbital layers, one at 590 km, 610 km and 630 km altitude.\r\n\r\n45 satellites will be carried on each Vulcan launch.",
+    "orbit": "Low Earth Orbit",
+    "orbit_abbrev": "LEO"
+   },
+   "pad": {
+    "name": "Space Launch Complex 41",
+    "location": "Cape Canaveral SFS, FL, USA",
+    "country": "United States of America"
+   },
+   "webcast_live": false,
+   "webcasts": [
+    {
+     "url": "https://www.youtube.com/watch?v=qM5A1ZO9oh8",
+     "title": "Rocket Launch: Vulcan Leo 1",
+     "publisher": "United Launch Alliance",
+     "type": "Official Webcast",
+     "live": false
+    }
+   ],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193955.jpeg",
+   "image_credit": "United Launch Alliance"
+  },
+  {
+   "id": "0f867f0c-5422-4d44-93b8-d7faaae7019b",
+   "slug": "starship-starlink-group-31-2-starship-flight-15",
+   "name": "Starship | Starlink Group 31-2 (Starship Flight 15)",
+   "net": "2026-11-13T22:45:00Z",
+   "net_precision": "MIN",
+   "window_start": "2026-11-13T22:45:00Z",
+   "window_end": "2026-11-14T00:00:00Z",
+   "status": {
+    "id": 8,
+    "name": "To Be Confirmed",
+    "abbrev": "TBC"
+   },
+   "provider": {
+    "name": "SpaceX",
+    "abbrev": "SpX"
+   },
+   "rocket": "Starship V3",
+   "mission": {
+    "name": "Starlink Group 31-2 (Starship Flight 15)",
+    "type": "Communications",
+    "description": "15th test flight of the two-stage Starship launch vehicle and 4th flight of Starship V3. Second Starship flight to deploy satellites (a group of Starlink satellites known as Starlink Group 31-2) into stable Low Earth Orbit and first ever to attempt returning the Starship 2nd stage back to the launch site.\r\n\r\nThe ship is expected to fly at an altitude approximately 275 km above Earth and complete approximately 14 orbits around the planet for more than 22 hours, with the ship expected to attempt returning back to Starbase, Texas on its launch pad by pad arms catching.\r\n\r\nThe booster’s primary test objective on Flight 15 will be executing a successful launch, ascent, stage separation, boostback burn, and landing by pad arms catching. This will also be the 1st Starship V3 booster to attempt returning to its launch site.\r\n\r\nStarship will deliver 26 Starlink V3 satellites to orbit for the second time, which aim to greatly expand the network's capacity and user speeds. Each Starlink V3 satellite will add 1 Tbps of capacity to the constellation. 3 of the satellites have been modified with a suite of cameras to scan Starship’s heatshield and transmit imagery down to operators.",
+    "orbit": "Low Earth Orbit",
+    "orbit_abbrev": "LEO"
+   },
+   "pad": {
+    "name": "Orbital Launch Pad 2",
+    "location": "SpaceX Starbase, TX, USA",
+    "country": "United States of America"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/starship_on_the_image_thumbnail_20260724044615.jpeg",
+   "image_credit": "SpaceX"
+  },
+  {
+   "id": "db3500ac-965b-4ad8-b417-cb8d8d005586",
+   "slug": "electron-the-mountain-god-rises-iqps-launch-10",
+   "name": "Electron | The Mountain God Rises (iQPS Launch 10)",
+   "net": "2026-11-14T05:30:00Z",
+   "net_precision": "MIN",
+   "window_start": "2026-11-14T05:30:00Z",
+   "window_end": "2026-11-14T05:30:00Z",
+   "status": {
+    "id": 1,
+    "name": "Go for Launch",
+    "abbrev": "Go"
+   },
+   "provider": {
+    "name": "Rocket Lab",
+    "abbrev": "RL"
+   },
+   "rocket": "Electron",
+   "mission": {
+    "name": "The Mountain God Rises (iQPS Launch 10)",
+    "type": "Earth Science",
+    "description": "Synthetic aperture radar Earth observation satellite for Japanese Earth imaging company iQPS.",
+    "orbit": "Low Earth Orbit",
+    "orbit_abbrev": "LEO"
+   },
+   "pad": {
+    "name": "Unknown Pad",
+    "location": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
+    "country": "New Zealand"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193613.jpeg",
+   "image_credit": null
+  },
+  {
+   "id": "76617033-4dc0-4448-b50c-e5b0d5a18539",
+   "slug": "falcon-9-block-5-ussf-317",
+   "name": "Falcon 9 Block 5 | USSF-317",
+   "net": "2026-11-15T03:55:00Z",
+   "net_precision": "MIN",
+   "window_start": "2026-11-15T03:55:00Z",
+   "window_end": "2026-11-15T07:55:00Z",
+   "status": {
+    "id": 1,
+    "name": "Go for Launch",
+    "abbrev": "Go"
+   },
+   "provider": {
+    "name": "SpaceX",
+    "abbrev": "SpX"
+   },
+   "rocket": "Falcon 9 Block 5",
+   "mission": {
+    "name": "USSF-317",
+    "type": "Government/Top Secret",
+    "description": "A classified mission for the United States Space Force. It is possibly a batch of classified LEO satellites based on SpaceX’s Starshield satellite bus, based on locations of rocket stage drop zones being exact fits with previous Starlink Group 15 launches.",
+    "orbit": "Low Earth Orbit",
+    "orbit_abbrev": "LEO"
+   },
+   "pad": {
+    "name": "Space Launch Complex 4E",
+    "location": "Vandenberg SFB, CA, USA",
+    "country": "United States of America"
+   },
+   "webcast_live": false,
+   "webcasts": [
+    {
+     "url": "https://x.com/i/broadcasts/2lgkMvaRVPMdYR",
+     "title": "USSF-317 Mission",
+     "publisher": "X",
+     "type": "Official Webcast",
+     "live": false
+    }
+   ],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_liftof_image_thumbnail_20260816171423.jpeg",
+   "image_credit": "SpaceX"
+  },
+  {
+   "id": "460d9db7-eaf6-4cd9-b095-cff433534c09",
+   "slug": "falcon-9-block-5-ussf-266",
+   "name": "Falcon 9 Block 5 | USSF-266",
+   "net": "2026-11-18T16:49:00Z",
+   "net_precision": "MIN",
+   "window_start": "2026-11-18T16:49:00Z",
+   "window_end": "2026-11-18T20:49:00Z",
+   "status": {
+    "id": 1,
+    "name": "Go for Launch",
+    "abbrev": "Go"
+   },
+   "provider": {
+    "name": "SpaceX",
+    "abbrev": "SpX"
+   },
+   "rocket": "Falcon 9 Block 5",
+   "mission": {
+    "name": "USSF-266",
+    "type": "Government/Top Secret",
+    "description": "A classified mission for the United States Space Force. It is possibly a batch of classified LEO satellites based on SpaceX’s Starshield satellite bus, based on locations of ascent rocket stage drop zones being fits with previous SDA Transport Layer launches.",
+    "orbit": "Polar Orbit",
+    "orbit_abbrev": "PO"
+   },
+   "pad": {
+    "name": "Space Launch Complex 4E",
+    "location": "Vandenberg SFB, CA, USA",
+    "country": "United States of America"
+   },
+   "webcast_live": false,
+   "webcasts": [
+    {
+     "url": "https://x.com/i/broadcasts/2JQXBjLyYOQrpX",
+     "title": "USSF-266 Mission",
+     "publisher": "X",
+     "type": "Official Webcast",
+     "live": false
+    }
+   ],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_liftof_image_thumbnail_20260816171423.jpeg",
+   "image_credit": "SpaceX"
+  },
+  {
+   "id": "a2975167-7c6f-4403-99e1-b40df17c8140",
+   "slug": "long-march-8a-satnet-leo-group-tbd",
+   "name": "Long March 8A | SatNet LEO Group TBD?",
+   "net": "2026-11-20T11:00:00Z",
+   "net_precision": "HR",
+   "window_start": "2026-11-20T11:00:00Z",
+   "window_end": "2026-11-20T14:00:00Z",
+   "status": {
+    "id": 8,
+    "name": "To Be Confirmed",
+    "abbrev": "TBC"
+   },
+   "provider": {
+    "name": "China Aerospace Science and Technology Corporation",
+    "abbrev": "CASC"
+   },
+   "rocket": "Long March 8A",
+   "mission": {
+    "name": "SatNet LEO Group TBD?",
+    "type": "Communications",
+    "description": "A batch of 9 Low Earth Orbit communication satellites for the Chinese state owned SatNet constellation operated by the China Satellite Network Group.\r\n\r\nThe constellation will eventually consists of 13000 satellites.",
+    "orbit": "Low Earth Orbit",
+    "orbit_abbrev": "LEO"
+   },
+   "pad": {
+    "name": "Commercial LC-1",
+    "location": "Wenchang Space Launch Site, People's Republic of China",
+    "country": "China"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/cz-8a_launch_2_image_thumbnail_20251206093108.jpeg",
+   "image_credit": "CASC"
+  },
+  {
+   "id": "7bdc412b-c965-4517-a131-f57a01189803",
+   "slug": "ariane-64-block-2-amazon-leo-le-04",
+   "name": "Ariane 64 Block 2 | Amazon Leo (LE-04)",
+   "net": "2026-11-23T00:00:00Z",
+   "net_precision": "DAY",
+   "window_start": "2026-11-23T00:00:00Z",
+   "window_end": "2026-11-23T00:00:00Z",
+   "status": {
+    "id": 2,
+    "name": "To Be Determined",
+    "abbrev": "TBD"
+   },
+   "provider": {
+    "name": "Arianespace",
+    "abbrev": "ASA"
+   },
+   "rocket": "Ariane 64 Block 2",
+   "mission": {
+    "name": "Amazon Leo (LE-04)",
+    "type": "Communications",
+    "description": "Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon. This constellation is planned to be composed of 3,276 satellites. The satellites are projected to be placed in 98 orbital planes in three orbital layers, one at 590 km, 610 km and 630 km altitude.\r\n\r\n35-40 satellites will be carried on each Ariane 6 launch.",
+    "orbit": "Low Earth Orbit",
+    "orbit_abbrev": "LEO"
+   },
+   "pad": {
+    "name": "Ariane Launch Area 4",
+    "location": "Guiana Space Centre, French Guiana",
+    "country": "French Guiana"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/ariane_64_lifto_image_thumbnail_20260618063419.jpeg",
+   "image_credit": "ESA\\CNES\\ArianespaceArianeGroup\\Optique Vidéo du CSG–T. Leduc"
+  },
+  {
+   "id": "8dd5de11-831b-445f-86f0-bffefe0550d9",
+   "slug": "soyuz-21b-progress-ms-36-97p",
+   "name": "Soyuz 2.1b | Progress MS-36 (97P)",
+   "net": "2026-11-24T05:03:00Z",
+   "net_precision": "MIN",
+   "window_start": "2026-11-24T05:03:00Z",
+   "window_end": "2026-11-24T05:03:00Z",
+   "status": {
+    "id": 8,
+    "name": "To Be Confirmed",
+    "abbrev": "TBC"
+   },
+   "provider": {
+    "name": "Russian Federal Space Agency (ROSCOSMOS)",
+    "abbrev": "RFSA"
+   },
+   "rocket": "Soyuz 2.1b",
+   "mission": {
+    "name": "Progress MS-36 (97P)",
+    "type": "Resupply",
+    "description": "Progress resupply mission to the International Space Station.",
+    "orbit": "Low Earth Orbit",
+    "orbit_abbrev": "LEO"
+   },
+   "pad": {
+    "name": "31/6",
+    "location": "Baikonur Cosmodrome, Republic of Kazakhstan",
+    "country": "Kazakhstan"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193901.jpeg",
+   "image_credit": "Roscosmos"
+  },
+  {
+   "id": "5ce59e3a-c343-430f-ae4e-e608ba536754",
+   "slug": "long-march-12-satnet-leo-group-tbd",
+   "name": "Long March 12 | SatNet LEO Group TBD?",
+   "net": "2026-11-24T07:00:00Z",
+   "net_precision": "HR",
+   "window_start": "2026-11-24T07:00:00Z",
+   "window_end": "2026-11-24T10:00:00Z",
+   "status": {
+    "id": 8,
+    "name": "To Be Confirmed",
+    "abbrev": "TBC"
+   },
+   "provider": {
+    "name": "China Aerospace Science and Technology Corporation",
+    "abbrev": "CASC"
+   },
+   "rocket": "Long March 12",
+   "mission": {
+    "name": "SatNet LEO Group TBD?",
+    "type": "Communications",
+    "description": "A batch of 9 Low Earth Orbit communication satellites for the Chinese state owned SatNet constellation operated by the China Satellite Network Group.\r\n\r\nThe constellation will eventually consists of 13000 satellites.",
+    "orbit": "Low Earth Orbit",
+    "orbit_abbrev": "LEO"
+   },
+   "pad": {
+    "name": "Commercial LC-2",
+    "location": "Wenchang Space Launch Site, People's Republic of China",
+    "country": "China"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/cz-12_on_its_la_image_thumbnail_20241128132937.jpeg",
+   "image_credit": "Unknown"
+  },
+  {
+   "id": "c9605b67-8a53-4239-a8ae-577fe3b79799",
+   "slug": "long-march-2fg-shenzhou-24",
+   "name": "Long March 2F/G | Shenzhou 24",
+   "net": "2026-11-25T00:00:00Z",
+   "net_precision": "DAY",
+   "window_start": "2026-11-25T00:00:00Z",
+   "window_end": "2026-11-25T00:00:00Z",
+   "status": {
+    "id": 2,
+    "name": "To Be Determined",
+    "abbrev": "TBD"
+   },
+   "provider": {
+    "name": "China Aerospace Science and Technology Corporation",
+    "abbrev": "CASC"
+   },
+   "rocket": "Long March 2F/G",
+   "mission": {
+    "name": "Shenzhou 24",
+    "type": "Human Exploration",
+    "description": "Shenzhou 24 will be the 24th flight of the Shenzhou program.\r\n\r\nThe first astronaut from Pakistan is expected to fly on this on a short duration mission, with another Chinese astronaut to undergo a year long expedition.",
+    "orbit": "Low Earth Orbit",
+    "orbit_abbrev": "LEO"
+   },
+   "pad": {
+    "name": "Launch Area 91 (SLS-1 / 921)",
+    "location": "Jiuquan Satellite Launch Center, People's Republic of China",
+    "country": "China"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/shenzhou_22_lau_image_thumbnail_20251129175823.jpeg",
+   "image_credit": "Xinhua"
+  },
+  {
+   "id": "dff42a2e-f047-48d7-b260-3888d3a4fe33",
+   "slug": "spectrum-at-astra-and-others-spectrum-flight-3",
+   "name": "Spectrum | AT-Astra and Others (Spectrum Flight 3)",
+   "net": "2026-11-26T20:00:00Z",
+   "net_precision": "HR",
+   "window_start": "2026-11-26T20:00:00Z",
+   "window_end": "2026-11-26T21:30:00Z",
+   "status": {
+    "id": 8,
+    "name": "To Be Confirmed",
+    "abbrev": "TBC"
+   },
+   "provider": {
+    "name": "Isar Aerospace",
+    "abbrev": "ISAR"
+   },
+   "rocket": "Spectrum",
+   "mission": {
+    "name": "AT-Astra and Others (Spectrum Flight 3)",
+    "type": "Technology",
+    "description": "Third test flight of the Isar Spectrum launch vehicle. This launch will carry various satellites including R-Space’s AT-Astra/IOD-01, which will perform in-orbit demonstrations for ENPULSION, SUNBOOSTER GmbH, and Synopsis Planet.",
+    "orbit": "Sun-Synchronous Orbit",
+    "orbit_abbrev": "SSO"
+   },
+   "pad": {
+    "name": "Orbital Launch Pad",
+    "location": "Andøya Spaceport",
+    "country": "Norway"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/spectrum_on_the_image_thumbnail_20250321072643.jpeg",
+   "image_credit": "Isar Aerospace | Robin Brillert, Wingmen Media"
+  },
+  {
+   "id": "d74afbc7-0de5-491c-be05-4e9c31f736ac",
+   "slug": "falcon-9-block-5-cygnus-crs-2-ng-25",
+   "name": "Falcon 9 Block 5 | Cygnus CRS-2 NG-25",
+   "net": "2026-11-29T15:49:00Z",
+   "net_precision": "MIN",
+   "window_start": "2026-11-29T15:49:00Z",
+   "window_end": "2026-11-29T15:49:00Z",
+   "status": {
+    "id": 1,
+    "name": "Go for Launch",
+    "abbrev": "Go"
+   },
+   "provider": {
+    "name": "SpaceX",
+    "abbrev": "SpX"
+   },
+   "rocket": "Falcon 9 Block 5",
+   "mission": {
+    "name": "Cygnus CRS-2 NG-25",
+    "type": "Resupply",
+    "description": "This is the 25th flight of the Orbital ATK's uncrewed resupply spacecraft Cygnus and its 24th flight to the International Space Station under the Commercial Resupply Services contract with NASA.",
+    "orbit": "Low Earth Orbit",
+    "orbit_abbrev": "LEO"
+   },
+   "pad": {
+    "name": "Space Launch Complex 40",
+    "location": "Cape Canaveral SFS, FL, USA",
+    "country": "United States of America"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193628.jpeg",
+   "image_credit": "SpaceX"
+  },
+  {
+   "id": "56ca6058-7ccc-4ec0-b1b0-fb49f3bfee49",
+   "slug": "falcon-9-block-5-nrol-195",
+   "name": "Falcon 9 Block 5 | NROL-195",
+   "net": "2026-11-30T00:00:00Z",
+   "net_precision": "M",
+   "window_start": "2026-11-30T00:00:00Z",
+   "window_end": "2026-11-30T00:00:00Z",
+   "status": {
+    "id": 2,
+    "name": "To Be Determined",
+    "abbrev": "TBD"
+   },
+   "provider": {
+    "name": "SpaceX",
+    "abbrev": "SpX"
+   },
+   "rocket": "Falcon 9 Block 5",
+   "mission": {
+    "name": "NROL-195",
+    "type": "Government/Top Secret",
+    "description": "Fifteenth batch of satellites for a reconnaissance satellite constellation built by SpaceX and Northrop Grumman for the National Reconnaissance Office to provide imaging and other reconnaissance capabilities.",
+    "orbit": "Low Earth Orbit",
+    "orbit_abbrev": "LEO"
+   },
+   "pad": {
+    "name": "Space Launch Complex 4E",
+    "location": "Vandenberg SFB, CA, USA",
+    "country": "United States of America"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_on_slc_image_thumbnail_20241024165957.jpeg",
+   "image_credit": "SpaceX"
+  },
+  {
+   "id": "b0dc988c-ea4a-423f-81b6-6b0fbe7cc17c",
+   "slug": "falcon-9-block-5-oneweb-21",
+   "name": "Falcon 9 Block 5 | OneWeb 21",
+   "net": "2026-11-30T00:00:00Z",
+   "net_precision": "M",
+   "window_start": "2026-11-30T00:00:00Z",
+   "window_end": "2026-11-30T00:00:00Z",
+   "status": {
+    "id": 2,
+    "name": "To Be Determined",
+    "abbrev": "TBD"
+   },
+   "provider": {
+    "name": "SpaceX",
+    "abbrev": "SpX"
+   },
+   "rocket": "Falcon 9 Block 5",
+   "mission": {
+    "name": "OneWeb 21",
+    "type": "Communications",
+    "description": "A batch of 32 satellites for the OneWeb satellite constellation, which is intended to provide global Internet broadband service for individual consumers. The constellation is planned to have around 648 microsatellites (of which 60 are spares), around 150 kg each, operating in Ku-band from low Earth orbit.",
+    "orbit": "Polar Orbit",
+    "orbit_abbrev": "PO"
+   },
+   "pad": {
+    "name": "Space Launch Complex 4E",
+    "location": "Vandenberg SFB, CA, USA",
+    "country": "United States of America"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_liftof_image_thumbnail_20241020164114.jpeg",
+   "image_credit": "SpaceX"
+  },
+  {
+   "id": "3cdb9dee-b5cb-406c-bbd1-06a219930fb7",
+   "slug": "falcon-9-block-5-starlink-group-15-21",
+   "name": "Falcon 9 Block 5 | Starlink Group 15-21",
+   "net": "2026-11-30T00:00:00Z",
+   "net_precision": "M",
+   "window_start": "2026-11-30T00:00:00Z",
+   "window_end": "2026-11-30T00:00:00Z",
+   "status": {
+    "id": 2,
+    "name": "To Be Determined",
+    "abbrev": "TBD"
+   },
+   "provider": {
+    "name": "SpaceX",
+    "abbrev": "SpX"
+   },
+   "rocket": "Falcon 9 Block 5",
+   "mission": {
+    "name": "Starlink Group 15-21",
+    "type": "Communications",
+    "description": "A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system.",
+    "orbit": "Low Earth Orbit",
+    "orbit_abbrev": "LEO"
+   },
+   "pad": {
+    "name": "Space Launch Complex 4E",
+    "location": "Vandenberg SFB, CA, USA",
+    "country": "United States of America"
+   },
+   "webcast_live": false,
+   "webcasts": [
+    {
+     "url": "https://x.com/i/broadcasts/1aJbdEgvmWaKX",
+     "title": "Starlink Mission",
+     "publisher": "SpaceX",
+     "type": "Official Webcast",
+     "live": false
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=z9uME3O2xHk",
+     "title": "GO!- SpaceX - Falcon 9 - Starlink 15-21 - SLC-4E - Vandenberg SFB, CA - Space Affairs Live",
+     "publisher": "SPACE AFFAIRS",
+     "type": "Unofficial Re-stream",
+     "live": false
+    }
+   ],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305192320.png",
+   "image_credit": "SpaceX"
+  },
+  {
+   "id": "dfac5ab7-7017-454f-b6cf-eeed277a97b5",
+   "slug": "lvm-3-gaganyaan-1",
+   "name": "LVM-3 | Gaganyaan-1",
+   "net": "2026-11-30T00:00:00Z",
+   "net_precision": "M",
+   "window_start": "2026-11-30T00:00:00Z",
+   "window_end": "2026-11-30T00:00:00Z",
+   "status": {
+    "id": 2,
+    "name": "To Be Determined",
+    "abbrev": "TBD"
+   },
+   "provider": {
+    "name": "Indian Space Research Organization",
+    "abbrev": "ISRO"
+   },
+   "rocket": "Launch Vehicle Mark-3 (GSLV Mk III)",
+   "mission": {
+    "name": "Gaganyaan-1",
+    "type": "Test Flight",
+    "description": "First uncrewed orbital test flight of the Gaganyaan capsule.",
+    "orbit": "Low Earth Orbit",
+    "orbit_abbrev": "LEO"
+   },
+   "pad": {
+    "name": "Satish Dhawan Space Centre Second Launch Pad",
+    "location": "Satish Dhawan Space Centre, India",
+    "country": "India"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193746.jpeg",
+   "image_credit": null
+  },
+  {
+   "id": "b5a9bccb-30d7-4af6-8ad1-fabb563be53c",
+   "slug": "pslv-xl-tds-01",
+   "name": "PSLV-XL | TDS-01",
+   "net": "2026-11-30T00:00:00Z",
+   "net_precision": "M",
+   "window_start": "2026-11-30T00:00:00Z",
+   "window_end": "2026-11-30T00:00:00Z",
+   "status": {
+    "id": 2,
+    "name": "To Be Determined",
+    "abbrev": "TBD"
+   },
+   "provider": {
+    "name": "Indian Space Research Organization",
+    "abbrev": "ISRO"
+   },
+   "rocket": "PSLV XL",
+   "mission": {
+    "name": "TDS-01",
+    "type": "Technology",
+    "description": "TDS-01 (Technology Demonstration Satellite-01) is an Indian geostationary orbit technology demonstration satellite carrying payloads for the Indian Space Research Organisation (ISRO)’s Institute of Plasma Research, Gandhinagar and the CSIR-CEERI, Pilani. \r\n\r\nPayloads to be tested included an internally developed 300 mN electric powered thrusters, atomic clocks, travelling wave tube amplifiers (TWTA) & a quantum communication suite (QuTDS).",
+    "orbit": "Geostationary Transfer Orbit",
+    "orbit_abbrev": "GTO"
+   },
+   "pad": {
+    "name": "Satish Dhawan Space Centre First Launch Pad",
+    "location": "Satish Dhawan Space Centre, India",
+    "country": "India"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193829.jpeg",
+   "image_credit": null
+  },
+  {
+   "id": "22e117bf-041c-49d5-9d09-7b180036e143",
+   "slug": "ariane-62-metop-sg-b1",
+   "name": "Ariane 62 | Metop-SG B1",
+   "net": "2026-12-31T00:00:00Z",
+   "net_precision": "M",
+   "window_start": "2026-12-31T00:00:00Z",
+   "window_end": "2026-12-31T00:00:00Z",
+   "status": {
+    "id": 2,
+    "name": "To Be Determined",
+    "abbrev": "TBD"
+   },
+   "provider": {
+    "name": "Arianespace",
+    "abbrev": "ASA"
+   },
+   "rocket": "Ariane 62",
+   "mission": {
+    "name": "Metop-SG B1",
+    "type": "Earth Science",
+    "description": "Second of EUMETSAT's second generation of Metop weather satellites.",
+    "orbit": "Sun-Synchronous Orbit",
+    "orbit_abbrev": "SSO"
+   },
+   "pad": {
+    "name": "Ariane Launch Area 4",
+    "location": "Guiana Space Centre, French Guiana",
+    "country": "French Guiana"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/ariane_62_lifto_image_thumbnail_20240711132056.jpeg",
+   "image_credit": "ESA/CNES/Arianespace/ArianeGroup/Optique vidéo du CSG–S. Martin"
+  },
+  {
+   "id": "8bf5f61e-a7e1-41e6-aede-7b87e4beebab",
+   "slug": "falcon-9-block-5-chorus",
+   "name": "Falcon 9 Block 5 | CHORUS",
+   "net": "2026-12-31T00:00:00Z",
+   "net_precision": "M",
+   "window_start": "2026-12-31T00:00:00Z",
+   "window_end": "2026-12-31T00:00:00Z",
+   "status": {
+    "id": 2,
+    "name": "To Be Determined",
+    "abbrev": "TBD"
+   },
+   "provider": {
+    "name": "SpaceX",
+    "abbrev": "SpX"
+   },
+   "rocket": "Falcon 9 Block 5",
+   "mission": {
+    "name": "CHORUS",
+    "type": "Earth Science",
+    "description": "CHORUS is MDA's next generation Earth observation constellation, consisting of 2 radar satellites (C-band SAR and X-band SAR), in a 53.5 degree 600 km altitude LEO, with the X-band trailing the C-band by 60 minutes. A collaborative multi-sensor constellation, CHORUS will bring together diverse and unique imagery and data sources and provide a new level of near real-time insight and innovative Earth observation services. Operating in a unique mid-inclination orbit, CHORUS will be able to image day or night, regardless of weather conditions, with daily access of up to 95% of the coverage area. From an industry-leading 700km-wide imaging swath down to sub-metre high resolution, CHORUS will provide the most extensive and unrivalled Earth observation radar imaging capacity available on the market in a single mission.",
+    "orbit": "Low Earth Orbit",
+    "orbit_abbrev": "LEO"
+   },
+   "pad": {
+    "name": "Unknown Pad",
+    "location": "Cape Canaveral SFS, FL, USA",
+    "country": "United States of America"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193628.jpeg",
+   "image_credit": "SpaceX"
+  },
+  {
+   "id": "e61d353c-db55-4a57-8184-0fab187231e6",
+   "slug": "falcon-9-block-5-globalstar-2-r-mission-2-x-9",
+   "name": "Falcon 9 Block 5 | Globalstar 2-R Mission 2 (x 9)",
+   "net": "2026-12-31T00:00:00Z",
+   "net_precision": "M",
+   "window_start": "2026-12-31T00:00:00Z",
+   "window_end": "2026-12-31T00:00:00Z",
+   "status": {
+    "id": 2,
+    "name": "To Be Determined",
+    "abbrev": "TBD"
+   },
+   "provider": {
+    "name": "SpaceX",
+    "abbrev": "SpX"
+   },
+   "rocket": "Falcon 9 Block 5",
+   "mission": {
+    "name": "Globalstar 2-R Mission 2 (x 9)",
+    "type": "Communications",
+    "description": "The Globalstar global mobile communications network offers global, digital real time voice, data and fax services via its Low Earth Orbit satellite constellation. The constellation operates in a 1410 km orbit inclined at 52 degrees.\r\n\r\nIn early 2022, Globalstar contracted with MDA for the construction of 17 new 2nd generation refresh satellites to replenish the existing constellation. Rocket Lab is sub-contracted to build the satellites' buses and the launch dispensers.",
+    "orbit": "Low Earth Orbit",
+    "orbit_abbrev": "LEO"
+   },
+   "pad": {
+    "name": "Space Launch Complex 40",
+    "location": "Cape Canaveral SFS, FL, USA",
+    "country": "United States of America"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193628.jpeg",
+   "image_credit": "SpaceX"
+  },
+  {
+   "id": "71df1dd0-d658-4762-b0bc-0fca6886aea7",
+   "slug": "falcon-9-block-5-sda-tranche-2-transport-layer-d",
+   "name": "Falcon 9 Block 5 | SDA Tranche 2 Transport Layer D",
+   "net": "2026-12-31T00:00:00Z",
+   "net_precision": "M",
+   "window_start": "2026-12-31T00:00:00Z",
+   "window_end": "2026-12-31T00:00:00Z",
+   "status": {
+    "id": 2,
+    "name": "To Be Determined",
+    "abbrev": "TBD"
+   },
+   "provider": {
+    "name": "SpaceX",
+    "abbrev": "SpX"
+   },
+   "rocket": "Falcon 9 Block 5",
+   "mission": {
+    "name": "SDA Tranche 2 Transport Layer D",
+    "type": "Government/Top Secret",
+    "description": "Classified mission launched by the Space Development Agency (SDA) for Tranche 2 Transport Layer.",
+    "orbit": "Polar Orbit",
+    "orbit_abbrev": "PO"
+   },
+   "pad": {
+    "name": "Unknown Pad",
+    "location": "Cape Canaveral SFS, FL, USA",
+    "country": "United States of America"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193628.jpeg",
+   "image_credit": "SpaceX"
+  },
+  {
+   "id": "71ed4649-8d71-42e8-8548-d42ffa2c5a6e",
+   "slug": "falcon-9-block-5-sda-tranche-2-transport-layer-e",
+   "name": "Falcon 9 Block 5 | SDA Tranche 2 Transport Layer E",
+   "net": "2026-12-31T00:00:00Z",
+   "net_precision": "M",
+   "window_start": "2026-12-31T00:00:00Z",
+   "window_end": "2026-12-31T00:00:00Z",
+   "status": {
+    "id": 2,
+    "name": "To Be Determined",
+    "abbrev": "TBD"
+   },
+   "provider": {
+    "name": "SpaceX",
+    "abbrev": "SpX"
+   },
+   "rocket": "Falcon 9 Block 5",
+   "mission": {
+    "name": "SDA Tranche 2 Transport Layer E",
+    "type": "Government/Top Secret",
+    "description": "Classified mission launched by the Space Development Agency (SDA) for Tranche 2 Transport Layer.",
+    "orbit": "Polar Orbit",
+    "orbit_abbrev": "PO"
+   },
+   "pad": {
+    "name": "Space Launch Complex 4E",
+    "location": "Vandenberg SFB, CA, USA",
+    "country": "United States of America"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193628.jpeg",
+   "image_credit": "SpaceX"
+  },
+  {
+   "id": "0cf92611-82a8-4095-a0b4-dda2e74b1fff",
+   "slug": "lvm-3-gsat-32-gsat-n3",
+   "name": "LVM-3 | GSAT-32 (GSAT-N3)",
+   "net": "2026-12-31T00:00:00Z",
+   "net_precision": "M",
+   "window_start": "2026-12-31T00:00:00Z",
+   "window_end": "2026-12-31T00:00:00Z",
+   "status": {
+    "id": 2,
+    "name": "To Be Determined",
+    "abbrev": "TBD"
+   },
+   "provider": {
+    "name": "Indian Space Research Organization",
+    "abbrev": "ISRO"
+   },
+   "rocket": "Launch Vehicle Mark-3 (GSLV Mk III)",
+   "mission": {
+    "name": "GSAT-32 (GSAT-N3)",
+    "type": "Communications",
+    "description": "GSAT-32 is a geostationary communications satellite for the Indian Space Research Organization (ISRO). The spacecraft is a replacement for GSAT-6A that failed before reaching geostationary orbit after launch in 2018.",
+    "orbit": "Geostationary Transfer Orbit",
+    "orbit_abbrev": "GTO"
+   },
+   "pad": {
+    "name": "Satish Dhawan Space Centre Second Launch Pad",
+    "location": "Satish Dhawan Space Centre, India",
+    "country": "India"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193746.jpeg",
+   "image_credit": null
+  },
+  {
+   "id": "548df42c-ae26-4cc9-921a-f0042941911a",
+   "slug": "electron-blacksky-gen-3-6",
+   "name": "Electron | BlackSky Gen-3 6",
+   "net": "2026-12-31T00:00:00Z",
+   "net_precision": "Q4",
+   "window_start": "2026-12-31T00:00:00Z",
+   "window_end": "2026-12-31T00:00:00Z",
+   "status": {
+    "id": 2,
+    "name": "To Be Determined",
+    "abbrev": "TBD"
+   },
+   "provider": {
+    "name": "Rocket Lab",
+    "abbrev": "RL"
+   },
+   "rocket": "Electron",
+   "mission": {
+    "name": "BlackSky Gen-3 6",
+    "type": "Earth Science",
+    "description": "BlackSky Gen-3 Earth-imaging satellites",
+    "orbit": "Low Earth Orbit",
+    "orbit_abbrev": "LEO"
+   },
+   "pad": {
+    "name": "Unknown Pad",
+    "location": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
+    "country": "New Zealand"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193613.jpeg",
+   "image_credit": null
+  },
+  {
+   "id": "5aa3575e-f3ff-48ec-969f-e7e4c669f866",
+   "slug": "electron-blacksky-gen-3-7",
+   "name": "Electron | BlackSky Gen-3 7",
+   "net": "2026-12-31T00:00:00Z",
+   "net_precision": "Q4",
+   "window_start": "2026-12-31T00:00:00Z",
+   "window_end": "2026-12-31T00:00:00Z",
+   "status": {
+    "id": 2,
+    "name": "To Be Determined",
+    "abbrev": "TBD"
+   },
+   "provider": {
+    "name": "Rocket Lab",
+    "abbrev": "RL"
+   },
+   "rocket": "Electron",
+   "mission": {
+    "name": "BlackSky Gen-3 7",
+    "type": "Earth Science",
+    "description": "BlackSky Gen-3 Earth-imaging satellites",
+    "orbit": "Low Earth Orbit",
+    "orbit_abbrev": "LEO"
+   },
+   "pad": {
+    "name": "Unknown Pad",
+    "location": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
+    "country": "New Zealand"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193613.jpeg",
+   "image_credit": null
+  },
+  {
+   "id": "11b218b1-5e40-4b9d-854e-50320299239d",
+   "slug": "falcon-9-block-5-bluebird-14-16-block-2-9-11",
+   "name": "Falcon 9 Block 5 | BlueBird 14-16 (Block 2 #9-11)",
+   "net": "2026-12-31T00:00:00Z",
+   "net_precision": "Q4",
+   "window_start": "2026-12-31T00:00:00Z",
+   "window_end": "2026-12-31T00:00:00Z",
+   "status": {
+    "id": 2,
+    "name": "To Be Determined",
+    "abbrev": "TBD"
+   },
+   "provider": {
+    "name": "SpaceX",
+    "abbrev": "SpX"
+   },
+   "rocket": "Falcon 9 Block 5",
+   "mission": {
+    "name": "BlueBird 14-16 (Block 2 #9-11)",
+    "type": "Communications",
+    "description": "AST SpaceMobile’s Block 2 BlueBird satellites are designed to deliver up to 10 times the bandwidth capacity of the BlueBird Block 1 satellites, required to achieve 24/7 continuous cellular broadband service coverage in the United States, with beams designed to support a capacity of up to 40 MHz, enabling peak data transmission speeds up to 120 Mbps, supporting voice, full data and video applications. The Block 2 BlueBirds, featuring as large as 2400 square foot communications arrays, will be the largest satellites ever commercially deployed in Low Earth orbit once launched.\r\n\r\nThis launch will feature 3 satellites.",
+    "orbit": "Low Earth Orbit",
+    "orbit_abbrev": "LEO"
+   },
+   "pad": {
+    "name": "Space Launch Complex 40",
+    "location": "Cape Canaveral SFS, FL, USA",
+    "country": "United States of America"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/f9_on_slc-40_2_image_thumbnail_20240919072420.jpeg",
+   "image_credit": "SpaceX"
+  },
+  {
+   "id": "2d0472b9-463d-49c8-afb1-7925e49a3368",
+   "slug": "falcon-9-block-5-sda-tranche-1-tracking-layer-a",
+   "name": "Falcon 9 Block 5 | SDA Tranche 1 Tracking Layer A",
+   "net": "2026-12-31T00:00:00Z",
+   "net_precision": "Q4",
+   "window_start": "2026-12-31T00:00:00Z",
+   "window_end": "2026-12-31T00:00:00Z",
+   "status": {
+    "id": 2,
+    "name": "To Be Determined",
+    "abbrev": "TBD"
+   },
+   "provider": {
+    "name": "SpaceX",
+    "abbrev": "SpX"
+   },
+   "rocket": "Falcon 9 Block 5",
+   "mission": {
+    "name": "SDA Tranche 1 Tracking Layer A",
+    "type": "Government/Top Secret",
+    "description": "Tranche 1 Tracking Layer A is one of five missions by the United States Space Force Space Development Agency (SDA) for the Proliferated Warfighter Space Architecture (PWSA) Tranche 1 Tracking Layer constellation, which will provide global indications, warning, tracking, and targeting of advanced missile threats, including hypersonic missile systems.",
+    "orbit": "Polar Orbit",
+    "orbit_abbrev": "PO"
+   },
+   "pad": {
+    "name": "Space Launch Complex 4E",
+    "location": "Vandenberg SFB, CA, USA",
+    "country": "United States of America"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193628.jpeg",
+   "image_credit": "SpaceX"
+  }
+ ]
+}

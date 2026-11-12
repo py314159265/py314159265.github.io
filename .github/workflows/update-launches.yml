@@ -1,0 +1,42 @@
+name: Update launch data
+
+on:
+  schedule:
+    # Every two hours, at 17 minutes past the hour UTC, to avoid the top-of-hour rush
+    - cron: "17 */2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-launches
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch launches
+        run: python scripts/fetch_launches.py
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- data/launches.json; then
+            echo "No data change; skipping commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/launches.json
+          git commit -m "Update launch data $(date -u +'%Y-%m-%dT%H:%MZ')"
+          git push
