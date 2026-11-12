@@ -1,64 +1,7 @@
 {
- "updated": "2026-11-12T05:10:16Z",
+ "updated": "2026-11-12T07:29:38Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
-  {
-   "id": "6aa7b90b-e5ed-45d8-a52e-04fbf399d178",
-   "slug": "falcon-9-block-5-ussf-627",
-   "name": "Falcon 9 Block 5 | USSF-627",
-   "net": "2026-11-12T04:36:30Z",
-   "net_precision": "SEC",
-   "window_start": "2026-11-12T02:35:00Z",
-   "window_end": "2026-11-12T06:35:00Z",
-   "status": {
-    "id": 6,
-    "name": "Launch in Flight",
-    "abbrev": "In Flight"
-   },
-   "provider": {
-    "name": "SpaceX",
-    "abbrev": "SpX"
-   },
-   "rocket": "Falcon 9 Block 5",
-   "mission": {
-    "name": "USSF-627",
-    "type": "Government/Top Secret",
-    "description": "A classified mission for the United States Space Force. It is possibly a batch of classified LEO satellites based on SpaceX’s Starshield satellite bus, based on locations of rocket stage drop zones being exact fits with previous Starlink Group 15 launches.",
-    "orbit": "Low Earth Orbit",
-    "orbit_abbrev": "LEO"
-   },
-   "pad": {
-    "name": "Space Launch Complex 4E",
-    "location": "Vandenberg SFB, CA, USA",
-    "country": "United States of America"
-   },
-   "webcast_live": false,
-   "webcasts": [
-    {
-     "url": "https://x.com/i/broadcasts/2brkWyolnlBbLM",
-     "title": "USSF-627 Mission",
-     "publisher": "X",
-     "type": "Official Webcast",
-     "live": false
-    },
-    {
-     "url": "https://www.youtube.com/watch?v=tM6K9RMvx0Y",
-     "title": "SpaceX Falcon 9 rocket launches classified U.S. Space Force mission from California",
-     "publisher": "Spaceflight Now",
-     "type": "Unofficial Webcast",
-     "live": false
-    },
-    {
-     "url": "https://www.youtube.com/watch?v=rq7SLpK5vlY",
-     "title": "SpaceX USSF-627",
-     "publisher": "The Space Devs",
-     "type": "Unofficial Re-stream",
-     "live": false
-    }
-   ],
-   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_liftof_image_thumbnail_20260816171423.jpeg",
-   "image_credit": "SpaceX"
-  },
   {
    "id": "e2523821-9760-4cb4-ad1f-7ce2e30419bd",
    "slug": "kuaizhou-11-unknown-payload",
@@ -1100,6 +1043,41 @@
     "name": "SDA Tranche 1 Tracking Layer A",
     "type": "Government/Top Secret",
     "description": "Tranche 1 Tracking Layer A is one of five missions by the United States Space Force Space Development Agency (SDA) for the Proliferated Warfighter Space Architecture (PWSA) Tranche 1 Tracking Layer constellation, which will provide global indications, warning, tracking, and targeting of advanced missile threats, including hypersonic missile systems.",
+    "orbit": "Polar Orbit",
+    "orbit_abbrev": "PO"
+   },
+   "pad": {
+    "name": "Space Launch Complex 4E",
+    "location": "Vandenberg SFB, CA, USA",
+    "country": "United States of America"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193628.jpeg",
+   "image_credit": "SpaceX"
+  },
+  {
+   "id": "dca8749f-1552-485a-8061-f1ad79055b8d",
+   "slug": "falcon-9-block-5-sda-tranche-1-tracking-layer-c",
+   "name": "Falcon 9 Block 5 | SDA Tranche 1 Tracking Layer C",
+   "net": "2026-12-31T00:00:00Z",
+   "net_precision": "Q4",
+   "window_start": "2026-12-31T00:00:00Z",
+   "window_end": "2026-12-31T00:00:00Z",
+   "status": {
+    "id": 2,
+    "name": "To Be Determined",
+    "abbrev": "TBD"
+   },
+   "provider": {
+    "name": "SpaceX",
+    "abbrev": "SpX"
+   },
+   "rocket": "Falcon 9 Block 5",
+   "mission": {
+    "name": "SDA Tranche 1 Tracking Layer C",
+    "type": "Government/Top Secret",
+    "description": "Tranche 1 Tracking Layer C is one of five missions by the United States Space Force Space Development Agency (SDA) for the Proliferated Warfighter Space Architecture (PWSA) Tranche 1 Tracking Layer constellation, which will provide global indications, warning, tracking, and targeting of advanced missile threats, including hypersonic missile systems.",
     "orbit": "Polar Orbit",
     "orbit_abbrev": "PO"
    },
