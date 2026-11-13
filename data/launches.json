@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T22:55:36Z",
+ "updated": "2026-11-13T01:19:30Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
   {
@@ -141,7 +141,7 @@
     "orbit_abbrev": "LEO"
    },
    "pad": {
-    "name": "Unknown Pad",
+    "name": "Rocket Lab Launch Complex 1A",
     "location": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
     "country": "New Zealand"
    },
@@ -162,10 +162,10 @@
    "id": "76617033-4dc0-4448-b50c-e5b0d5a18539",
    "slug": "falcon-9-block-5-ussf-317",
    "name": "Falcon 9 Block 5 | USSF-317",
-   "net": "2026-11-15T03:55:00Z",
+   "net": "2026-11-18T03:14:00Z",
    "net_precision": "MIN",
-   "window_start": "2026-11-15T03:55:00Z",
-   "window_end": "2026-11-15T07:55:00Z",
+   "window_start": "2026-11-18T03:14:00Z",
+   "window_end": "2026-11-18T07:14:00Z",
    "status": {
     "id": 1,
     "name": "Go for Launch",
