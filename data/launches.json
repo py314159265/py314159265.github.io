@@ -1,50 +1,7 @@
 {
- "updated": "2026-11-13T13:19:34Z",
+ "updated": "2026-11-13T14:58:27Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
-  {
-   "id": "ef9850ad-1096-425b-9d27-f7bbd186e61a",
-   "slug": "vulcan-vc6l-amazon-leo-lv-01",
-   "name": "Vulcan VC6L | Amazon Leo (LV-01)",
-   "net": "2026-11-13T17:54:00Z",
-   "net_precision": "MIN",
-   "window_start": "2026-11-13T17:54:00Z",
-   "window_end": "2026-11-13T18:23:00Z",
-   "status": {
-    "id": 1,
-    "name": "Go for Launch",
-    "abbrev": "Go"
-   },
-   "provider": {
-    "name": "United Launch Alliance",
-    "abbrev": "ULA"
-   },
-   "rocket": "Vulcan VC6L",
-   "mission": {
-    "name": "Amazon Leo (LV-01)",
-    "type": "Communications",
-    "description": "Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon. This constellation is planned to be composed of 3,276 satellites. The satellites are projected to be placed in 98 orbital planes in three orbital layers, one at 590 km, 610 km and 630 km altitude.\r\n\r\n45 satellites will be carried on each Vulcan launch.",
-    "orbit": "Low Earth Orbit",
-    "orbit_abbrev": "LEO"
-   },
-   "pad": {
-    "name": "Space Launch Complex 41",
-    "location": "Cape Canaveral SFS, FL, USA",
-    "country": "United States of America"
-   },
-   "webcast_live": false,
-   "webcasts": [
-    {
-     "url": "https://www.youtube.com/watch?v=qM5A1ZO9oh8",
-     "title": "Rocket Launch: Vulcan Leo 1",
-     "publisher": "United Launch Alliance",
-     "type": "Official Webcast",
-     "live": false
-    }
-   ],
-   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193955.jpeg",
-   "image_credit": "United Launch Alliance"
-  },
   {
    "id": "0f867f0c-5422-4d44-93b8-d7faaae7019b",
    "slug": "starship-starlink-group-31-2-starship-flight-15",
@@ -157,6 +114,56 @@
    ],
    "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193613.jpeg",
    "image_credit": null
+  },
+  {
+   "id": "ef9850ad-1096-425b-9d27-f7bbd186e61a",
+   "slug": "vulcan-vc6l-amazon-leo-lv-01",
+   "name": "Vulcan VC6L | Amazon Leo (LV-01)",
+   "net": "2026-11-14T17:32:30Z",
+   "net_precision": "SEC",
+   "window_start": "2026-11-14T17:32:00Z",
+   "window_end": "2026-11-14T18:01:00Z",
+   "status": {
+    "id": 1,
+    "name": "Go for Launch",
+    "abbrev": "Go"
+   },
+   "provider": {
+    "name": "United Launch Alliance",
+    "abbrev": "ULA"
+   },
+   "rocket": "Vulcan VC6L",
+   "mission": {
+    "name": "Amazon Leo (LV-01)",
+    "type": "Communications",
+    "description": "Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon. This constellation is planned to be composed of 3,276 satellites. The satellites are projected to be placed in 98 orbital planes in three orbital layers, one at 590 km, 610 km and 630 km altitude.\r\n\r\n45 satellites will be carried on each Vulcan launch.",
+    "orbit": "Low Earth Orbit",
+    "orbit_abbrev": "LEO"
+   },
+   "pad": {
+    "name": "Space Launch Complex 41",
+    "location": "Cape Canaveral SFS, FL, USA",
+    "country": "United States of America"
+   },
+   "webcast_live": false,
+   "webcasts": [
+    {
+     "url": "https://www.youtube.com/watch?v=qcA9uMBhTmo",
+     "title": "Watch live: ULA Vulcan rocket launches from Cape Canaveral with 40 satellites for Amazon Leo",
+     "publisher": "Spaceflight Now",
+     "type": "Unofficial Webcast",
+     "live": false
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=qM5A1ZO9oh8",
+     "title": "Rocket Launch: Vulcan Leo 1",
+     "publisher": "United Launch Alliance",
+     "type": "Official Webcast",
+     "live": false
+    }
+   ],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193955.jpeg",
+   "image_credit": "United Launch Alliance"
   },
   {
    "id": "76617033-4dc0-4448-b50c-e5b0d5a18539",
