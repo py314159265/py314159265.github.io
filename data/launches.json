@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T14:58:27Z",
+ "updated": "2026-11-13T17:02:25Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
   {
@@ -41,8 +41,8 @@
    "id": "bff2fc91-eddd-4dfc-af26-ac0674cfab4d",
    "slug": "soyuz-21bfregat-m-mka-kinosputnik-koen-and-others",
    "name": "Soyuz 2.1b/Fregat-M | MKA Kinosputnik, KOEN and others",
-   "net": "2026-11-14T00:50:00Z",
-   "net_precision": "HR",
+   "net": "2026-11-14T01:16:00Z",
+   "net_precision": "MIN",
    "window_start": "2026-11-14T00:50:00Z",
    "window_end": "2026-11-14T01:50:00Z",
    "status": {
