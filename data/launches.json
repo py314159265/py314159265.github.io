@@ -1,19 +1,19 @@
 {
- "updated": "2026-11-13T20:59:28Z",
+ "updated": "2026-11-13T22:52:54Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
   {
    "id": "0f867f0c-5422-4d44-93b8-d7faaae7019b",
    "slug": "starship-starlink-group-31-2-starship-flight-15",
    "name": "Starship | Starlink Group 31-2 (Starship Flight 15)",
-   "net": "2026-11-13T22:45:00Z",
-   "net_precision": "MIN",
+   "net": "2026-11-13T22:47:36Z",
+   "net_precision": "SEC",
    "window_start": "2026-11-13T22:45:00Z",
    "window_end": "2026-11-14T00:00:00Z",
    "status": {
-    "id": 1,
-    "name": "Go for Launch",
-    "abbrev": "Go"
+    "id": 6,
+    "name": "Launch in Flight",
+    "abbrev": "In Flight"
    },
    "provider": {
     "name": "SpaceX",
@@ -32,8 +32,30 @@
     "location": "SpaceX Starbase, TX, USA",
     "country": "United States of America"
    },
-   "webcast_live": false,
-   "webcasts": [],
+   "webcast_live": true,
+   "webcasts": [
+    {
+     "url": "https://www.youtube.com/watch?v=QJFdKoKNn2M",
+     "title": "[4K] Watch Starship's First DOUBLE CATCH!!!",
+     "publisher": "Everyday Astronaut",
+     "type": "Unofficial Webcast",
+     "live": true
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=9XM0lpVlvo0",
+     "title": "SPACEX LAUNCHES STARSHIP FLIGHT 15 - Launch & Booster Catch",
+     "publisher": "NASASpaceflight",
+     "type": "Unofficial Webcast",
+     "live": true
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=QlR1agMLyMk",
+     "title": "Watch Live: SpaceX Starship launches on 15th flight with double catch planned",
+     "publisher": "Spaceflight Now",
+     "type": "Unofficial Webcast",
+     "live": true
+    }
+   ],
    "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/starship_on_the_image_thumbnail_20260724044615.jpeg",
    "image_credit": "SpaceX"
   },
