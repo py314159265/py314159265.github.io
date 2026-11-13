@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T11:09:38Z",
+ "updated": "2026-11-13T13:19:34Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
   {
@@ -536,10 +536,10 @@
    "id": "d74afbc7-0de5-491c-be05-4e9c31f736ac",
    "slug": "falcon-9-block-5-cygnus-crs-2-ng-25",
    "name": "Falcon 9 Block 5 | Cygnus CRS-2 NG-25",
-   "net": "2026-11-29T15:49:00Z",
+   "net": "2026-11-29T15:47:00Z",
    "net_precision": "MIN",
-   "window_start": "2026-11-29T15:49:00Z",
-   "window_end": "2026-11-29T15:49:00Z",
+   "window_start": "2026-11-29T15:47:00Z",
+   "window_end": "2026-11-29T15:47:00Z",
    "status": {
     "id": 1,
     "name": "Go for Launch",
