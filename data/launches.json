@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T02:58:40Z",
+ "updated": "2026-11-14T07:12:27Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
   {
@@ -36,49 +36,6 @@
    "webcasts": [],
    "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193901.jpeg",
    "image_credit": "Roscosmos"
-  },
-  {
-   "id": "db3500ac-965b-4ad8-b417-cb8d8d005586",
-   "slug": "electron-the-mountain-god-rises-iqps-launch-10",
-   "name": "Electron | The Mountain God Rises (iQPS Launch 10)",
-   "net": "2026-11-14T05:30:00Z",
-   "net_precision": "MIN",
-   "window_start": "2026-11-14T05:30:00Z",
-   "window_end": "2026-11-14T05:30:00Z",
-   "status": {
-    "id": 1,
-    "name": "Go for Launch",
-    "abbrev": "Go"
-   },
-   "provider": {
-    "name": "Rocket Lab",
-    "abbrev": "RL"
-   },
-   "rocket": "Electron",
-   "mission": {
-    "name": "The Mountain God Rises (iQPS Launch 10)",
-    "type": "Earth Science",
-    "description": "Synthetic aperture radar Earth observation satellite for Japanese Earth imaging company iQPS.",
-    "orbit": "Low Earth Orbit",
-    "orbit_abbrev": "LEO"
-   },
-   "pad": {
-    "name": "Rocket Lab Launch Complex 1A",
-    "location": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
-    "country": "New Zealand"
-   },
-   "webcast_live": false,
-   "webcasts": [
-    {
-     "url": "https://www.youtube.com/watch?v=kyR8kZ2XlhQ",
-     "title": "Rocket Lab | LAUNCH 100 - The Mountain God Rises",
-     "publisher": "Rocket Lab",
-     "type": "Official Webcast",
-     "live": false
-    }
-   ],
-   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193613.jpeg",
-   "image_credit": null
   },
   {
    "id": "ef9850ad-1096-425b-9d27-f7bbd186e61a",
@@ -538,6 +495,41 @@
    "webcasts": [],
    "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193628.jpeg",
    "image_credit": "SpaceX"
+  },
+  {
+   "id": "2093e4fc-ac8c-4296-a1b5-deececee6a72",
+   "slug": "electron-strix-launch-14",
+   "name": "Electron | StriX Launch 14",
+   "net": "2026-11-30T00:00:00Z",
+   "net_precision": "M",
+   "window_start": "2026-11-30T00:00:00Z",
+   "window_end": "2026-11-30T00:00:00Z",
+   "status": {
+    "id": 2,
+    "name": "To Be Determined",
+    "abbrev": "TBD"
+   },
+   "provider": {
+    "name": "Rocket Lab",
+    "abbrev": "RL"
+   },
+   "rocket": "Electron",
+   "mission": {
+    "name": "StriX Launch 14",
+    "type": "Earth Science",
+    "description": "Synthetic aperture radar satellite for Japanese Earth imaging company Synspective.",
+    "orbit": "Sun-Synchronous Orbit",
+    "orbit_abbrev": "SSO"
+   },
+   "pad": {
+    "name": "Unknown Pad",
+    "location": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
+    "country": "New Zealand"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193613.jpeg",
+   "image_credit": null
   },
   {
    "id": "56ca6058-7ccc-4ec0-b1b0-fb49f3bfee49",
