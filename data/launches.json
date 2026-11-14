@@ -1,15 +1,15 @@
 {
- "updated": "2026-11-14T13:00:47Z",
+ "updated": "2026-11-14T14:51:25Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
   {
    "id": "ef9850ad-1096-425b-9d27-f7bbd186e61a",
    "slug": "vulcan-vc6l-amazon-leo-lv-01",
    "name": "Vulcan VC6L | Amazon Leo (LV-01)",
-   "net": "2026-11-14T17:32:30Z",
+   "net": "2026-11-15T17:11:30Z",
    "net_precision": "SEC",
-   "window_start": "2026-11-14T17:32:00Z",
-   "window_end": "2026-11-14T18:01:00Z",
+   "window_start": "2026-11-15T17:11:30Z",
+   "window_end": "2026-11-15T17:31:00Z",
    "status": {
     "id": 1,
     "name": "Go for Launch",
