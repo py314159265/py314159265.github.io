@@ -1,64 +1,7 @@
 {
- "updated": "2026-11-13T22:52:54Z",
+ "updated": "2026-11-14T01:12:19Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
-  {
-   "id": "0f867f0c-5422-4d44-93b8-d7faaae7019b",
-   "slug": "starship-starlink-group-31-2-starship-flight-15",
-   "name": "Starship | Starlink Group 31-2 (Starship Flight 15)",
-   "net": "2026-11-13T22:47:36Z",
-   "net_precision": "SEC",
-   "window_start": "2026-11-13T22:45:00Z",
-   "window_end": "2026-11-14T00:00:00Z",
-   "status": {
-    "id": 6,
-    "name": "Launch in Flight",
-    "abbrev": "In Flight"
-   },
-   "provider": {
-    "name": "SpaceX",
-    "abbrev": "SpX"
-   },
-   "rocket": "Starship V3",
-   "mission": {
-    "name": "Starlink Group 31-2 (Starship Flight 15)",
-    "type": "Communications",
-    "description": "15th test flight of the two-stage Starship launch vehicle and 4th flight of Starship V3. Second Starship flight to deploy satellites (a group of Starlink satellites known as Starlink Group 31-2) into stable Low Earth Orbit and first ever to attempt returning the Starship 2nd stage back to the launch site.\r\n\r\nThe ship is expected to fly at an altitude approximately 275 km above Earth and complete approximately 14 orbits around the planet for more than 22 hours, with the ship expected to attempt returning back to Starbase, Texas on its launch pad by pad arms catching.\r\n\r\nThe booster’s primary test objective on Flight 15 will be executing a successful launch, ascent, stage separation, boostback burn, and landing by pad arms catching. This will also be the 1st Starship V3 booster to attempt returning to its launch site.\r\n\r\nStarship will deliver 26 Starlink V3 satellites to orbit for the second time, which aim to greatly expand the network's capacity and user speeds. Each Starlink V3 satellite will add 1 Tbps of capacity to the constellation. 3 of the satellites have been modified with a suite of cameras to scan Starship’s heatshield and transmit imagery down to operators.",
-    "orbit": "Low Earth Orbit",
-    "orbit_abbrev": "LEO"
-   },
-   "pad": {
-    "name": "Orbital Launch Pad 2",
-    "location": "SpaceX Starbase, TX, USA",
-    "country": "United States of America"
-   },
-   "webcast_live": true,
-   "webcasts": [
-    {
-     "url": "https://www.youtube.com/watch?v=QJFdKoKNn2M",
-     "title": "[4K] Watch Starship's First DOUBLE CATCH!!!",
-     "publisher": "Everyday Astronaut",
-     "type": "Unofficial Webcast",
-     "live": true
-    },
-    {
-     "url": "https://www.youtube.com/watch?v=9XM0lpVlvo0",
-     "title": "SPACEX LAUNCHES STARSHIP FLIGHT 15 - Launch & Booster Catch",
-     "publisher": "NASASpaceflight",
-     "type": "Unofficial Webcast",
-     "live": true
-    },
-    {
-     "url": "https://www.youtube.com/watch?v=QlR1agMLyMk",
-     "title": "Watch Live: SpaceX Starship launches on 15th flight with double catch planned",
-     "publisher": "Spaceflight Now",
-     "type": "Unofficial Webcast",
-     "live": true
-    }
-   ],
-   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/starship_on_the_image_thumbnail_20260724044615.jpeg",
-   "image_credit": "SpaceX"
-  },
   {
    "id": "bff2fc91-eddd-4dfc-af26-ac0674cfab4d",
    "slug": "soyuz-21bfregat-m-mka-kinosputnik-koen-and-others",
@@ -1135,6 +1078,41 @@
    "webcasts": [],
    "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193613.jpeg",
    "image_credit": null
+  },
+  {
+   "id": "11b218b1-5e40-4b9d-854e-50320299239d",
+   "slug": "falcon-9-block-5-bluebird-14-16-block-2-9-11",
+   "name": "Falcon 9 Block 5 | BlueBird 14-16 (Block 2 #9-11)",
+   "net": "2026-12-31T00:00:00Z",
+   "net_precision": "Q4",
+   "window_start": "2026-12-31T00:00:00Z",
+   "window_end": "2026-12-31T00:00:00Z",
+   "status": {
+    "id": 2,
+    "name": "To Be Determined",
+    "abbrev": "TBD"
+   },
+   "provider": {
+    "name": "SpaceX",
+    "abbrev": "SpX"
+   },
+   "rocket": "Falcon 9 Block 5",
+   "mission": {
+    "name": "BlueBird 14-16 (Block 2 #9-11)",
+    "type": "Communications",
+    "description": "AST SpaceMobile’s Block 2 BlueBird satellites are designed to deliver up to 10 times the bandwidth capacity of the BlueBird Block 1 satellites, required to achieve 24/7 continuous cellular broadband service coverage in the United States, with beams designed to support a capacity of up to 40 MHz, enabling peak data transmission speeds up to 120 Mbps, supporting voice, full data and video applications. The Block 2 BlueBirds, featuring as large as 2400 square foot communications arrays, will be the largest satellites ever commercially deployed in Low Earth orbit once launched.\r\n\r\nThis launch will feature 3 satellites.",
+    "orbit": "Low Earth Orbit",
+    "orbit_abbrev": "LEO"
+   },
+   "pad": {
+    "name": "Space Launch Complex 40",
+    "location": "Cape Canaveral SFS, FL, USA",
+    "country": "United States of America"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/f9_on_slc-40_2_image_thumbnail_20240919072420.jpeg",
+   "image_credit": "SpaceX"
   }
  ]
 }
