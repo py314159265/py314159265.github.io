@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T01:12:19Z",
+ "updated": "2026-11-14T02:58:40Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
   {
@@ -11,9 +11,9 @@
    "window_start": "2026-11-14T00:50:00Z",
    "window_end": "2026-11-14T01:50:00Z",
    "status": {
-    "id": 1,
-    "name": "Go for Launch",
-    "abbrev": "Go"
+    "id": 6,
+    "name": "Launch in Flight",
+    "abbrev": "In Flight"
    },
    "provider": {
     "name": "Russian Federal Space Agency (ROSCOSMOS)",
