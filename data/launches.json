@@ -1,42 +1,7 @@
 {
- "updated": "2026-11-14T08:58:29Z",
+ "updated": "2026-11-14T10:52:06Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
-  {
-   "id": "bff2fc91-eddd-4dfc-af26-ac0674cfab4d",
-   "slug": "soyuz-21bfregat-m-mka-kinosputnik-koen-and-others",
-   "name": "Soyuz 2.1b/Fregat-M | MKA Kinosputnik, KOEN and others",
-   "net": "2026-11-14T01:16:00Z",
-   "net_precision": "MIN",
-   "window_start": "2026-11-14T00:50:00Z",
-   "window_end": "2026-11-14T01:50:00Z",
-   "status": {
-    "id": 6,
-    "name": "Launch in Flight",
-    "abbrev": "In Flight"
-   },
-   "provider": {
-    "name": "Russian Federal Space Agency (ROSCOSMOS)",
-    "abbrev": "RFSA"
-   },
-   "rocket": "Soyuz 2.1b Fregat-M",
-   "mission": {
-    "name": "MKA Kinosputnik, KOEN and others",
-    "type": "Technology",
-    "description": "Share-ride of multiple satellites, including dual-use optical Earth observation satellites and drone-guiding satellites:\r\n\r\n* MKA Kinosputnik\r\n* KOEN, KA MT-LAB\r\n* NPO Kaisant 6U cubesat with a Germes modem\r\n* NPO Kaisant 16U cubesat with Gonets modems",
-    "orbit": "Sun-Synchronous Orbit",
-    "orbit_abbrev": "SSO"
-   },
-   "pad": {
-    "name": "Cosmodrome Site 1S",
-    "location": "Vostochny Cosmodrome, Siberia, Russian Federation",
-    "country": "Russia"
-   },
-   "webcast_live": false,
-   "webcasts": [],
-   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193901.jpeg",
-   "image_credit": "Roscosmos"
-  },
   {
    "id": "ef9850ad-1096-425b-9d27-f7bbd186e61a",
    "slug": "vulcan-vc6l-amazon-leo-lv-01",
@@ -84,7 +49,7 @@
      "live": false
     }
    ],
-   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193955.jpeg",
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/vulcan_vc6l_on__image_thumbnail_20261114102519.jpeg",
    "image_credit": "United Launch Alliance"
   },
   {
@@ -1104,6 +1069,41 @@
    "webcast_live": false,
    "webcasts": [],
    "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/f9_on_slc-40_2_image_thumbnail_20240919072420.jpeg",
+   "image_credit": "SpaceX"
+  },
+  {
+   "id": "2d0472b9-463d-49c8-afb1-7925e49a3368",
+   "slug": "falcon-9-block-5-sda-tranche-1-tracking-layer-a",
+   "name": "Falcon 9 Block 5 | SDA Tranche 1 Tracking Layer A",
+   "net": "2026-12-31T00:00:00Z",
+   "net_precision": "Q4",
+   "window_start": "2026-12-31T00:00:00Z",
+   "window_end": "2026-12-31T00:00:00Z",
+   "status": {
+    "id": 2,
+    "name": "To Be Determined",
+    "abbrev": "TBD"
+   },
+   "provider": {
+    "name": "SpaceX",
+    "abbrev": "SpX"
+   },
+   "rocket": "Falcon 9 Block 5",
+   "mission": {
+    "name": "SDA Tranche 1 Tracking Layer A",
+    "type": "Government/Top Secret",
+    "description": "Tranche 1 Tracking Layer A is one of five missions by the United States Space Force Space Development Agency (SDA) for the Proliferated Warfighter Space Architecture (PWSA) Tranche 1 Tracking Layer constellation, which will provide global indications, warning, tracking, and targeting of advanced missile threats, including hypersonic missile systems.",
+    "orbit": "Polar Orbit",
+    "orbit_abbrev": "PO"
+   },
+   "pad": {
+    "name": "Space Launch Complex 4E",
+    "location": "Vandenberg SFB, CA, USA",
+    "country": "United States of America"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193628.jpeg",
    "image_credit": "SpaceX"
   }
  ]
