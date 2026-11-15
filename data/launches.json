@@ -1,12 +1,12 @@
 {
- "updated": "2026-11-15T14:52:33Z",
+ "updated": "2026-11-15T16:51:12Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
   {
    "id": "ef9850ad-1096-425b-9d27-f7bbd186e61a",
    "slug": "vulcan-vc6l-amazon-leo-lv-01",
    "name": "Vulcan VC6L | Amazon Leo (LV-01)",
-   "net": "2026-11-15T17:11:30Z",
+   "net": "2026-11-15T17:11:40Z",
    "net_precision": "SEC",
    "window_start": "2026-11-15T17:11:30Z",
    "window_end": "2026-11-15T17:31:00Z",
@@ -32,21 +32,21 @@
     "location": "Cape Canaveral SFS, FL, USA",
     "country": "United States of America"
    },
-   "webcast_live": false,
+   "webcast_live": true,
    "webcasts": [
     {
      "url": "https://www.youtube.com/watch?v=qcA9uMBhTmo",
      "title": "Watch live: ULA Vulcan rocket launches from Cape Canaveral with 40 satellites for Amazon Leo",
      "publisher": "Spaceflight Now",
      "type": "Unofficial Webcast",
-     "live": false
+     "live": true
     },
     {
      "url": "https://www.youtube.com/watch?v=qM5A1ZO9oh8",
      "title": "Rocket Launch: Vulcan Leo 1",
      "publisher": "United Launch Alliance",
      "type": "Official Webcast",
-     "live": false
+     "live": true
     }
    ],
    "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/vulcan_vc6l_on__image_thumbnail_20261114102519.jpeg",
