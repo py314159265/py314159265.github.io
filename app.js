@@ -980,7 +980,9 @@
     const dockTop = dock.getBoundingClientRect().top;
     const headBottom = head.getBoundingClientRect().bottom;
     const gap = dockTop - Math.max(headBottom, 0);
-    const top = gap > 280 && headBottom > 8 && headBottom < dockTop ? headBottom + 8 : 8;
+    /* Use the band under the title when it is tall enough for the card; otherwise
+       cover the header so the card still fits above the axis. */
+    const top = gap > 640 && headBottom > 8 && headBottom < dockTop ? headBottom + 8 : 8;
     const limit = Math.min(Math.max(dockTop, top + 160), window.innerHeight);
     const bottom = Math.max(8, window.innerHeight - limit + 16);
     overlay.style.top = `${top}px`;
