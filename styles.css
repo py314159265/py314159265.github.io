@@ -142,13 +142,18 @@ h1 {
 }
 
 .tz-note {
-  display: inline-block;
-  margin: 1.5rem 0 0;
-  padding: 0.35rem 0.9rem;
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  margin: 0.7rem auto 0;
+  padding: 0.12rem 0.55rem;
   border: 1px solid var(--line);
   border-radius: 999px;
   color: var(--paper-dim);
-  font-size: 0.85rem;
+  font-size: clamp(0.58rem, 2.45vw, 0.78rem);
+  line-height: 1.25;
+  letter-spacing: 0;
+  white-space: nowrap;
 }
 
 /* ---------- Page column ---------- */
@@ -770,7 +775,11 @@ main {
   .event { scroll-snap-align: start; }
   .masthead { padding: 1.6rem 1rem 0.75rem; }
   h1 { letter-spacing: 0.1em; padding-left: 0.1em; }
-  .tz-note { margin-top: 1rem; }
+  .tz-note {
+    margin-top: 0.55rem;
+    padding: 0.08rem 0.4rem;
+    font-size: clamp(0.56rem, 2.35vw, 0.7rem);
+  }
   .schedule { min-height: 0; }
   .hint { font-size: 0.86rem; }
   .mission-card { grid-template-columns: 1fr; }
