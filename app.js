@@ -1196,8 +1196,8 @@
 
   async function init() {
     $("#tz-note").textContent = timeZone
-      ? `All times are shown in your local timezone (${timeZone}).`
-      : "All times are shown in your local timezone.";
+      ? `Times in your local timezone (${timeZone})`
+      : "Times in your local timezone";
 
     const bundled = await loadBundled();
     const cached = readStore(CACHE_KEY);

@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip" href="#log">Skip to launch list</a>
+  <a class="skip" href="#schedule">Skip to launch schedule</a>
 
   <header class="masthead">
     <svg class="sigil" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
@@ -43,25 +43,34 @@
     <p class="kicker">An orbital launch log</p>
     <h1>Come on meow meow~, let's go l(a)unch!</h1>
     <p class="lede">The next leg of the journey from the ground to orbit. In pink.</p>
-    <p class="tz-note" id="tz-note">All times are shown in your local timezone.</p>
+    <p class="tz-note" id="tz-note">Times in your local timezone</p>
   </header>
 
   <main>
-    <section class="featured" id="featured" aria-labelledby="featured-heading">
-      <h2 id="featured-heading" class="section-title">Next launch</h2>
-      <div class="featured-body" id="featured-body">
-        <p class="placeholder">Loading launch data…</p>
-      </div>
-    </section>
-
-    <section class="log" id="log" aria-labelledby="log-heading" tabindex="-1">
-      <div class="log-head">
-        <h2 id="log-heading" class="section-title">Later launches</h2>
+    <section class="schedule" id="schedule" aria-labelledby="schedule-heading" tabindex="-1">
+      <div class="schedule-lead">
+        <h2 id="schedule-heading" class="section-title">Launch schedule</h2>
+        <p class="hint">Nearest on the left, further out on the right. Hover or tap a rocket to see the mission details; the axis stays in place so you can move to another event. Press Escape, tap outside, or use Close to dismiss.</p>
         <p class="log-meta" id="log-meta" aria-live="polite"></p>
       </div>
-      <ol class="entries" id="entries"></ol>
+
+      <div class="timeline-dock" id="timeline-dock">
+        <p class="axis-caption"><span>Nearest</span><span>Further out</span></p>
+        <p class="visually-hidden" id="timeline-help">Launches run from soonest to latest. Use Left and Right arrow keys to move between rockets. Focusing a rocket, or pressing Enter, opens its mission details. Escape closes them.</p>
+        <div class="timeline" id="timeline">
+          <div class="timeline-track" id="timeline-track" role="list" aria-describedby="timeline-help" aria-label="Upcoming launches, nearest first">
+            <p class="placeholder">Loading launch data…</p>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
+
+  <div class="overlay" id="overlay" hidden>
+    <div class="overlay-backdrop" data-close="true" aria-hidden="true"></div>
+    <div class="overlay-panel" id="overlay-panel" role="region" aria-label="Mission details"></div>
+  </div>
+  <p class="visually-hidden" id="overlay-live" aria-live="polite"></p>
 
   <footer class="colophon">
     <p>
@@ -71,25 +80,6 @@
     <p>Mission descriptions are left in the source wording. Launch times often change; treat the official announcement from the launch provider as authoritative.</p>
     <p class="small"><a href="https://seagle.xyz">seagle.xyz</a></p>
   </footer>
-
-  <template id="tpl-entry">
-    <li class="entry">
-      <div class="entry-date">
-        <span class="entry-day"></span>
-        <span class="entry-month"></span>
-      </div>
-      <article class="entry-main">
-        <p class="entry-status"><span class="badge"></span><span class="entry-when"></span></p>
-        <h3 class="entry-name"></h3>
-        <dl class="facts"></dl>
-        <details class="entry-desc" hidden>
-          <summary>Mission description</summary>
-          <p lang="en"></p>
-        </details>
-        <p class="entry-links"></p>
-      </article>
-    </li>
-  </template>
 
   <script src="app.js" defer></script>
 </body>
