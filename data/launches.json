@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T13:26:24Z",
+ "updated": "2026-11-18T15:06:56Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
   {
@@ -229,6 +229,20 @@
      "url": "https://www.youtube.com/watch?v=F4xjWb4OEs4",
      "title": "Lancement Ariane 6 pour la constellation Amazon LEO (VA271)",
      "publisher": "CNES",
+     "type": "Official Webcast",
+     "live": false
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=w9Wokj3rBH4",
+     "title": "Vol VA271 | Amazon Leo LE-04 | Ariane 6 | Arianespace",
+     "publisher": "Arianespace",
+     "type": "Official Webcast",
+     "live": false
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=k2adMyxSoJE",
+     "title": "Flight VA271 | Amazon Leo LE-04 | Ariane 6 | Arianespace",
+     "publisher": "Arianespace",
      "type": "Official Webcast",
      "live": false
     }
