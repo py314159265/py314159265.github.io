@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T11:09:48Z",
+ "updated": "2026-11-19T13:28:17Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
   {
@@ -486,7 +486,15 @@
     "country": "United States of America"
    },
    "webcast_live": false,
-   "webcasts": [],
+   "webcasts": [
+    {
+     "url": "https://plus.nasa.gov/scheduled-video/nasas-northrop-grumman-commercial-resupply-services-25-launch/",
+     "title": "NASA’s Northrop Grumman Commercial Resupply Services 25 Launch",
+     "publisher": "NASA",
+     "type": "Official Webcast",
+     "live": false
+    }
+   ],
    "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193628.jpeg",
    "image_credit": "SpaceX"
   },
@@ -789,10 +797,10 @@
    "id": "22e117bf-041c-49d5-9d09-7b180036e143",
    "slug": "ariane-62-metop-sg-b1",
    "name": "Ariane 62 | Metop-SG B1",
-   "net": "2026-12-31T00:00:00Z",
-   "net_precision": "M",
-   "window_start": "2026-12-31T00:00:00Z",
-   "window_end": "2026-12-31T00:00:00Z",
+   "net": "2026-12-17T00:00:00Z",
+   "net_precision": "DAY",
+   "window_start": "2026-12-17T00:00:00Z",
+   "window_end": "2026-12-17T00:00:00Z",
    "status": {
     "id": 2,
     "name": "To Be Determined",
