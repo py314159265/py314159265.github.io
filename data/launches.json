@@ -1,50 +1,7 @@
 {
- "updated": "2026-11-20T15:05:35Z",
+ "updated": "2026-11-20T17:08:05Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
-  {
-   "id": "a2975167-7c6f-4403-99e1-b40df17c8140",
-   "slug": "long-march-8a-satnet-leo-group-tbd",
-   "name": "Long March 8A | SatNet LEO Group TBD?",
-   "net": "2026-11-20T11:59:00Z",
-   "net_precision": "HR",
-   "window_start": "2026-11-20T11:51:00Z",
-   "window_end": "2026-11-20T12:17:00Z",
-   "status": {
-    "id": 6,
-    "name": "Launch in Flight",
-    "abbrev": "In Flight"
-   },
-   "provider": {
-    "name": "China Aerospace Science and Technology Corporation",
-    "abbrev": "CASC"
-   },
-   "rocket": "Long March 8A",
-   "mission": {
-    "name": "SatNet LEO Group TBD?",
-    "type": "Communications",
-    "description": "A batch of 9 Low Earth Orbit communication satellites for the Chinese state owned SatNet constellation operated by the China Satellite Network Group.\r\n\r\nThe constellation will eventually consists of 13000 satellites.",
-    "orbit": "Low Earth Orbit",
-    "orbit_abbrev": "LEO"
-   },
-   "pad": {
-    "name": "Commercial LC-1",
-    "location": "Wenchang Space Launch Site, People's Republic of China",
-    "country": "China"
-   },
-   "webcast_live": false,
-   "webcasts": [
-    {
-     "url": "https://www.youtube.com/watch?v=dUxmQvNnQEI",
-     "title": "Live: Long March 8A Launches SatNet LEO Group 30 (No Commentary)",
-     "publisher": "International Rocket Launches",
-     "type": "Unofficial Webcast",
-     "live": false
-    }
-   ],
-   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/cz-8a_launch_2_image_thumbnail_20251206093108.jpeg",
-   "image_credit": "CASC"
-  },
   {
    "id": "76617033-4dc0-4448-b50c-e5b0d5a18539",
    "slug": "falcon-9-block-5-ussf-317",
@@ -141,10 +98,10 @@
    "id": "951a341f-236b-42fe-a667-4ab2fcf36eac",
    "slug": "falcon-9-block-5-nrol-136",
    "name": "Falcon 9 Block 5 | NROL-136",
-   "net": "2026-11-21T12:30:00Z",
+   "net": "2026-11-22T12:16:00Z",
    "net_precision": "MIN",
-   "window_start": "2026-11-21T12:30:00Z",
-   "window_end": "2026-11-21T13:00:00Z",
+   "window_start": "2026-11-22T12:16:00Z",
+   "window_end": "2026-11-22T12:46:00Z",
    "status": {
     "id": 1,
     "name": "Go for Launch",
@@ -174,6 +131,13 @@
      "title": "NROL-136 Mission",
      "publisher": "X",
      "type": "Official Webcast",
+     "live": false
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=CjN4lPx7mD8",
+     "title": "SpaceX - Falcon 9 - NROL-136 - SLC-4E - Vandenberg Space Force Base, CA - Space Affairs Live",
+     "publisher": "SPACE AFFAIRS",
+     "type": "Unofficial Re-stream",
      "live": false
     }
    ],
@@ -1149,6 +1113,41 @@
    "webcast_live": false,
    "webcasts": [],
    "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/f9_on_slc-40_2_image_thumbnail_20240919072420.jpeg",
+   "image_credit": "SpaceX"
+  },
+  {
+   "id": "2d0472b9-463d-49c8-afb1-7925e49a3368",
+   "slug": "falcon-9-block-5-sda-tranche-1-tracking-layer-a",
+   "name": "Falcon 9 Block 5 | SDA Tranche 1 Tracking Layer A",
+   "net": "2026-12-31T00:00:00Z",
+   "net_precision": "Q4",
+   "window_start": "2026-12-31T00:00:00Z",
+   "window_end": "2026-12-31T00:00:00Z",
+   "status": {
+    "id": 2,
+    "name": "To Be Determined",
+    "abbrev": "TBD"
+   },
+   "provider": {
+    "name": "SpaceX",
+    "abbrev": "SpX"
+   },
+   "rocket": "Falcon 9 Block 5",
+   "mission": {
+    "name": "SDA Tranche 1 Tracking Layer A",
+    "type": "Government/Top Secret",
+    "description": "Tranche 1 Tracking Layer A is one of five missions by the United States Space Force Space Development Agency (SDA) for the Proliferated Warfighter Space Architecture (PWSA) Tranche 1 Tracking Layer constellation, which will provide global indications, warning, tracking, and targeting of advanced missile threats, including hypersonic missile systems.",
+    "orbit": "Polar Orbit",
+    "orbit_abbrev": "PO"
+   },
+   "pad": {
+    "name": "Space Launch Complex 4E",
+    "location": "Vandenberg SFB, CA, USA",
+    "country": "United States of America"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193628.jpeg",
    "image_credit": "SpaceX"
   }
  ]
