@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T07:28:48Z",
+ "updated": "2026-11-20T09:13:58Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
   {
@@ -311,14 +311,14 @@
    "id": "c9605b67-8a53-4239-a8ae-577fe3b79799",
    "slug": "long-march-2fg-shenzhou-24",
    "name": "Long March 2F/G | Shenzhou 24",
-   "net": "2026-11-25T00:00:00Z",
-   "net_precision": "DAY",
-   "window_start": "2026-11-25T00:00:00Z",
-   "window_end": "2026-11-25T00:00:00Z",
+   "net": "2026-11-25T00:18:00Z",
+   "net_precision": "MIN",
+   "window_start": "2026-11-25T00:08:00Z",
+   "window_end": "2026-11-25T00:48:00Z",
    "status": {
-    "id": 2,
-    "name": "To Be Determined",
-    "abbrev": "TBD"
+    "id": 1,
+    "name": "Go for Launch",
+    "abbrev": "Go"
    },
    "provider": {
     "name": "China Aerospace Science and Technology Corporation",
@@ -341,6 +341,41 @@
    "webcasts": [],
    "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/shenzhou_22_lau_image_thumbnail_20251129175823.jpeg",
    "image_credit": "Xinhua"
+  },
+  {
+   "id": "b00f0e9a-48d6-4f26-9cb5-7d19169ff7c4",
+   "slug": "long-march-2d-unknown-payload",
+   "name": "Long March 2D | Unknown Payload",
+   "net": "2026-11-26T09:35:00Z",
+   "net_precision": "HR",
+   "window_start": "2026-11-26T09:30:00Z",
+   "window_end": "2026-11-26T09:52:00Z",
+   "status": {
+    "id": 1,
+    "name": "Go for Launch",
+    "abbrev": "Go"
+   },
+   "provider": {
+    "name": "China Aerospace Science and Technology Corporation",
+    "abbrev": "CASC"
+   },
+   "rocket": "Long March 2D",
+   "mission": {
+    "name": "Unknown Payload",
+    "type": "Unknown",
+    "description": "Details TBD.",
+    "orbit": "Unknown",
+    "orbit_abbrev": "N/A"
+   },
+   "pad": {
+    "name": "Launch Complex 3 (LC-3/LA-1)",
+    "location": "Xichang Satellite Launch Center, People's Republic of China",
+    "country": "China"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193719.jpeg",
+   "image_credit": null
   },
   {
    "id": "dff42a2e-f047-48d7-b260-3888d3a4fe33",
@@ -1106,41 +1141,6 @@
    "webcast_live": false,
    "webcasts": [],
    "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/f9_on_slc-40_2_image_thumbnail_20240919072420.jpeg",
-   "image_credit": "SpaceX"
-  },
-  {
-   "id": "2d0472b9-463d-49c8-afb1-7925e49a3368",
-   "slug": "falcon-9-block-5-sda-tranche-1-tracking-layer-a",
-   "name": "Falcon 9 Block 5 | SDA Tranche 1 Tracking Layer A",
-   "net": "2026-12-31T00:00:00Z",
-   "net_precision": "Q4",
-   "window_start": "2026-12-31T00:00:00Z",
-   "window_end": "2026-12-31T00:00:00Z",
-   "status": {
-    "id": 2,
-    "name": "To Be Determined",
-    "abbrev": "TBD"
-   },
-   "provider": {
-    "name": "SpaceX",
-    "abbrev": "SpX"
-   },
-   "rocket": "Falcon 9 Block 5",
-   "mission": {
-    "name": "SDA Tranche 1 Tracking Layer A",
-    "type": "Government/Top Secret",
-    "description": "Tranche 1 Tracking Layer A is one of five missions by the United States Space Force Space Development Agency (SDA) for the Proliferated Warfighter Space Architecture (PWSA) Tranche 1 Tracking Layer constellation, which will provide global indications, warning, tracking, and targeting of advanced missile threats, including hypersonic missile systems.",
-    "orbit": "Polar Orbit",
-    "orbit_abbrev": "PO"
-   },
-   "pad": {
-    "name": "Space Launch Complex 4E",
-    "location": "Vandenberg SFB, CA, USA",
-    "country": "United States of America"
-   },
-   "webcast_live": false,
-   "webcasts": [],
-   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193628.jpeg",
    "image_credit": "SpaceX"
   }
  ]
