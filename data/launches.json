@@ -1,15 +1,50 @@
 {
- "updated": "2026-11-20T02:56:33Z",
+ "updated": "2026-11-20T05:11:53Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
+  {
+   "id": "a2975167-7c6f-4403-99e1-b40df17c8140",
+   "slug": "long-march-8a-satnet-leo-group-tbd",
+   "name": "Long March 8A | SatNet LEO Group TBD?",
+   "net": "2026-11-20T11:59:00Z",
+   "net_precision": "HR",
+   "window_start": "2026-11-20T11:51:00Z",
+   "window_end": "2026-11-20T12:17:00Z",
+   "status": {
+    "id": 1,
+    "name": "Go for Launch",
+    "abbrev": "Go"
+   },
+   "provider": {
+    "name": "China Aerospace Science and Technology Corporation",
+    "abbrev": "CASC"
+   },
+   "rocket": "Long March 8A",
+   "mission": {
+    "name": "SatNet LEO Group TBD?",
+    "type": "Communications",
+    "description": "A batch of 9 Low Earth Orbit communication satellites for the Chinese state owned SatNet constellation operated by the China Satellite Network Group.\r\n\r\nThe constellation will eventually consists of 13000 satellites.",
+    "orbit": "Low Earth Orbit",
+    "orbit_abbrev": "LEO"
+   },
+   "pad": {
+    "name": "Commercial LC-1",
+    "location": "Wenchang Space Launch Site, People's Republic of China",
+    "country": "China"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/cz-8a_launch_2_image_thumbnail_20251206093108.jpeg",
+   "image_credit": "CASC"
+  },
   {
    "id": "76617033-4dc0-4448-b50c-e5b0d5a18539",
    "slug": "falcon-9-block-5-ussf-317",
    "name": "Falcon 9 Block 5 | USSF-317",
-   "net": "2026-11-20T06:43:59Z",
-   "net_precision": "SEC",
-   "window_start": "2026-11-20T02:46:00Z",
-   "window_end": "2026-11-20T06:46:00Z",
+   "net": "2026-11-21T02:32:00Z",
+   "net_precision": "MIN",
+   "window_start": "2026-11-21T02:32:00Z",
+   "window_end": "2026-11-21T06:32:00Z",
    "status": {
     "id": 1,
     "name": "Go for Launch",
@@ -58,41 +93,6 @@
    ],
    "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_liftof_image_thumbnail_20260816171423.jpeg",
    "image_credit": "SpaceX"
-  },
-  {
-   "id": "a2975167-7c6f-4403-99e1-b40df17c8140",
-   "slug": "long-march-8a-satnet-leo-group-tbd",
-   "name": "Long March 8A | SatNet LEO Group TBD?",
-   "net": "2026-11-20T11:59:00Z",
-   "net_precision": "HR",
-   "window_start": "2026-11-20T11:51:00Z",
-   "window_end": "2026-11-20T12:17:00Z",
-   "status": {
-    "id": 1,
-    "name": "Go for Launch",
-    "abbrev": "Go"
-   },
-   "provider": {
-    "name": "China Aerospace Science and Technology Corporation",
-    "abbrev": "CASC"
-   },
-   "rocket": "Long March 8A",
-   "mission": {
-    "name": "SatNet LEO Group TBD?",
-    "type": "Communications",
-    "description": "A batch of 9 Low Earth Orbit communication satellites for the Chinese state owned SatNet constellation operated by the China Satellite Network Group.\r\n\r\nThe constellation will eventually consists of 13000 satellites.",
-    "orbit": "Low Earth Orbit",
-    "orbit_abbrev": "LEO"
-   },
-   "pad": {
-    "name": "Commercial LC-1",
-    "location": "Wenchang Space Launch Site, People's Republic of China",
-    "country": "China"
-   },
-   "webcast_live": false,
-   "webcasts": [],
-   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/cz-8a_launch_2_image_thumbnail_20251206093108.jpeg",
-   "image_credit": "CASC"
   },
   {
    "id": "13270554-4bdb-42ae-916f-1bb54492204f",
