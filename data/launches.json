@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T11:12:22Z",
+ "updated": "2026-11-20T13:24:22Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
   {
@@ -11,9 +11,9 @@
    "window_start": "2026-11-20T11:51:00Z",
    "window_end": "2026-11-20T12:17:00Z",
    "status": {
-    "id": 1,
-    "name": "Go for Launch",
-    "abbrev": "Go"
+    "id": 6,
+    "name": "Launch in Flight",
+    "abbrev": "In Flight"
    },
    "provider": {
     "name": "China Aerospace Science and Technology Corporation",
@@ -33,7 +33,15 @@
     "country": "China"
    },
    "webcast_live": false,
-   "webcasts": [],
+   "webcasts": [
+    {
+     "url": "https://www.youtube.com/watch?v=dUxmQvNnQEI",
+     "title": "Live: Long March 8A Launches SatNet LEO Group 30 (No Commentary)",
+     "publisher": "International Rocket Launches",
+     "type": "Unofficial Webcast",
+     "live": false
+    }
+   ],
    "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/cz-8a_launch_2_image_thumbnail_20251206093108.jpeg",
    "image_credit": "CASC"
   },
