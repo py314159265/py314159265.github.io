@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T02:56:20Z",
+ "updated": "2026-11-21T05:04:06Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
   {
@@ -11,9 +11,9 @@
    "window_start": "2026-11-21T02:32:00Z",
    "window_end": "2026-11-21T06:32:00Z",
    "status": {
-    "id": 1,
-    "name": "Go for Launch",
-    "abbrev": "Go"
+    "id": 6,
+    "name": "Launch in Flight",
+    "abbrev": "In Flight"
    },
    "provider": {
     "name": "SpaceX",
@@ -49,9 +49,9 @@
      "live": false
     },
     {
-     "url": "https://www.youtube.com/watch?v=Zi7vbfr5FPI",
-     "title": "GO! - SpaceX - Falcon 9 - USSF-317 - SLC-4E - Vandenberg SFB, CA - Space Affairs Live",
-     "publisher": "SPACE AFFAIRS",
+     "url": "https://www.youtube.com/watch?v=NejEgXnJzBM",
+     "title": "SpaceX USSF-317",
+     "publisher": "The Space Devs",
      "type": "Unofficial Re-stream",
      "live": false
     }
