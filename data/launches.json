@@ -1,13 +1,13 @@
 {
- "updated": "2026-11-21T18:57:49Z",
+ "updated": "2026-11-21T20:52:13Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
   {
    "id": "951a341f-236b-42fe-a667-4ab2fcf36eac",
    "slug": "falcon-9-block-5-nrol-136",
    "name": "Falcon 9 Block 5 | NROL-136",
-   "net": "2026-11-22T12:16:00Z",
-   "net_precision": "MIN",
+   "net": "2026-11-22T12:23:56Z",
+   "net_precision": "SEC",
    "window_start": "2026-11-22T12:16:00Z",
    "window_end": "2026-11-22T12:46:00Z",
    "status": {
