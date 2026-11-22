@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T10:55:47Z",
+ "updated": "2026-11-22T13:05:19Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
   {
@@ -11,9 +11,9 @@
    "window_start": "2026-11-22T12:16:00Z",
    "window_end": "2026-11-22T12:46:00Z",
    "status": {
-    "id": 1,
-    "name": "Go for Launch",
-    "abbrev": "Go"
+    "id": 6,
+    "name": "Launch in Flight",
+    "abbrev": "In Flight"
    },
    "provider": {
     "name": "SpaceX",
@@ -49,9 +49,9 @@
      "live": false
     },
     {
-     "url": "https://www.youtube.com/watch?v=CjN4lPx7mD8",
-     "title": "SpaceX - Falcon 9 - NROL-136 - SLC-4E - Vandenberg Space Force Base, CA - Space Affairs Live",
-     "publisher": "SPACE AFFAIRS",
+     "url": "https://www.youtube.com/watch?v=NFIjyRFTPao",
+     "title": "SpaceX NROL-136",
+     "publisher": "The Space Devs",
      "type": "Unofficial Re-stream",
      "live": false
     }
@@ -263,41 +263,6 @@
    "webcasts": [],
    "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193719.jpeg",
    "image_credit": null
-  },
-  {
-   "id": "dff42a2e-f047-48d7-b260-3888d3a4fe33",
-   "slug": "spectrum-at-astra-and-others-spectrum-flight-3",
-   "name": "Spectrum | AT-Astra and Others (Spectrum Flight 3)",
-   "net": "2026-11-26T20:00:00Z",
-   "net_precision": "HR",
-   "window_start": "2026-11-26T20:00:00Z",
-   "window_end": "2026-11-26T21:30:00Z",
-   "status": {
-    "id": 8,
-    "name": "To Be Confirmed",
-    "abbrev": "TBC"
-   },
-   "provider": {
-    "name": "Isar Aerospace",
-    "abbrev": "ISAR"
-   },
-   "rocket": "Spectrum",
-   "mission": {
-    "name": "AT-Astra and Others (Spectrum Flight 3)",
-    "type": "Technology",
-    "description": "Third test flight of the Isar Spectrum launch vehicle. This launch will carry various satellites including R-Space’s AT-Astra/IOD-01, which will perform in-orbit demonstrations for ENPULSION, SUNBOOSTER GmbH, and Synopsis Planet.",
-    "orbit": "Sun-Synchronous Orbit",
-    "orbit_abbrev": "SSO"
-   },
-   "pad": {
-    "name": "Orbital Launch Pad",
-    "location": "Andøya Spaceport",
-    "country": "Norway"
-   },
-   "webcast_live": false,
-   "webcasts": [],
-   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/spectrum_on_the_image_thumbnail_20250321072643.jpeg",
-   "image_credit": "Isar Aerospace | Robin Brillert, Wingmen Media"
   },
   {
    "id": "2093e4fc-ac8c-4296-a1b5-deececee6a72",
@@ -1129,6 +1094,41 @@
     "name": "SDA Tranche 1 Tracking Layer A",
     "type": "Government/Top Secret",
     "description": "Tranche 1 Tracking Layer A is one of five missions by the United States Space Force Space Development Agency (SDA) for the Proliferated Warfighter Space Architecture (PWSA) Tranche 1 Tracking Layer constellation, which will provide global indications, warning, tracking, and targeting of advanced missile threats, including hypersonic missile systems.",
+    "orbit": "Polar Orbit",
+    "orbit_abbrev": "PO"
+   },
+   "pad": {
+    "name": "Space Launch Complex 4E",
+    "location": "Vandenberg SFB, CA, USA",
+    "country": "United States of America"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193628.jpeg",
+   "image_credit": "SpaceX"
+  },
+  {
+   "id": "dca8749f-1552-485a-8061-f1ad79055b8d",
+   "slug": "falcon-9-block-5-sda-tranche-1-tracking-layer-c",
+   "name": "Falcon 9 Block 5 | SDA Tranche 1 Tracking Layer C",
+   "net": "2026-12-31T00:00:00Z",
+   "net_precision": "Q4",
+   "window_start": "2026-12-31T00:00:00Z",
+   "window_end": "2026-12-31T00:00:00Z",
+   "status": {
+    "id": 2,
+    "name": "To Be Determined",
+    "abbrev": "TBD"
+   },
+   "provider": {
+    "name": "SpaceX",
+    "abbrev": "SpX"
+   },
+   "rocket": "Falcon 9 Block 5",
+   "mission": {
+    "name": "SDA Tranche 1 Tracking Layer C",
+    "type": "Government/Top Secret",
+    "description": "Tranche 1 Tracking Layer C is one of five missions by the United States Space Force Space Development Agency (SDA) for the Proliferated Warfighter Space Architecture (PWSA) Tranche 1 Tracking Layer constellation, which will provide global indications, warning, tracking, and targeting of advanced missile threats, including hypersonic missile systems.",
     "orbit": "Polar Orbit",
     "orbit_abbrev": "PO"
    },
