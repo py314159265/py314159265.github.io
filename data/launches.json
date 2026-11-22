@@ -1,64 +1,7 @@
 {
- "updated": "2026-11-22T13:05:19Z",
+ "updated": "2026-11-22T14:57:35Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
-  {
-   "id": "951a341f-236b-42fe-a667-4ab2fcf36eac",
-   "slug": "falcon-9-block-5-nrol-136",
-   "name": "Falcon 9 Block 5 | NROL-136",
-   "net": "2026-11-22T12:23:56Z",
-   "net_precision": "SEC",
-   "window_start": "2026-11-22T12:16:00Z",
-   "window_end": "2026-11-22T12:46:00Z",
-   "status": {
-    "id": 6,
-    "name": "Launch in Flight",
-    "abbrev": "In Flight"
-   },
-   "provider": {
-    "name": "SpaceX",
-    "abbrev": "SpX"
-   },
-   "rocket": "Falcon 9 Block 5",
-   "mission": {
-    "name": "NROL-136",
-    "type": "Government/Top Secret",
-    "description": "Fifteenth batch of satellites for a reconnaissance satellite constellation built by SpaceX and Northrop Grumman for the National Reconnaissance Office to provide imaging and other reconnaissance capabilities.",
-    "orbit": "Low Earth Orbit",
-    "orbit_abbrev": "LEO"
-   },
-   "pad": {
-    "name": "Space Launch Complex 4E",
-    "location": "Vandenberg SFB, CA, USA",
-    "country": "United States of America"
-   },
-   "webcast_live": false,
-   "webcasts": [
-    {
-     "url": "https://x.com/i/broadcasts/2yboJapzrmYNbe",
-     "title": "NROL-136 Mission",
-     "publisher": "X",
-     "type": "Official Webcast",
-     "live": false
-    },
-    {
-     "url": "https://www.youtube.com/watch?v=um48_-sSFrE",
-     "title": "Live: SpaceX Falcon 9 rocket launches from California with satellites for U.S. spy satellite agency",
-     "publisher": "Spaceflight Now",
-     "type": "Unofficial Webcast",
-     "live": false
-    },
-    {
-     "url": "https://www.youtube.com/watch?v=NFIjyRFTPao",
-     "title": "SpaceX NROL-136",
-     "publisher": "The Space Devs",
-     "type": "Unofficial Re-stream",
-     "live": false
-    }
-   ],
-   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_on_slc_image_thumbnail_20241024165957.jpeg",
-   "image_credit": "SpaceX"
-  },
   {
    "id": "7bdc412b-c965-4517-a131-f57a01189803",
    "slug": "ariane-64-block-2-amazon-leo-le-04",
@@ -1129,6 +1072,41 @@
     "name": "SDA Tranche 1 Tracking Layer C",
     "type": "Government/Top Secret",
     "description": "Tranche 1 Tracking Layer C is one of five missions by the United States Space Force Space Development Agency (SDA) for the Proliferated Warfighter Space Architecture (PWSA) Tranche 1 Tracking Layer constellation, which will provide global indications, warning, tracking, and targeting of advanced missile threats, including hypersonic missile systems.",
+    "orbit": "Polar Orbit",
+    "orbit_abbrev": "PO"
+   },
+   "pad": {
+    "name": "Space Launch Complex 4E",
+    "location": "Vandenberg SFB, CA, USA",
+    "country": "United States of America"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193628.jpeg",
+   "image_credit": "SpaceX"
+  },
+  {
+   "id": "a9ee8337-127d-4f17-9e3a-a07999f80099",
+   "slug": "falcon-9-block-5-sda-tranche-1-tracking-layer-d",
+   "name": "Falcon 9 Block 5 | SDA Tranche 1 Tracking Layer D",
+   "net": "2026-12-31T00:00:00Z",
+   "net_precision": "Q4",
+   "window_start": "2026-12-31T00:00:00Z",
+   "window_end": "2026-12-31T00:00:00Z",
+   "status": {
+    "id": 2,
+    "name": "To Be Determined",
+    "abbrev": "TBD"
+   },
+   "provider": {
+    "name": "SpaceX",
+    "abbrev": "SpX"
+   },
+   "rocket": "Falcon 9 Block 5",
+   "mission": {
+    "name": "SDA Tranche 1 Tracking Layer D",
+    "type": "Government/Top Secret",
+    "description": "Tranche 1 Tracking Layer D is one of five missions by the United States Space Force Space Development Agency (SDA) for the Proliferated Warfighter Space Architecture (PWSA) Tranche 1 Tracking Layer constellation, which will provide global indications, warning, tracking, and targeting of advanced missile threats, including hypersonic missile systems.",
     "orbit": "Polar Orbit",
     "orbit_abbrev": "PO"
    },
