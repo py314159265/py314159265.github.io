@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T02:57:59Z",
+ "updated": "2026-11-22T05:07:48Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
   {
@@ -39,6 +39,13 @@
      "title": "NROL-136 Mission",
      "publisher": "X",
      "type": "Official Webcast",
+     "live": false
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=um48_-sSFrE",
+     "title": "Live: SpaceX Falcon 9 rocket launches from California with satellites for U.S. spy satellite agency",
+     "publisher": "Spaceflight Now",
+     "type": "Unofficial Webcast",
      "live": false
     },
     {
