@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T18:58:42Z",
+ "updated": "2026-11-22T20:54:02Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
   {
@@ -63,10 +63,10 @@
    "id": "8dd5de11-831b-445f-86f0-bffefe0550d9",
    "slug": "soyuz-21b-progress-ms-36-97p",
    "name": "Soyuz 2.1b | Progress MS-36 (97P)",
-   "net": "2026-11-24T05:03:00Z",
+   "net": "2026-11-24T10:13:00Z",
    "net_precision": "MIN",
-   "window_start": "2026-11-24T05:03:00Z",
-   "window_end": "2026-11-24T05:03:00Z",
+   "window_start": "2026-11-24T10:13:00Z",
+   "window_end": "2026-11-24T10:13:00Z",
    "status": {
     "id": 8,
     "name": "To Be Confirmed",
