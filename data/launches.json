@@ -1,64 +1,7 @@
 {
- "updated": "2026-11-23T05:29:35Z",
+ "updated": "2026-11-23T07:46:22Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
-  {
-   "id": "7bdc412b-c965-4517-a131-f57a01189803",
-   "slug": "ariane-64-block-2-amazon-leo-le-04",
-   "name": "Ariane 64 Block 2 | Amazon Leo (LE-04)",
-   "net": "2026-11-23T11:09:00Z",
-   "net_precision": "MIN",
-   "window_start": "2026-11-23T11:09:00Z",
-   "window_end": "2026-11-23T11:38:00Z",
-   "status": {
-    "id": 1,
-    "name": "Go for Launch",
-    "abbrev": "Go"
-   },
-   "provider": {
-    "name": "Arianespace",
-    "abbrev": "ASA"
-   },
-   "rocket": "Ariane 64 Block 2",
-   "mission": {
-    "name": "Amazon Leo (LE-04)",
-    "type": "Communications",
-    "description": "Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon. This constellation is planned to be composed of 3,276 satellites. The satellites are projected to be placed in 98 orbital planes in three orbital layers, one at 590 km, 610 km and 630 km altitude.\r\n\r\n35-40 satellites will be carried on each Ariane 6 launch.",
-    "orbit": "Low Earth Orbit",
-    "orbit_abbrev": "LEO"
-   },
-   "pad": {
-    "name": "Ariane Launch Area 4",
-    "location": "Guiana Space Centre, French Guiana",
-    "country": "French Guiana"
-   },
-   "webcast_live": false,
-   "webcasts": [
-    {
-     "url": "https://www.youtube.com/watch?v=F4xjWb4OEs4",
-     "title": "Lancement Ariane 6 pour la constellation Amazon LEO (VA271)",
-     "publisher": "CNES",
-     "type": "Official Webcast",
-     "live": false
-    },
-    {
-     "url": "https://www.youtube.com/watch?v=w9Wokj3rBH4",
-     "title": "Vol VA271 | Amazon Leo LE-04 | Ariane 6 | Arianespace",
-     "publisher": "Arianespace",
-     "type": "Official Webcast",
-     "live": false
-    },
-    {
-     "url": "https://www.youtube.com/watch?v=k2adMyxSoJE",
-     "title": "Flight VA271 | Amazon Leo LE-04 | Ariane 6 | Arianespace",
-     "publisher": "Arianespace",
-     "type": "Official Webcast",
-     "live": false
-    }
-   ],
-   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/ariane_64_lifto_image_thumbnail_20260618063419.jpeg",
-   "image_credit": "ESA\\CNES\\ArianespaceArianeGroup\\Optique Vidéo du CSG–T. Leduc"
-  },
   {
    "id": "8dd5de11-831b-445f-86f0-bffefe0550d9",
    "slug": "soyuz-21b-progress-ms-36-97p",
@@ -93,6 +36,63 @@
    "webcasts": [],
    "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193901.jpeg",
    "image_credit": "Roscosmos"
+  },
+  {
+   "id": "7bdc412b-c965-4517-a131-f57a01189803",
+   "slug": "ariane-64-block-2-amazon-leo-le-04",
+   "name": "Ariane 64 Block 2 | Amazon Leo (LE-04)",
+   "net": "2026-11-24T11:09:00Z",
+   "net_precision": "HR",
+   "window_start": "2026-11-24T11:09:00Z",
+   "window_end": "2026-11-24T11:38:00Z",
+   "status": {
+    "id": 8,
+    "name": "To Be Confirmed",
+    "abbrev": "TBC"
+   },
+   "provider": {
+    "name": "Arianespace",
+    "abbrev": "ASA"
+   },
+   "rocket": "Ariane 64 Block 2",
+   "mission": {
+    "name": "Amazon Leo (LE-04)",
+    "type": "Communications",
+    "description": "Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon. This constellation is planned to be composed of 3,276 satellites. The satellites are projected to be placed in 98 orbital planes in three orbital layers, one at 590 km, 610 km and 630 km altitude.\r\n\r\n35-40 satellites will be carried on each Ariane 6 launch.",
+    "orbit": "Low Earth Orbit",
+    "orbit_abbrev": "LEO"
+   },
+   "pad": {
+    "name": "Ariane Launch Area 4",
+    "location": "Guiana Space Centre, French Guiana",
+    "country": "French Guiana"
+   },
+   "webcast_live": false,
+   "webcasts": [
+    {
+     "url": "https://www.youtube.com/watch?v=F4xjWb4OEs4",
+     "title": "Lancement Ariane 6 pour la constellation Amazon LEO (VA271)",
+     "publisher": "CNES",
+     "type": "Official Webcast",
+     "live": false
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=w9Wokj3rBH4",
+     "title": "Reporté | Vol VA271 | Amazon Leo LE-04 | Ariane 6 | Arianespace",
+     "publisher": "Arianespace",
+     "type": "Official Webcast",
+     "live": false
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=k2adMyxSoJE",
+     "title": "Postponed | Flight VA271 | Amazon Leo LE-04 | Ariane 6 | Arianespace",
+     "publisher": "Arianespace",
+     "type": "Official Webcast",
+     "live": false
+    }
+   ],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/ariane_64_lifto_image_thumbnail_20260618063419.jpeg",
+   "image_credit": "ESA\\CNES\\ArianespaceArianeGroup\\Optique Vidéo du CSG–T. Leduc"
   },
   {
    "id": "460d9db7-eaf6-4cd9-b095-cff433534c09",
