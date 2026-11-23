@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T13:31:22Z",
+ "updated": "2026-11-23T15:16:30Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
   {
@@ -41,14 +41,14 @@
    "id": "7bdc412b-c965-4517-a131-f57a01189803",
    "slug": "ariane-64-block-2-amazon-leo-le-04",
    "name": "Ariane 64 Block 2 | Amazon Leo (LE-04)",
-   "net": "2026-11-24T11:09:00Z",
-   "net_precision": "HR",
-   "window_start": "2026-11-24T11:09:00Z",
-   "window_end": "2026-11-24T11:38:00Z",
+   "net": "2026-11-24T10:45:00Z",
+   "net_precision": "MIN",
+   "window_start": "2026-11-24T10:45:00Z",
+   "window_end": "2026-11-24T11:14:00Z",
    "status": {
-    "id": 8,
-    "name": "To Be Confirmed",
-    "abbrev": "TBC"
+    "id": 1,
+    "name": "Go for Launch",
+    "abbrev": "Go"
    },
    "provider": {
     "name": "Arianespace",
