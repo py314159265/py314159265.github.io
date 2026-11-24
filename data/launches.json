@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T15:14:18Z",
+ "updated": "2026-11-24T17:12:37Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
   {
@@ -11,9 +11,9 @@
    "window_start": "2026-11-24T15:55:00Z",
    "window_end": "2026-11-24T19:55:00Z",
    "status": {
-    "id": 1,
-    "name": "Go for Launch",
-    "abbrev": "Go"
+    "id": 6,
+    "name": "Launch in Flight",
+    "abbrev": "In Flight"
    },
    "provider": {
     "name": "SpaceX",
@@ -32,7 +32,7 @@
     "location": "Vandenberg SFB, CA, USA",
     "country": "United States of America"
    },
-   "webcast_live": true,
+   "webcast_live": false,
    "webcasts": [
     {
      "url": "https://x.com/i/broadcasts/2JQXBjLyYOQrpX",
@@ -46,7 +46,7 @@
      "title": "SpaceX Launches Falcon 9 with USSF-266",
      "publisher": "NASASpaceflight",
      "type": "Unofficial Webcast",
-     "live": true
+     "live": false
     },
     {
      "url": "https://www.youtube.com/watch?v=Mx26fq3CcnQ",
