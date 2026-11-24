@@ -1,64 +1,7 @@
 {
- "updated": "2026-11-24T13:27:42Z",
+ "updated": "2026-11-24T15:14:18Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
-  {
-   "id": "7bdc412b-c965-4517-a131-f57a01189803",
-   "slug": "ariane-64-block-2-amazon-leo-le-04",
-   "name": "Ariane 64 Block 2 | Amazon Leo (LE-04)",
-   "net": "2026-11-24T11:14:52Z",
-   "net_precision": "SEC",
-   "window_start": "2026-11-24T10:45:00Z",
-   "window_end": "2026-11-24T11:14:52Z",
-   "status": {
-    "id": 6,
-    "name": "Launch in Flight",
-    "abbrev": "In Flight"
-   },
-   "provider": {
-    "name": "Arianespace",
-    "abbrev": "ASA"
-   },
-   "rocket": "Ariane 64 Block 2",
-   "mission": {
-    "name": "Amazon Leo (LE-04)",
-    "type": "Communications",
-    "description": "Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit that will offer broadband internet access, this constellation will be managed by Kuiper Systems LLC, a subsidiary of Amazon. This constellation is planned to be composed of 3,276 satellites. The satellites are projected to be placed in 98 orbital planes in three orbital layers, one at 590 km, 610 km and 630 km altitude.\r\n\r\n35-40 satellites will be carried on each Ariane 6 launch.",
-    "orbit": "Low Earth Orbit",
-    "orbit_abbrev": "LEO"
-   },
-   "pad": {
-    "name": "Ariane Launch Area 4",
-    "location": "Guiana Space Centre, French Guiana",
-    "country": "French Guiana"
-   },
-   "webcast_live": false,
-   "webcasts": [
-    {
-     "url": "https://www.youtube.com/watch?v=F4xjWb4OEs4",
-     "title": "Lancement Ariane 6 pour la constellation Amazon LEO (VA271)",
-     "publisher": "CNES",
-     "type": "Official Webcast",
-     "live": false
-    },
-    {
-     "url": "https://www.youtube.com/watch?v=w9Wokj3rBH4",
-     "title": "Vol VA271 | Amazon Leo LE-04 | Ariane 6 | Arianespace",
-     "publisher": "Arianespace",
-     "type": "Official Webcast",
-     "live": false
-    },
-    {
-     "url": "https://www.youtube.com/watch?v=k2adMyxSoJE",
-     "title": "Flight VA271 | Amazon Leo LE-04 | Ariane 6 | Arianespace",
-     "publisher": "Arianespace",
-     "type": "Official Webcast",
-     "live": false
-    }
-   ],
-   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/ariane_64_lifto_image_thumbnail_20260618063419.jpeg",
-   "image_credit": "ESA\\CNES\\ArianespaceArianeGroup\\Optique Vidéo du CSG–T. Leduc"
-  },
   {
    "id": "460d9db7-eaf6-4cd9-b095-cff433534c09",
    "slug": "falcon-9-block-5-ussf-266",
@@ -89,7 +32,7 @@
     "location": "Vandenberg SFB, CA, USA",
     "country": "United States of America"
    },
-   "webcast_live": false,
+   "webcast_live": true,
    "webcasts": [
     {
      "url": "https://x.com/i/broadcasts/2JQXBjLyYOQrpX",
@@ -103,7 +46,7 @@
      "title": "SpaceX Launches Falcon 9 with USSF-266",
      "publisher": "NASASpaceflight",
      "type": "Unofficial Webcast",
-     "live": false
+     "live": true
     },
     {
      "url": "https://www.youtube.com/watch?v=Mx26fq3CcnQ",
@@ -1121,6 +1064,41 @@
     "name": "SDA Tranche 1 Tracking Layer D",
     "type": "Government/Top Secret",
     "description": "Tranche 1 Tracking Layer D is one of five missions by the United States Space Force Space Development Agency (SDA) for the Proliferated Warfighter Space Architecture (PWSA) Tranche 1 Tracking Layer constellation, which will provide global indications, warning, tracking, and targeting of advanced missile threats, including hypersonic missile systems.",
+    "orbit": "Polar Orbit",
+    "orbit_abbrev": "PO"
+   },
+   "pad": {
+    "name": "Space Launch Complex 4E",
+    "location": "Vandenberg SFB, CA, USA",
+    "country": "United States of America"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193628.jpeg",
+   "image_credit": "SpaceX"
+  },
+  {
+   "id": "4541ce85-0e38-42ac-a9a0-20474bb5f2cd",
+   "slug": "falcon-9-block-5-sda-tranche-1-transport-layer-d",
+   "name": "Falcon 9 Block 5 | SDA Tranche 1 Transport Layer D",
+   "net": "2026-12-31T00:00:00Z",
+   "net_precision": "Q4",
+   "window_start": "2026-12-31T00:00:00Z",
+   "window_end": "2026-12-31T00:00:00Z",
+   "status": {
+    "id": 2,
+    "name": "To Be Determined",
+    "abbrev": "TBD"
+   },
+   "provider": {
+    "name": "SpaceX",
+    "abbrev": "SpX"
+   },
+   "rocket": "Falcon 9 Block 5",
+   "mission": {
+    "name": "SDA Tranche 1 Transport Layer D",
+    "type": "Government/Top Secret",
+    "description": "Tranche 1 Transport Layer D is one of six missions by the United States Space Force Space Development Agency (SDA) for the Proliferated Warfighter Space Architecture (PWSA) Tranche 1 Transport Layer constellation, which will provide assured, resilient, low-latency military data and connectivity worldwide to the full range of warfighter platforms from Low Earth Orbit satellites.\r\n\r\nThe constellation will be interconnected with Optical Inter-Satellite Links (OISLs) which have significantly increased performance over existing radio frequency crosslinks. It is expected to operate over Ka band, have stereo coverage and be dynamically networked for simpler hand-offs, greater bandwidth and fault tolerance.",
     "orbit": "Polar Orbit",
     "orbit_abbrev": "PO"
    },
