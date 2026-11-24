@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T19:10:19Z",
+ "updated": "2026-11-24T21:04:32Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
   {
@@ -23,7 +23,7 @@
    "mission": {
     "name": "Shenzhou 24",
     "type": "Human Exploration",
-    "description": "Shenzhou 24 will be the 24th flight of the Shenzhou program.\r\n\r\nThe first astronaut from Pakistan is expected to fly on this on a short duration mission, with another Chinese astronaut to undergo a year long expedition.",
+    "description": "Shenzhou 24 will be the 24th flight of the Shenzhou program.\r\n\r\nThe first astronaut from Pakistan, Muhammad Zeeshan Ali, will fly on this on a short duration mission, with Chinese astronaut Zhu Yangzhu of Shenzhou 23 to undergo a year long expedition and stay on the CSS in exchange.",
     "orbit": "Low Earth Orbit",
     "orbit_abbrev": "LEO"
    },
@@ -224,10 +224,10 @@
    "id": "d74afbc7-0de5-491c-be05-4e9c31f736ac",
    "slug": "falcon-9-block-5-cygnus-crs-2-ng-25",
    "name": "Falcon 9 Block 5 | Cygnus CRS-2 NG-25",
-   "net": "2026-11-29T15:50:00Z",
+   "net": "2026-11-29T15:47:00Z",
    "net_precision": "MIN",
-   "window_start": "2026-11-29T15:50:00Z",
-   "window_end": "2026-11-29T15:50:00Z",
+   "window_start": "2026-11-29T15:47:00Z",
+   "window_end": "2026-11-29T15:47:00Z",
    "status": {
     "id": 1,
     "name": "Go for Launch",
@@ -479,6 +479,41 @@
    "webcasts": [],
    "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/ariane_62_lifto_image_thumbnail_20240711132056.jpeg",
    "image_credit": "ESA/CNES/Arianespace/ArianeGroup/Optique vidéo du CSG–S. Martin"
+  },
+  {
+   "id": "9b9db235-8ffb-4569-b09b-0e852ad231a0",
+   "slug": "falcon-9-block-5-amazon-leo-lf-04",
+   "name": "Falcon 9 Block 5 | Amazon Leo (LF-04)",
+   "net": "2026-12-31T00:00:00Z",
+   "net_precision": "M",
+   "window_start": "2026-12-31T00:00:00Z",
+   "window_end": "2026-12-31T00:00:00Z",
+   "status": {
+    "id": 2,
+    "name": "To Be Determined",
+    "abbrev": "TBD"
+   },
+   "provider": {
+    "name": "SpaceX",
+    "abbrev": "SpX"
+   },
+   "rocket": "Falcon 9 Block 5",
+   "mission": {
+    "name": "Amazon Leo (LF-04)",
+    "type": "Communications",
+    "description": "Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit designed to offer broadband internet access managed by Kuiper Systems LLC, a subsidiary of Amazon. This constellation is planned to be composed of 3,276 satellites. The satellites are projected to be placed in 98 orbital planes in three orbital layers, one at 590 km, 610 km and 630 km altitude.",
+    "orbit": "Low Earth Orbit",
+    "orbit_abbrev": "LEO"
+   },
+   "pad": {
+    "name": "Unknown Pad",
+    "location": "Cape Canaveral SFS, FL, USA",
+    "country": "United States of America"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193628.jpeg",
+   "image_credit": "SpaceX"
   },
   {
    "id": "8bf5f61e-a7e1-41e6-aede-7b87e4beebab",
@@ -739,41 +774,6 @@
    ],
    "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305192320.png",
    "image_credit": "SpaceX"
-  },
-  {
-   "id": "dfac5ab7-7017-454f-b6cf-eeed277a97b5",
-   "slug": "lvm-3-gaganyaan-1",
-   "name": "LVM-3 | Gaganyaan-1",
-   "net": "2026-12-31T00:00:00Z",
-   "net_precision": "M",
-   "window_start": "2026-12-31T00:00:00Z",
-   "window_end": "2026-12-31T00:00:00Z",
-   "status": {
-    "id": 2,
-    "name": "To Be Determined",
-    "abbrev": "TBD"
-   },
-   "provider": {
-    "name": "Indian Space Research Organization",
-    "abbrev": "ISRO"
-   },
-   "rocket": "Launch Vehicle Mark-3 (GSLV Mk III)",
-   "mission": {
-    "name": "Gaganyaan-1",
-    "type": "Test Flight",
-    "description": "First uncrewed orbital test flight of the Gaganyaan capsule.",
-    "orbit": "Low Earth Orbit",
-    "orbit_abbrev": "LEO"
-   },
-   "pad": {
-    "name": "Satish Dhawan Space Centre Second Launch Pad",
-    "location": "Satish Dhawan Space Centre, India",
-    "country": "India"
-   },
-   "webcast_live": false,
-   "webcasts": [],
-   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193746.jpeg",
-   "image_credit": null
   },
   {
    "id": "912a8aee-8fc2-47b4-81a5-040fa0e0a36f",
