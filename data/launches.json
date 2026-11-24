@@ -1,69 +1,19 @@
 {
- "updated": "2026-11-24T09:18:41Z",
+ "updated": "2026-11-24T11:02:22Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
-  {
-   "id": "8dd5de11-831b-445f-86f0-bffefe0550d9",
-   "slug": "soyuz-21b-progress-ms-36-97p",
-   "name": "Soyuz 2.1b | Progress MS-36 (97P)",
-   "net": "2026-11-24T10:17:00Z",
-   "net_precision": "MIN",
-   "window_start": "2026-11-24T10:17:00Z",
-   "window_end": "2026-11-24T10:17:00Z",
-   "status": {
-    "id": 1,
-    "name": "Go for Launch",
-    "abbrev": "Go"
-   },
-   "provider": {
-    "name": "Russian Federal Space Agency (ROSCOSMOS)",
-    "abbrev": "RFSA"
-   },
-   "rocket": "Soyuz 2.1b",
-   "mission": {
-    "name": "Progress MS-36 (97P)",
-    "type": "Resupply",
-    "description": "Progress resupply mission to the International Space Station.",
-    "orbit": "Low Earth Orbit",
-    "orbit_abbrev": "LEO"
-   },
-   "pad": {
-    "name": "31/6",
-    "location": "Baikonur Cosmodrome, Republic of Kazakhstan",
-    "country": "Kazakhstan"
-   },
-   "webcast_live": false,
-   "webcasts": [
-    {
-     "url": "https://www.youtube.com/watch?v=-UddWcF9BTM",
-     "title": "Трансляция запуска грузового корабля «Прогресс МС-36»",
-     "publisher": "Роскосмос ТВ",
-     "type": "Official Webcast",
-     "live": false
-    },
-    {
-     "url": "https://plus.nasa.gov/scheduled-video/progress-97-cargo-ship-launch/",
-     "title": "Progress 97 Cargo Ship Launch",
-     "publisher": "NASA",
-     "type": "Official Webcast",
-     "live": false
-    }
-   ],
-   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193901.jpeg",
-   "image_credit": "Roscosmos"
-  },
   {
    "id": "7bdc412b-c965-4517-a131-f57a01189803",
    "slug": "ariane-64-block-2-amazon-leo-le-04",
    "name": "Ariane 64 Block 2 | Amazon Leo (LE-04)",
-   "net": "2026-11-24T10:45:00Z",
-   "net_precision": "MIN",
+   "net": "2026-11-24T10:46:32Z",
+   "net_precision": "SEC",
    "window_start": "2026-11-24T10:45:00Z",
    "window_end": "2026-11-24T11:14:00Z",
    "status": {
-    "id": 1,
-    "name": "Go for Launch",
-    "abbrev": "Go"
+    "id": 5,
+    "name": "On Hold",
+    "abbrev": "Hold"
    },
    "provider": {
     "name": "Arianespace",
@@ -82,28 +32,28 @@
     "location": "Guiana Space Centre, French Guiana",
     "country": "French Guiana"
    },
-   "webcast_live": false,
+   "webcast_live": true,
    "webcasts": [
     {
      "url": "https://www.youtube.com/watch?v=F4xjWb4OEs4",
      "title": "Lancement Ariane 6 pour la constellation Amazon LEO (VA271)",
      "publisher": "CNES",
      "type": "Official Webcast",
-     "live": false
+     "live": true
     },
     {
      "url": "https://www.youtube.com/watch?v=w9Wokj3rBH4",
-     "title": "Reporté | Vol VA271 | Amazon Leo LE-04 | Ariane 6 | Arianespace",
+     "title": "Vol VA271 | Amazon Leo LE-04 | Ariane 6 | Arianespace",
      "publisher": "Arianespace",
      "type": "Official Webcast",
-     "live": false
+     "live": true
     },
     {
      "url": "https://www.youtube.com/watch?v=k2adMyxSoJE",
-     "title": "Postponed | Flight VA271 | Amazon Leo LE-04 | Ariane 6 | Arianespace",
+     "title": "Flight VA271 | Amazon Leo LE-04 | Ariane 6 | Arianespace",
      "publisher": "Arianespace",
      "type": "Official Webcast",
-     "live": false
+     "live": true
     }
    ],
    "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/ariane_64_lifto_image_thumbnail_20260618063419.jpeg",
@@ -435,41 +385,6 @@
    "image_credit": "SpaceX"
   },
   {
-   "id": "e2523821-9760-4cb4-ad1f-7ce2e30419bd",
-   "slug": "kuaizhou-11-unknown-payload",
-   "name": "Kuaizhou 11 | Unknown Payload",
-   "net": "2026-11-30T00:00:00Z",
-   "net_precision": "M",
-   "window_start": "2026-11-30T00:00:00Z",
-   "window_end": "2026-11-30T00:00:00Z",
-   "status": {
-    "id": 2,
-    "name": "To Be Determined",
-    "abbrev": "TBD"
-   },
-   "provider": {
-    "name": "ExPace",
-    "abbrev": "EP"
-   },
-   "rocket": "Kuaizhou 11",
-   "mission": {
-    "name": "Unknown Payload",
-    "type": "Unknown",
-    "description": "Details TBD.",
-    "orbit": "Unknown",
-    "orbit_abbrev": "N/A"
-   },
-   "pad": {
-    "name": "Launch Area 95A",
-    "location": "Jiuquan Satellite Launch Center, People's Republic of China",
-    "country": "China"
-   },
-   "webcast_live": false,
-   "webcasts": [],
-   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/kuaizhou_11_lif_image_thumbnail_20240520155835.jpeg",
-   "image_credit": "中国航天科工"
-  },
-  {
    "id": "9e27a1ed-e81a-4918-b32b-0380cf3a9f8f",
    "slug": "mir-demo-flight",
    "name": "Mir | Demo Flight",
@@ -538,6 +453,41 @@
    "webcasts": [],
    "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193659.png",
    "image_credit": null
+  },
+  {
+   "id": "e2523821-9760-4cb4-ad1f-7ce2e30419bd",
+   "slug": "kuaizhou-11-unknown-payload",
+   "name": "Kuaizhou 11 | Unknown Payload",
+   "net": "2026-12-01T08:00:00Z",
+   "net_precision": "HR",
+   "window_start": "2026-12-01T08:00:00Z",
+   "window_end": "2026-12-01T16:00:00Z",
+   "status": {
+    "id": 8,
+    "name": "To Be Confirmed",
+    "abbrev": "TBC"
+   },
+   "provider": {
+    "name": "ExPace",
+    "abbrev": "EP"
+   },
+   "rocket": "Kuaizhou 11",
+   "mission": {
+    "name": "Unknown Payload",
+    "type": "Unknown",
+    "description": "Details TBD.",
+    "orbit": "Unknown",
+    "orbit_abbrev": "N/A"
+   },
+   "pad": {
+    "name": "Launch Area 95A",
+    "location": "Jiuquan Satellite Launch Center, People's Republic of China",
+    "country": "China"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/kuaizhou_11_lif_image_thumbnail_20240520155835.jpeg",
+   "image_credit": "中国航天科工"
   },
   {
    "id": "5591cfa3-6336-41ab-a37a-7c57aa28ab5f",
@@ -1136,6 +1086,41 @@
     "name": "SDA Tranche 1 Tracking Layer C",
     "type": "Government/Top Secret",
     "description": "Tranche 1 Tracking Layer C is one of five missions by the United States Space Force Space Development Agency (SDA) for the Proliferated Warfighter Space Architecture (PWSA) Tranche 1 Tracking Layer constellation, which will provide global indications, warning, tracking, and targeting of advanced missile threats, including hypersonic missile systems.",
+    "orbit": "Polar Orbit",
+    "orbit_abbrev": "PO"
+   },
+   "pad": {
+    "name": "Space Launch Complex 4E",
+    "location": "Vandenberg SFB, CA, USA",
+    "country": "United States of America"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193628.jpeg",
+   "image_credit": "SpaceX"
+  },
+  {
+   "id": "a9ee8337-127d-4f17-9e3a-a07999f80099",
+   "slug": "falcon-9-block-5-sda-tranche-1-tracking-layer-d",
+   "name": "Falcon 9 Block 5 | SDA Tranche 1 Tracking Layer D",
+   "net": "2026-12-31T00:00:00Z",
+   "net_precision": "Q4",
+   "window_start": "2026-12-31T00:00:00Z",
+   "window_end": "2026-12-31T00:00:00Z",
+   "status": {
+    "id": 2,
+    "name": "To Be Determined",
+    "abbrev": "TBD"
+   },
+   "provider": {
+    "name": "SpaceX",
+    "abbrev": "SpX"
+   },
+   "rocket": "Falcon 9 Block 5",
+   "mission": {
+    "name": "SDA Tranche 1 Tracking Layer D",
+    "type": "Government/Top Secret",
+    "description": "Tranche 1 Tracking Layer D is one of five missions by the United States Space Force Space Development Agency (SDA) for the Proliferated Warfighter Space Architecture (PWSA) Tranche 1 Tracking Layer constellation, which will provide global indications, warning, tracking, and targeting of advanced missile threats, including hypersonic missile systems.",
     "orbit": "Polar Orbit",
     "orbit_abbrev": "PO"
    },
