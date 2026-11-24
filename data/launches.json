@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T21:04:32Z",
+ "updated": "2026-11-24T23:06:41Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
   {
@@ -32,8 +32,23 @@
     "location": "Jiuquan Satellite Launch Center, People's Republic of China",
     "country": "China"
    },
-   "webcast_live": false,
-   "webcasts": [],
+   "webcast_live": true,
+   "webcasts": [
+    {
+     "url": "https://www.youtube.com/watch?v=Jd_rM2JlOi4",
+     "title": "神舟二十四号出征太空 “天宫”将迎首位外籍航天员",
+     "publisher": "中国新闻社",
+     "type": "Official Webcast",
+     "live": true
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=SeWm3kfVx20",
+     "title": "Live: Special coverage of China's Shenzhou-24 crewed spacecraft launch",
+     "publisher": "CGTN",
+     "type": "Official Webcast",
+     "live": true
+    }
+   ],
    "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/shenzhou_22_lau_image_thumbnail_20251129175823.jpeg",
    "image_credit": "Xinhua"
   },
