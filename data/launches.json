@@ -1,19 +1,19 @@
 {
- "updated": "2026-11-24T11:02:22Z",
+ "updated": "2026-11-24T13:27:42Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
   {
    "id": "7bdc412b-c965-4517-a131-f57a01189803",
    "slug": "ariane-64-block-2-amazon-leo-le-04",
    "name": "Ariane 64 Block 2 | Amazon Leo (LE-04)",
-   "net": "2026-11-24T10:46:32Z",
+   "net": "2026-11-24T11:14:52Z",
    "net_precision": "SEC",
    "window_start": "2026-11-24T10:45:00Z",
-   "window_end": "2026-11-24T11:14:00Z",
+   "window_end": "2026-11-24T11:14:52Z",
    "status": {
-    "id": 5,
-    "name": "On Hold",
-    "abbrev": "Hold"
+    "id": 6,
+    "name": "Launch in Flight",
+    "abbrev": "In Flight"
    },
    "provider": {
     "name": "Arianespace",
@@ -32,28 +32,28 @@
     "location": "Guiana Space Centre, French Guiana",
     "country": "French Guiana"
    },
-   "webcast_live": true,
+   "webcast_live": false,
    "webcasts": [
     {
      "url": "https://www.youtube.com/watch?v=F4xjWb4OEs4",
      "title": "Lancement Ariane 6 pour la constellation Amazon LEO (VA271)",
      "publisher": "CNES",
      "type": "Official Webcast",
-     "live": true
+     "live": false
     },
     {
      "url": "https://www.youtube.com/watch?v=w9Wokj3rBH4",
      "title": "Vol VA271 | Amazon Leo LE-04 | Ariane 6 | Arianespace",
      "publisher": "Arianespace",
      "type": "Official Webcast",
-     "live": true
+     "live": false
     },
     {
      "url": "https://www.youtube.com/watch?v=k2adMyxSoJE",
      "title": "Flight VA271 | Amazon Leo LE-04 | Ariane 6 | Arianespace",
      "publisher": "Arianespace",
      "type": "Official Webcast",
-     "live": true
+     "live": false
     }
    ],
    "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/ariane_64_lifto_image_thumbnail_20260618063419.jpeg",
