@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T01:23:43Z",
+ "updated": "2026-11-24T03:00:42Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
   {
@@ -98,8 +98,8 @@
    "id": "460d9db7-eaf6-4cd9-b095-cff433534c09",
    "slug": "falcon-9-block-5-ussf-266",
    "name": "Falcon 9 Block 5 | USSF-266",
-   "net": "2026-11-24T15:55:00Z",
-   "net_precision": "MIN",
+   "net": "2026-11-24T16:08:59Z",
+   "net_precision": "SEC",
    "window_start": "2026-11-24T15:55:00Z",
    "window_end": "2026-11-24T19:55:00Z",
    "status": {
@@ -141,10 +141,10 @@
      "live": false
     },
     {
-     "url": "https://www.youtube.com/watch?v=oELkxR9uY8Q",
-     "title": "GO! - SpaceX - Falcon 9 - USSF-266 - SLC-4E - Vandenberg SFB, CA - Space Affairs Live",
-     "publisher": "SPACE AFFAIRS",
-     "type": "Unofficial Re-stream",
+     "url": "https://www.youtube.com/watch?v=Mx26fq3CcnQ",
+     "title": "SpaceX Falcon 9 rocket launches from Vandenberg on secretive U.S. Space Force mission",
+     "publisher": "Spaceflight Now",
+     "type": "Unofficial Webcast",
      "live": false
     }
    ],
