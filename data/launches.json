@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T17:14:02Z",
+ "updated": "2026-11-25T19:04:13Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
   {
@@ -230,6 +230,13 @@
      "publisher": "NASA",
      "type": "Official Webcast",
      "live": false
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=YLrybIli73I",
+     "title": "NASA's Northrop Grumman Commercial Resupply Services 25 Launch",
+     "publisher": "NASA",
+     "type": "Official Webcast",
+     "live": false
     }
    ],
    "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193628.jpeg",
@@ -376,6 +383,49 @@
    "image_credit": "SpaceX"
   },
   {
+   "id": "8bf5f61e-a7e1-41e6-aede-7b87e4beebab",
+   "slug": "falcon-9-block-5-chorus",
+   "name": "Falcon 9 Block 5 | CHORUS",
+   "net": "2026-12-04T12:55:00Z",
+   "net_precision": "MIN",
+   "window_start": "2026-12-04T12:55:00Z",
+   "window_end": "2026-12-04T13:24:00Z",
+   "status": {
+    "id": 1,
+    "name": "Go for Launch",
+    "abbrev": "Go"
+   },
+   "provider": {
+    "name": "SpaceX",
+    "abbrev": "SpX"
+   },
+   "rocket": "Falcon 9 Block 5",
+   "mission": {
+    "name": "CHORUS",
+    "type": "Earth Science",
+    "description": "CHORUS is MDA's next generation Earth observation constellation, consisting of 2 radar satellites (C-band SAR and X-band SAR), in a 53.5 degree 600 km altitude LEO, with the X-band trailing the C-band by 60 minutes. A collaborative multi-sensor constellation, CHORUS will bring together diverse and unique imagery and data sources and provide a new level of near real-time insight and innovative Earth observation services. Operating in a unique mid-inclination orbit, CHORUS will be able to image day or night, regardless of weather conditions, with daily access of up to 95% of the coverage area. From an industry-leading 700km-wide imaging swath down to sub-metre high resolution, CHORUS will provide the most extensive and unrivalled Earth observation radar imaging capacity available on the market in a single mission.\r\n\r\nAlso on board this mission are 2 satellites from ICEYE and PECCY.",
+    "orbit": "Low Earth Orbit",
+    "orbit_abbrev": "LEO"
+   },
+   "pad": {
+    "name": "Space Launch Complex 40",
+    "location": "Cape Canaveral SFS, FL, USA",
+    "country": "United States of America"
+   },
+   "webcast_live": false,
+   "webcasts": [
+    {
+     "url": "https://x.com/i/broadcasts/2VNlrbYvYNmMgM",
+     "title": "MDA Space – MDA CHORUS Mission",
+     "publisher": "X",
+     "type": "Official Webcast",
+     "live": false
+    }
+   ],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193628.jpeg",
+   "image_credit": "SpaceX"
+  },
+  {
    "id": "5ce59e3a-c343-430f-ae4e-e608ba536754",
    "slug": "long-march-12-satnet-leo-group-tbd",
    "name": "Long March 12 | SatNet LEO Group TBD?",
@@ -467,41 +517,6 @@
     "name": "Amazon Leo (LF-04)",
     "type": "Communications",
     "description": "Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit designed to offer broadband internet access managed by Kuiper Systems LLC, a subsidiary of Amazon. This constellation is planned to be composed of 3,276 satellites. The satellites are projected to be placed in 98 orbital planes in three orbital layers, one at 590 km, 610 km and 630 km altitude.",
-    "orbit": "Low Earth Orbit",
-    "orbit_abbrev": "LEO"
-   },
-   "pad": {
-    "name": "Unknown Pad",
-    "location": "Cape Canaveral SFS, FL, USA",
-    "country": "United States of America"
-   },
-   "webcast_live": false,
-   "webcasts": [],
-   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193628.jpeg",
-   "image_credit": "SpaceX"
-  },
-  {
-   "id": "8bf5f61e-a7e1-41e6-aede-7b87e4beebab",
-   "slug": "falcon-9-block-5-chorus",
-   "name": "Falcon 9 Block 5 | CHORUS",
-   "net": "2026-12-31T00:00:00Z",
-   "net_precision": "M",
-   "window_start": "2026-12-31T00:00:00Z",
-   "window_end": "2026-12-31T00:00:00Z",
-   "status": {
-    "id": 2,
-    "name": "To Be Determined",
-    "abbrev": "TBD"
-   },
-   "provider": {
-    "name": "SpaceX",
-    "abbrev": "SpX"
-   },
-   "rocket": "Falcon 9 Block 5",
-   "mission": {
-    "name": "CHORUS",
-    "type": "Earth Science",
-    "description": "CHORUS is MDA's next generation Earth observation constellation, consisting of 2 radar satellites (C-band SAR and X-band SAR), in a 53.5 degree 600 km altitude LEO, with the X-band trailing the C-band by 60 minutes. A collaborative multi-sensor constellation, CHORUS will bring together diverse and unique imagery and data sources and provide a new level of near real-time insight and innovative Earth observation services. Operating in a unique mid-inclination orbit, CHORUS will be able to image day or night, regardless of weather conditions, with daily access of up to 95% of the coverage area. From an industry-leading 700km-wide imaging swath down to sub-metre high resolution, CHORUS will provide the most extensive and unrivalled Earth observation radar imaging capacity available on the market in a single mission.",
     "orbit": "Low Earth Orbit",
     "orbit_abbrev": "LEO"
    },
