@@ -266,13 +266,18 @@ function paintPlanet(kind) {
   return t;
 }
 
-function addLabel(text, cls, minor, getPos, space = "solar") {
+function addLabel(text, cls, minor, getPos, space = "solar", extra = {}) {
   const el = document.createElement("div");
   el.className = "label" + (cls ? " " + cls : "");
   el.textContent = text;
   el.dataset.minor = minor ? "1" : "0";
   labelsEl.appendChild(el);
-  labelEls.push({ el, getPos, minor, text, space });
+  labelEls.push({
+    el, getPos, minor, text, space,
+    id: extra.id || null,
+    anchor: extra.anchor || null,
+    leader: Boolean(extra.leader),
+  });
 }
 
 function buildScene() {
@@ -342,7 +347,7 @@ function buildScene() {
     }
     solar.add(g);
     planetGroups[planet.name] = g;
-    const major = ["Earth", "Jupiter", "Saturn", "Uranus", "Neptune"].includes(planet.name);
+    const major = ["Earth", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto"].includes(planet.name);
     addLabel(planet.name, "planet", !major, () => (mode === "solar" ? g.getWorldPosition(tmp2) : null));
   }
   for (const au of [1, 10, 100]) {
@@ -353,7 +358,25 @@ function buildScene() {
   const helioR = toR(120);
   const shell = new THREE.Mesh(
     new THREE.SphereGeometry(helioR, phone ? 32 : 48, phone ? 24 : 32),
-    new THREE.MeshBasicMaterial({ color: 0x9cc0e0, transparent: true, opacity: 0.08, depthWrite: false, side: THREE.DoubleSide }),
+    new THREE.ShaderMaterial({
+      transparent: true,
+      depthWrite: false,
+      side: THREE.FrontSide,
+      vertexShader: `
+        varying vec3 vN; varying vec3 vV;
+        void main() {
+          vN = normalize(normalMatrix * normal);
+          vec4 p = modelViewMatrix * vec4(position, 1.0);
+          vV = normalize(-p.xyz);
+          gl_Position = projectionMatrix * p;
+        }`,
+      fragmentShader: `
+        varying vec3 vN; varying vec3 vV;
+        void main() {
+          float rim = pow(1.0 - abs(dot(normalize(vN), normalize(vV))), 2.4);
+          gl_FragColor = vec4(0.62, 0.76, 0.88, rim * 0.07);
+        }`,
+    }),
   );
   solar.add(shell);
   const eq = [];
@@ -361,7 +384,7 @@ function buildScene() {
     const a = (i / 96) * Math.PI * 2;
     eq.push(new THREE.Vector3(Math.cos(a) * helioR, 0, Math.sin(a) * helioR));
   }
-  const eqLine = lineOf(eq, 0x9cc0e0, 0.45);
+  const eqLine = lineOf(eq, 0x9cc0e0, 0.28);
   if (eqLine) solar.add(eqLine);
   const hp = new THREE.Vector3(-helioR * 0.15, helioR * 0.72, -helioR * 0.55);
   addLabel("heliopause ~120 AU", "ring", false, () => hp);
@@ -396,10 +419,10 @@ function buildScene() {
     solar.add(g);
     craftGroups[meta.id] = g;
     if (!meta.earth || meta.group !== "planned") {
-      addLabel(meta.name, meta.group === "ended" ? "ended" : "", !meta.major, () => {
+      addLabel(meta.label || meta.name, meta.group === "ended" ? "ended" : "", !meta.major, () => {
         if (!g.visible) return null;
         return g.getWorldPosition(tmp2);
-      });
+      }, "solar", { id: meta.id });
     }
   }
   buildEarthScene(phone);
@@ -469,17 +492,25 @@ function buildEarthScene() {
   }
   const haloLine = lineOf(halo, 0x9cc0e0, 0.7);
   if (haloLine) localGroup.add(haloLine);
-  addLabel("Sun–Earth L2", "planet", false, () => l2.clone(), "earth");
-  const placeL2 = (id, phase, hollow) => {
+  const l2Mark = new THREE.Mesh(
+    new THREE.SphereGeometry(0.12, 12, 10),
+    new THREE.MeshBasicMaterial({ color: 0x9cc0e0 }),
+  );
+  l2Mark.position.copy(l2);
+  localGroup.add(l2Mark);
+  addLabel("Earth L2", "gold", false, () => l2.clone().add(new THREE.Vector3(-1.7, -0.15, 0)), "earth", {
+    leader: true,
+    anchor: () => l2.clone(),
+  });
+  const placeL2 = (id, spot, labelAt, hollow) => {
     const meta = byId[id];
-    const a = phase * Math.PI * 2;
-    const p = new THREE.Vector3(l2.x + Math.sin(a) * 0.55, Math.sin(a) * 1.15, Math.cos(a) * 1.45);
+    const p = l2.clone().add(new THREE.Vector3(...spot));
     const g = new THREE.Group();
     g.userData.craftId = id;
     g.position.copy(p);
     if (hollow) {
       g.add(new THREE.Mesh(
-        new THREE.RingGeometry(0.28, 0.42, 24),
+        new THREE.RingGeometry(0.22, 0.36, 24),
         new THREE.MeshBasicMaterial({ color: 0xc9a86a, side: THREE.DoubleSide, depthWrite: false }),
       ));
     } else {
@@ -487,16 +518,17 @@ function buildEarthScene() {
     }
     g.traverse((obj) => { obj.userData.craftId = id; });
     localGroup.add(g);
-    addLabel(hollow ? "Roman" : meta.name, hollow ? "gold left" : "left", false, () => {
+    const textAt = l2.clone().add(new THREE.Vector3(...labelAt));
+    addLabel(hollow ? "Roman" : (meta.label || meta.name), hollow ? "gold" : "", false, () => {
       if (!meta.planned && phaseOf(meta, when) === "hidden") return null;
-      return g.getWorldPosition(tmp2);
-    }, "earth");
+      return textAt;
+    }, "earth", { leader: true, anchor: () => g.getWorldPosition(new THREE.Vector3()) });
     g.userData.localFor = id;
   };
-  placeL2("jwst", 0.18, false);
-  placeL2("gaia", 0.52, false);
-  placeL2("euclid", 0.78, false);
-  placeL2("roman", 0.36, true);
+  placeL2("jwst", [0.15, 1.55, 0.15], [-2.4, 2.15, 0.2], false);
+  placeL2("gaia", [0.15, 0.15, 1.7], [0.2, 0.35, 3.15], false);
+  placeL2("euclid", [0.2, -0.15, -1.65], [0.35, -0.2, -3.2], false);
+  placeL2("roman", [0.1, -1.55, -0.1], [0.15, -2.55, -0.15], true);
   if (craftGroups.apollo) craftGroups.apollo.visible = false;
 }
 
@@ -805,38 +837,108 @@ function projectToScreen(vec) {
   const h = stage.clientHeight;
   return { x: (tmp.x * 0.5 + 0.5) * w, y: (-tmp.y * 0.5 + 0.5) * h, z: tmp.z };
 }
-function layoutLabels() {
-    const zoomed = mode === "earth" || radius < 78;
-    const boxes = [];
-    const dockLeft = phoneQuery.matches ? 1e9 : $("dock").getBoundingClientRect().left;
-    for (const item of labelEls) {
-      if (item.space === "solar" && mode !== "solar") { item.el.hidden = true; continue; }
-      if (item.space === "earth" && mode !== "earth") { item.el.hidden = true; continue; }
-      const showMinor = !item.minor || zoomed || (selected && item.text === byId[selected]?.name) || (hot && item.text === byId[hot]?.name);
-      const pos = item.getPos();
-      if (!pos || !showMinor) { item.el.hidden = true; continue; }
-    const world = pos.isVector3 ? pos : tmp2;
-    const scr = projectToScreen(world);
-    const labelW = Math.max(48, item.el.offsetWidth);
-    const growsLeft = item.el.classList.contains("left");
-    const rightEdge = growsLeft ? scr.x : scr.x + labelW;
-    const leftEdge = growsLeft ? scr.x - labelW : scr.x;
-    if (scr.z < -1 || scr.z > 1 || leftEdge < 4 || scr.y < 48 || scr.y > stage.clientHeight - 70 || rightEdge > Math.min(dockLeft, stage.clientWidth) - 8) {
-      item.el.hidden = true;
-      continue;
+function labelCandidates(scr) {
+  const sun = projectToScreen(new THREE.Vector3(0, 0, 0));
+  let ox = scr.x - sun.x;
+  let oy = scr.y - sun.y;
+  const len = Math.hypot(ox, oy) || 1;
+  ox /= len;
+  oy /= len;
+  const px = -oy;
+  const py = ox;
+  const out = [];
+  for (const dist of [28, 46, 64, 84]) {
+    for (const side of [0, 0.85, -0.85, 1.4, -1.4]) {
+      out.push([ox * dist + px * side * 16, oy * dist + py * side * 16]);
     }
+  }
+  return out;
+}
+
+function sceneName(id) {
+  const meta = byId[id];
+  return meta ? (meta.label || meta.name) : "";
+}
+
+function layoutLabels() {
+  const zoomed = mode === "earth" || radius < 110;
+  const boxes = [];
+  const dockLeft = phoneQuery.matches ? stage.clientWidth : $("dock").getBoundingClientRect().left;
+  const edge = Math.min(dockLeft, stage.clientWidth) - 8;
+  const tryPlace = (item, scr, dx, dy, force) => {
+    const w = Math.max(42, item.el.offsetWidth || item.text.length * 6.4);
+    const rect = { x: scr.x + dx, y: scr.y + dy - 12, w: w + 8, h: 18 };
+    const inside = rect.x > 6 && rect.y > 48 && rect.y + rect.h < stage.clientHeight - 62 && rect.x + rect.w < edge;
+    const hit = boxes.some((b) => rect.x < b.x + b.w && rect.x + rect.w > b.x && rect.y < b.y + b.h && rect.y + rect.h > b.y);
+    if ((!inside || hit) && !force) return false;
     item.el.hidden = false;
     item.el.style.left = `${scr.x}px`;
     item.el.style.top = `${scr.y}px`;
-    const rect = { x: scr.x, y: scr.y - 12, w: item.el.offsetWidth + 6, h: 16, minor: item.minor };
-    const hit = boxes.some((b) => rect.x < b.x + b.w && rect.x + rect.w > b.x && rect.y < b.y + b.h && rect.y + rect.h > b.y);
-    if (hit && item.minor) { item.el.hidden = true; continue; }
+    item.el.style.transform = `translate(${dx}px, ${dy}px)`;
+    item.screen = { x: rect.x, y: scr.y + dy };
     boxes.push(rect);
+    return true;
+  };
+  const queue = [];
+  for (const item of labelEls) {
+    if (item.space === "solar" && mode !== "solar") { item.el.hidden = true; continue; }
+    if (item.space === "earth" && mode !== "earth") { item.el.hidden = true; continue; }
+    const named = selected && item.text === sceneName(selected);
+    const hovered = hot && item.text === sceneName(hot);
+    if (item.minor && !(zoomed || named || hovered)) { item.el.hidden = true; continue; }
+    const pos = item.getPos();
+    if (!pos) { item.el.hidden = true; continue; }
+    const scr = projectToScreen(pos);
+    if (scr.z < -1 || scr.z > 1) { item.el.hidden = true; continue; }
+    queue.push({ item, scr });
   }
+  queue.sort((a, b) => (a.item.id ? 1 : 0) - (b.item.id ? 1 : 0));
+  for (const { item, scr } of queue) {
+    const prefs = item.leader
+      ? [[0, -2], [8, -12], [-6, 10]]
+      : (item.id ? labelCandidates(scr) : [[10, -14], [12, 12], [-8, -16], [14, 4]]);
+    let placed = false;
+    for (const [dx, dy] of prefs) {
+      if (tryPlace(item, scr, dx, dy, false)) { placed = true; break; }
+    }
+    if (!placed && !item.minor) {
+      let best = prefs[0];
+      let bestOverflow = Infinity;
+      const w = Math.max(42, item.el.offsetWidth || item.text.length * 6.4);
+      for (const [dx, dy] of prefs) {
+        const rect = { x: scr.x + dx, y: scr.y + dy - 12, w: w + 8, h: 18 };
+        const overflow =
+          Math.max(0, 8 - rect.x) +
+          Math.max(0, rect.x + rect.w - edge) +
+          Math.max(0, 50 - rect.y) +
+          Math.max(0, rect.y + rect.h - (stage.clientHeight - 64));
+        if (overflow < bestOverflow) { bestOverflow = overflow; best = [dx, dy]; }
+      }
+      tryPlace(item, scr, best[0], best[1], true);
+    } else if (!placed) item.el.hidden = true;
+  }
+}
+
+function frameSolar() {
+  let maxR = toR(128);
+  for (const g of Object.values(craftGroups)) {
+    if (!g.visible || g.parent !== solar) continue;
+    maxR = Math.max(maxR, g.position.length());
+  }
+  resize();
+  const w = stage.clientWidth;
+  const h = stage.clientHeight;
+  const dock = phoneQuery.matches ? 0 : 260;
+  const vHalf = (camera.fov * Math.PI) / 360;
+  const usableAspect = Math.max(0.4, (w - dock) / Math.max(h, 1));
+  const hHalf = Math.atan(Math.tan(vHalf) * usableAspect);
+  const dist = Math.max(maxR / Math.tan(vHalf), maxR / Math.tan(hHalf));
+  radius = dist * (phoneQuery.matches ? 1.38 : 1.26);
 }
 function drawConnector() {
   const svg = $("hover-lines");
   svg.replaceChildren();
+  drawLeaders(svg);
   if (!selected || !craftGroups[selected] || !craftGroups[selected].visible) return;
   const scr = projectToScreen(craftGroups[selected].getWorldPosition(tmp2));
   stage.style.setProperty("--spot-x", `${scr.x}px`);
@@ -852,6 +954,23 @@ function drawConnector() {
   path.setAttribute("stroke", "rgba(201,168,106,0.75)");
   path.setAttribute("stroke-width", "1");
   svg.appendChild(path);
+}
+
+function drawLeaders(svg) {
+  if (mode !== "earth") return;
+  const ns = "http://www.w3.org/2000/svg";
+  for (const item of labelEls) {
+    if (!item.leader || item.el.hidden || !item.anchor || !item.screen) continue;
+    const a = projectToScreen(item.anchor());
+    const line = document.createElementNS(ns, "line");
+    line.setAttribute("x1", a.x.toFixed(1));
+    line.setAttribute("y1", a.y.toFixed(1));
+    line.setAttribute("x2", item.screen.x.toFixed(1));
+    line.setAttribute("y2", item.screen.y.toFixed(1));
+    line.setAttribute("stroke", "rgba(201,168,106,0.65)");
+    line.setAttribute("stroke-width", "1");
+    svg.appendChild(line);
+  }
 }
 
 function frame() {
@@ -1004,6 +1123,7 @@ async function init() {
     if (!Number.isNaN(t)) slider.value = String(Math.round(((t - T0) / (T1 - T0)) * 1000));
   } else slider.value = "1000";
   setWhenFromSlider();
+  frameSolar();
   if (params.get("view") === "earth") enterEarth(true);
   const open = params.get("open");
   if (open && byId[open]) openCard(open);
