@@ -402,14 +402,14 @@ body.card-open .legend { display: none; }
   .today { padding: 0 10px; font-size: 11px; }
   .legend {
     top: auto;
-    bottom: 64px;
+    bottom: 60px;
     right: 8px;
-    width: 132px;
-    padding: 7px 8px;
+    width: 118px;
+    padding: 6px 7px;
   }
-  .legend-row { font-size: 10px; margin: 2px 0; }
+  .legend-row { font-size: 10px; margin: 1px 0; }
   .legend-note { display: none; }
-  .inset { left: 8px; bottom: 64px; width: min(168px, 46vw); }
+  .inset { left: 8px; bottom: 60px; width: min(156px, 42vw); }
   .toolbar { left: 8px; right: 8px; bottom: 8px; height: 50px; gap: 8px; padding: 0 10px; }
   .slider-now { min-width: 5.4rem; font-size: 13px; }
   .card {

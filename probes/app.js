@@ -10,8 +10,15 @@
   const AU_DAY_TO_KMS = 149597870.7 / 86400;
   const DAY = 86400000;
   const T0 = Date.UTC(1977, 0, 1);
-  const MIN_AU = 0.04;
-  const MAX_AU = 210;
+  // Piecewise log so the rings, labels, planets, and probes share one radius.
+  // 0.08–5 AU, 5–40 AU, and 40–200 AU each get a share of the drawing radius.
+  // A single log from 0.04 to 200 piles 65 AU onto 144 AU and parks Voyager on the heliopause.
+  const SCALE = [
+    { au: 0.08, t: 0 },
+    { au: 5, t: 0.22 },
+    { au: 40, t: 0.50 },
+    { au: 200, t: 1 },
+  ];
 
   // a, e, I, L, longitude of perihelion, longitude of node — value and rate per century.
   // J2000, ecliptic. Earth is the Earth–Moon barycenter, close enough at this scale.
@@ -64,20 +71,22 @@
       launched: "2018-08-12", agency: "NASA / JHUAPL", rocket: "Delta IV Heavy",
       fact: "It dives closer to the Sun than any spacecraft before it, flying through the corona and coming out the other side.",
       trail: "recent",
-      recentDays: 100,
+      recentDays: 48,
+      color: "#e3a283",
     },
     starman: {
       name: "Starman", sub: "A car between Earth and Mars.",
       launched: "2018-02-06", agency: "SpaceX", rocket: "Falcon Heavy",
       fact: "The dummy in the driver’s seat is still on the first Falcon Heavy payload: a midnight-cherry Roadster in a long solar orbit.",
-      trail: "ellipse",
+      trail: "recent",
+      recentDays: 70,
     },
     hayabusa2: {
       name: "Hayabusa2", sub: "Onward to 1998 KY26.",
       launched: "2014-12-03", agency: "JAXA", rocket: "H-IIA",
       fact: "After returning pieces of Ryugu to Earth in 2020, it set off on an extended cruise toward the tiny asteroid 1998 KY26.",
       trail: "recent",
-      recentDays: 500,
+      recentDays: 90,
     },
     juno: {
       name: "Juno", sub: "Circling Jupiter.",
@@ -172,9 +181,21 @@
     return { x, y, z, dist: Math.hypot(x, y, z), lon: Math.atan2(y, x) };
   }
 
+  function scaleT(au) {
+    const a = Math.max(au, SCALE[0].au);
+    for (let i = 1; i < SCALE.length; i++) {
+      if (a <= SCALE[i].au || i === SCALE.length - 1) {
+        const a0 = SCALE[i - 1].au;
+        const a1 = SCALE[i].au;
+        const u = Math.log(Math.min(a, a1 * 1.08) / a0) / Math.log(a1 / a0);
+        return SCALE[i - 1].t + (SCALE[i].t - SCALE[i - 1].t) * u;
+      }
+    }
+    return 1;
+  }
+
   function toR(au) {
-    const t = Math.log(Math.max(au, MIN_AU) / MIN_AU) / Math.log(MAX_AU / MIN_AU);
-    return R0 + (R1 - R0) * t;
+    return R0 + (R1 - R0) * scaleT(au);
   }
 
   function project(dist, lon) {
@@ -223,33 +244,76 @@
 
   function trailPoints(id, ms) {
     const tr = tracks[id];
-    if (!tr) return [];
-    const launch = Date.parse(CRAFT[id].launched + "T00:00:00Z");
-    const mode = CRAFT[id].trail;
-    if (mode === "none" || mode === "ellipse") return [];
-    const pts = [];
-    const stride = Math.max(1, Math.floor(tr.ms.length / 56));
-    let outbound = mode !== "outbound";
-    let prev = 0;
+    const meta = CRAFT[id];
+    if (!tr || !meta || meta.trail === "none") return [];
+    const launch = Date.parse(meta.launched + "T00:00:00Z");
+    const raw = [];
     for (let i = 0; i < tr.ms.length; i++) {
       if (tr.ms[i] < launch || tr.ms[i] > ms) continue;
-      const dist = Math.hypot(tr.x[i], tr.y[i], tr.z[i]);
-      if (mode === "outbound") {
-        if (!outbound) {
-          if (dist > 12 && dist + 0.05 >= prev) outbound = true;
-          else { prev = dist; continue; }
-        }
-      } else if (mode === "recent") {
-        if (ms - tr.ms[i] > (CRAFT[id].recentDays || 200) * DAY) { prev = dist; continue; }
-      } else if (mode === "none") {
-        break;
-      }
-      if (i % stride === 0) pts.push(project(dist, Math.atan2(tr.y[i], tr.x[i])));
-      prev = dist;
+      raw.push({
+        ms: tr.ms[i],
+        dist: Math.hypot(tr.x[i], tr.y[i], tr.z[i]),
+        lon: Math.atan2(tr.y[i], tr.x[i]),
+      });
+    }
+    if (!raw.length) return [];
+    let slice = raw;
+    if (meta.trail === "recent") {
+      const windowMs = (meta.recentDays || 60) * DAY;
+      slice = raw.filter((p) => ms - p.ms <= windowMs);
+    } else {
+      let start = 0;
+      let prev = raw[0].dist;
+      raw.forEach((p, i) => {
+        if (p.dist + 0.35 < prev) start = i;
+        prev = p.dist;
+      });
+      slice = raw.slice(start).filter((p) => p.dist >= 8);
     }
     const now = sample(id, ms);
-    if (now && mode !== "none") pts.push(project(now.dist, now.lon));
-    return pts;
+    if (now) slice.push({ dist: now.dist, lon: now.lon });
+    return slice.map((p) => project(p.dist, p.lon));
+  }
+
+  function smoothPath(points) {
+    if (points.length < 2) return "";
+    const fmt = (n) => n.toFixed(1);
+    let d = `M ${fmt(points[0][0])} ${fmt(points[0][1])}`;
+    if (points.length === 2) {
+      return `${d} L ${fmt(points[1][0])} ${fmt(points[1][1])}`;
+    }
+    for (let i = 0; i < points.length - 1; i++) {
+      const p0 = points[Math.max(0, i - 1)];
+      const p1 = points[i];
+      const p2 = points[i + 1];
+      const p3 = points[Math.min(points.length - 1, i + 2)];
+      const c1x = p1[0] + (p2[0] - p0[0]) / 6;
+      const c1y = p1[1] + (p2[1] - p0[1]) / 6;
+      const c2x = p2[0] - (p3[0] - p1[0]) / 6;
+      const c2y = p2[1] - (p3[1] - p1[1]) / 6;
+      d += ` C ${fmt(c1x)} ${fmt(c1y)} ${fmt(c2x)} ${fmt(c2y)} ${fmt(p2[0])} ${fmt(p2[1])}`;
+    }
+    return d;
+  }
+
+  function drawFadedTrail(points, color) {
+    if (points.length < 2) return;
+    const parts = Math.min(7, points.length - 1);
+    for (let k = 0; k < parts; k++) {
+      const a = Math.floor((k * (points.length - 1)) / parts);
+      const b = Math.floor(((k + 1) * (points.length - 1)) / parts);
+      const slice = points.slice(a, b + 1);
+      if (slice.length < 2) continue;
+      svgEl("path", {
+        d: smoothPath(slice),
+        fill: "none",
+        stroke: color,
+        "stroke-width": 1.2,
+        "stroke-linecap": "round",
+        "stroke-linejoin": "round",
+        opacity: (0.07 + 0.48 * ((k + 1) / parts)).toFixed(3),
+      }, $("trails"));
+    }
   }
 
   function statusOf(id, state) {
@@ -313,10 +377,15 @@
     const w = stage.clientWidth;
     const h = stage.clientHeight;
     const phone = w < 720;
-    originX = phone ? w * 0.5 : w * 0.45;
-    originY = phone ? h * 0.44 : h * 0.47;
-    R1 = Math.min(w, h) * (phone ? 0.34 : 0.4);
-    R0 = phone ? 16 : 20;
+    const header = phone ? 76 : 58;
+    const foot = phone ? 58 : 74;
+    const side = phone ? 8 : 168;
+    originX = phone ? w * 0.5 : Math.min(w * 0.46, w - side - 40);
+    const top = header + 4;
+    const bottom = h - foot - 4;
+    originY = (top + bottom) / 2;
+    R1 = Math.max(90, Math.min(originX - 12, w - originX - (phone ? 10 : 28), originY - top + (phone ? 36 : 8), bottom - originY + (phone ? 28 : 6)));
+    R0 = Math.max(16, R1 * 0.06);
     sky.setAttribute("viewBox", `0 0 ${w} ${h}`);
   }
 
@@ -332,13 +401,15 @@
     svgEl("circle", {
       cx: 0, cy: 0, r: (rIn + rOut) / 2,
       fill: "none",
-      stroke: "rgba(156,192,224,0.16)",
-      "stroke-width": Math.max(8, rOut - rIn),
+      stroke: "rgba(156,192,224,0.18)",
+      "stroke-width": Math.max(4, rOut - rIn),
+      "data-au": "kuiper",
     }, rings);
     for (const name of ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto"]) {
       const au = ELEMENTS[name].a[0];
       svgEl("circle", {
-        cx: 0, cy: 0, r: toR(au),
+        cx: 0, cy: 0, r: toR(au).toFixed(2),
+        "data-au": au.toFixed(3),
         fill: "none",
         stroke: name === "Earth" ? "rgba(236,228,212,0.28)" : "rgba(236,228,212,0.16)",
         "stroke-width": name === "Earth" ? 1.15 : 0.75,
@@ -346,37 +417,93 @@
     }
     for (const au of [1, 10, 100]) {
       const r = toR(au);
-      const x = r * Math.cos(200 * DEG);
-      const y = -r * Math.sin(200 * DEG);
+      const ang = 198 * DEG;
+      const x = r * Math.cos(ang);
+      const y = -r * Math.sin(ang);
       const label = svgEl("text", {
-        x, y: y - 6, class: "ring-label", "text-anchor": "middle",
+        x, y: y - 5, class: "ring-label", "text-anchor": "middle",
+        transform: `translate(${x} ${y - 5}) scale(${1 / zoom}) translate(${-x} ${-(y - 5)})`,
       }, rings);
       label.textContent = au === 1 ? "1 AU" : `${au} AU`;
     }
     svgEl("circle", {
-      cx: 0, cy: 0, r: toR(120),
+      cx: 0, cy: 0, r: toR(120).toFixed(2),
+      "data-au": "120",
       fill: "none",
-      stroke: "rgba(156,192,224,0.55)",
-      "stroke-width": 1.15,
-      "stroke-dasharray": "4 4",
+      stroke: "rgba(156,192,224,0.85)",
+      "stroke-width": 1.25,
+      "stroke-dasharray": "5 3.5",
     }, rings);
     const hpR = toR(120);
-    const hpA = -28 * DEG;
+    const hpA = 22 * DEG;
+    const hx = hpR * Math.cos(hpA);
+    const hy = -hpR * Math.sin(hpA) - 8;
     const hp = svgEl("text", {
-      x: hpR * Math.cos(hpA),
-      y: -hpR * Math.sin(hpA) + 16,
-      class: "ring-label",
-      "text-anchor": "middle",
+      x: hx, y: hy, class: "ring-label", "text-anchor": "middle",
+      transform: `translate(${hx} ${hy}) scale(${1 / zoom}) translate(${-hx} ${-hy})`,
     }, rings);
-    hp.textContent = "heliopause  ~120 AU";
+    hp.textContent = "heliopause ~120 AU";
 
     svgEl("g", { id: "trails" });
     svgEl("g", { id: "bodies" });
     svgEl("g", { id: "sun" });
   }
 
-  function pathFrom(points) {
-    return points.map((p, i) => `${i ? "L" : "M"}${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(" ");
+  const pendingLabels = [];
+
+  function queueLabel(x, y, text, cls, priority) {
+    pendingLabels.push({ x, y, text, cls, priority });
+  }
+
+  function flushLabels(parent) {
+    const phone = stage.clientWidth < 720;
+    const floor = phone && zoom < 1.6 ? 2 : 0;
+    const items = pendingLabels.filter((lab) => lab.priority >= floor)
+      .sort((a, b) => b.priority - a.priority);
+    const boxes = [];
+    const dirs = [
+      [1, -0.2], [1.1, 0.75], [-1, -0.2], [-1.1, 0.75],
+      [0.1, -1.3], [0.15, 1.25], [-0.1, -1.3],
+      [1.4, 0.15], [-1.4, 0.15], [0.7, -1.15], [-0.75, -1.15],
+      [0.7, 1.2], [-0.75, 1.2],
+    ];
+    for (const lab of items) {
+      const font = lab.cls === "probe-label" ? 12 : 11;
+      const width = (lab.text.length * font * 0.56) / zoom;
+      const height = (font + 4) / zoom;
+      const gap = (phone ? 13 : 11) / zoom;
+      let kept = false;
+      const gaps = [gap, gap * 1.8, gap * 2.6];
+      for (const reach of gaps) {
+        if (kept) break;
+      for (const [dx, dy] of dirs) {
+        const len = Math.hypot(dx, dy) || 1;
+        const lx = lab.x + (dx / len) * reach;
+        const ly = lab.y + (dy / len) * reach;
+        const anchor = dx < -0.3 ? "end" : dx > 0.3 ? "start" : "middle";
+        const left = anchor === "end" ? lx - width : anchor === "middle" ? lx - width / 2 : lx;
+        const box = { left: left - 1 / zoom, top: ly - height, right: left + width + 1 / zoom, bottom: ly + 2 / zoom };
+        if (boxes.some((b) => box.left < b.right && box.right > b.left && box.top < b.bottom && box.bottom > b.top)) continue;
+        boxes.push(box);
+        const node = svgEl("text", {
+          x: lx, y: ly, class: lab.cls, "text-anchor": anchor,
+          transform: `translate(${lx} ${ly}) scale(${1 / zoom}) translate(${-lx} ${-ly})`,
+        }, parent);
+        node.textContent = lab.text;
+        if (lab.text === "Sun") node.setAttribute("fill", "#c9a86a");
+        kept = true;
+        break;
+      }
+      }
+      if (!kept && lab.priority >= 3) {
+        const node = svgEl("text", {
+          x: lab.x + gap, y: lab.y, class: lab.cls, "text-anchor": "start",
+          transform: `translate(${lab.x + gap} ${lab.y}) scale(${1 / zoom}) translate(${-(lab.x + gap)} ${-lab.y})`,
+        }, parent);
+        node.textContent = lab.text;
+      }
+    }
+    pendingLabels.length = 0;
   }
 
   function drawBodies() {
@@ -399,19 +526,12 @@
         }, bodies);
       }
       svgEl("circle", { cx: x, cy: y, r: planet.r + 3.2, fill: planet.fill, opacity: 0.16 }, bodies);
-      svgEl("circle", { cx: x, cy: y, r: planet.r, fill: planet.fill }, bodies);
-      const outward = st.lon;
-      const lx = Math.cos(outward) * (planet.r + 8);
-      const ly = -Math.sin(outward) * (planet.r + 8);
-      const anchor = Math.cos(outward) < -0.2 ? "end" : Math.cos(outward) > 0.2 ? "start" : "middle";
-      const label = svgEl("text", {
-        x: x + lx, y: y + ly, class: "planet-label", "text-anchor": anchor,
-        transform: `translate(${x + lx} ${y + ly}) scale(${1 / zoom}) translate(${-(x + lx)} ${-(y + ly)})`,
+      svgEl("circle", {
+        cx: x, cy: y, r: planet.r, fill: planet.fill, "data-dist": st.dist.toFixed(3),
       }, bodies);
-      label.textContent = planet.name;
-      if (planet.name === "Earth") {
-        earthScreen = screenOf(x, y);
-      }
+      const major = ["Earth", "Jupiter", "Saturn", "Uranus", "Neptune"].includes(planet.name);
+      queueLabel(x, y, planet.name, "planet-label", major ? 2 : 1);
+      if (planet.name === "Earth") earthScreen = screenOf(x, y);
     }
     updateLeader();
 
@@ -420,43 +540,7 @@
       if (meta.planned) continue;
       const st = sample(id, when);
       if (!st || meta.inset) continue;
-      if (meta.trail === "ellipse") {
-        const tr = tracks[id];
-        if (tr) {
-          let q = Infinity;
-          let Q = 0;
-          let peri = 0;
-          for (let i = 0; i < tr.ms.length; i++) {
-            const dist = Math.hypot(tr.x[i], tr.y[i], tr.z[i]);
-            if (dist < q) { q = dist; peri = Math.atan2(tr.y[i], tr.x[i]); }
-            if (dist > Q) Q = dist;
-          }
-          const a = (q + Q) / 2;
-          const e = (Q - q) / (Q + q) || 0;
-          const loop = [];
-          for (let i = 0; i <= 72; i++) {
-            const nu = (i / 72) * Math.PI * 2;
-            const r = (a * (1 - e * e)) / (1 + e * Math.cos(nu));
-            loop.push(project(r, peri + nu));
-          }
-          svgEl("path", {
-            d: pathFrom(loop),
-            fill: "none",
-            stroke: "rgba(236,228,212,0.28)",
-            "stroke-width": 0.9,
-          }, trails);
-        }
-      }
-      const pts = trailPoints(id, when);
-      if (pts.length > 1) {
-        svgEl("path", {
-          d: pathFrom(pts),
-          fill: "none",
-          stroke: id === "parker" ? "rgba(227,162,131,0.9)" : "rgba(236,228,212,0.55)",
-          "stroke-width": id === "parker" ? 1.35 : 1.05,
-          "stroke-linecap": "round",
-        }, trails);
-      }
+      drawFadedTrail(trailPoints(id, when), meta.color || "rgba(236,228,212,0.95)");
       const [x, y] = project(st.dist, st.lon);
       const g = svgEl("g", {
         class: "probe",
@@ -468,33 +552,27 @@
       }, bodies);
       svgEl("circle", { cx: x, cy: y, r: 16 / zoom, fill: "transparent", class: "probe-hit" }, g);
       svgEl("circle", {
-        cx: x, cy: y, r: 7 / zoom, fill: "#ece4d4", opacity: 0.16, filter: "url(#probeGlow)",
+        cx: x, cy: y, r: 5 / zoom, fill: "#ece4d4", opacity: 0.14, filter: "url(#probeGlow)",
       }, g);
       svgEl("circle", {
-        cx: x, cy: y, r: 3.1 / zoom, fill: "#ece4d4", class: "probe-core", filter: "url(#probeGlow)",
+        cx: x, cy: y, r: 2.7 / zoom, fill: "#ece4d4", class: "probe-core", filter: "url(#probeGlow)",
+        "data-dist": st.dist.toFixed(2),
       }, g);
       if (openId === id) {
         svgEl("circle", {
           cx: x, cy: y, r: 11 / zoom, fill: "none", stroke: "rgba(236,228,212,0.8)", "stroke-width": 1.2 / zoom, class: "probe-ring",
         }, g);
       }
-      const tangent = id === "juno" || id === "hayabusa2" || id === "starman" || id === "voyager2";
-      const spin = id === "hayabusa2" || id === "voyager1" ? -1 : 1;
-      let lx;
-      let ly;
-      if (tangent) {
-        lx = spin * -Math.sin(st.lon) * 16;
-        ly = spin * -Math.cos(st.lon) * 16;
-      } else {
-        lx = Math.cos(st.lon) * 12;
-        ly = -Math.sin(st.lon) * 12 - (id === "newHorizons" ? 8 : 0);
-      }
-      const anchor = lx < 0 ? "end" : "start";
-      const label = svgEl("text", {
-        x: x + lx, y: y + ly, class: "probe-label", "text-anchor": anchor,
-        transform: `translate(${x + lx} ${y + ly}) scale(${1 / zoom}) translate(${-(x + lx)} ${-(y + ly)})`,
-      }, g);
-      label.textContent = meta.mapName || meta.name;
+      const outer = id === "voyager1" || id === "voyager2" || id === "newHorizons";
+      const bias = {
+        hayabusa2: [-1.3, 1.2],
+        starman: [0.2, -1.4],
+        parker: [1.3, 0.5],
+        juno: [-1.3, -0.2],
+      }[id];
+      const bx = bias ? x + bias[0] * 18 / zoom : x;
+      const by = bias ? y + bias[1] * 18 / zoom : y;
+      queueLabel(bx, by, meta.mapName || meta.name, "probe-label", outer ? 3 : 1);
       g.addEventListener("click", (event) => {
         event.stopPropagation();
         openCard(id);
@@ -516,11 +594,8 @@
     svgEl("circle", { cx: 0, cy: 0, r: 34, fill: "url(#sunGlow)", filter: "url(#sunBlur)", opacity: 0.9 }, sun);
     svgEl("circle", { cx: 0, cy: 0, r: 16, fill: "url(#sunGlow)" }, sun);
     svgEl("circle", { cx: 0, cy: 0, r: 9, fill: "url(#sunCore)" }, sun);
-    const sunLabel = svgEl("text", {
-      x: 0, y: 22, class: "planet-label", "text-anchor": "middle", fill: "#c9a86a",
-      transform: `translate(0 22) scale(${1 / zoom}) translate(0 -22)`,
-    }, sun);
-    sunLabel.textContent = "Sun";
+    queueLabel(0, 18 / zoom, "Sun", "planet-label", 4);
+    flushLabels(bodies);
   }
 
   function updateLeader() {
@@ -534,7 +609,7 @@
         "stroke-dasharray": "3 3",
       }, sky);
     }
-    if (!earthScreen) {
+    if (!earthScreen || stage.clientWidth < 720) {
       leader.setAttribute("d", "");
       return;
     }
@@ -772,6 +847,7 @@
     panX = px - originX - k * (px - originX - panX);
     panY = py - originY - k * (py - originY - panY);
     zoom = next;
+    drawStatic();
     applyTransform();
     drawBodies();
   }
