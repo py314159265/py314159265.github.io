@@ -1,19 +1,18 @@
 #!/usr/bin/env python3
 """Pull heliocentric probe states from NASA JPL Horizons into data/probes.json.
 
-The page draws planets from orbital elements. This file is only the spacecraft:
-Voyager 1 and 2, New Horizons, Parker Solar Probe, Starman, Hayabusa2, Juno,
-and the James Webb Space Telescope. Samples are ecliptic J2000 cartesian
-states relative to the Sun, in AU and AU/day.
+Planets are drawn from orbital elements. This file is the spacecraft, in
+ecliptic J2000 cartesian states relative to the Sun (AU and AU/day).
 
-If Horizons does not return a usable ephemeris, the previous JSON is left
-untouched and the script exits with an error so a scheduled run does not
-replace good data with a partial file.
+Each target keeps its previous samples if Horizons fails, so a bad response
+never wipes the last good track. A target whose ephemeris ends before today
+is stored through the last date Horizons will give.
 """
 
 from __future__ import annotations
 
 import json
+import re
 import sys
 import time
 import urllib.parse
@@ -25,16 +24,34 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "probes.json"
 API = "https://ssd.jpl.nasa.gov/api/horizons.api"
 
-# Horizons COMMAND ids. Hayabusa 2 is -37 in Horizons (the name "Hayabusa2" is not).
+# Horizons COMMAND ids. Names that collide with planets are given as numbers.
+# Tianwen-1 has no public ephemeris past 2021; the page holds it at Mars.
 TARGETS = [
-    {"id": "voyager1", "command": "-31", "start": "1977-09-06", "step": "20 d"},
-    {"id": "voyager2", "command": "-32", "start": "1977-08-21", "step": "20 d"},
-    {"id": "newHorizons", "command": "-98", "start": "2006-01-20", "step": "15 d"},
-    {"id": "parker", "command": "-96", "start": "2018-08-13", "step": "4 d"},
-    {"id": "starman", "command": "-143205", "start": "2018-02-08", "step": "10 d"},
-    {"id": "hayabusa2", "command": "-37", "start": "2014-12-04", "step": "12 d"},
-    {"id": "juno", "command": "-61", "start": "2011-08-06", "step": "10 d"},
-    {"id": "jwst", "command": "-170", "start": "2021-12-26", "step": "10 d"},
+    {"id": "voyager1", "command": "-31", "start": "1977-09-06", "step": "25 d"},
+    {"id": "voyager2", "command": "-32", "start": "1977-08-21", "step": "25 d"},
+    {"id": "newHorizons", "command": "-98", "start": "2006-01-20", "step": "20 d"},
+    {"id": "parker", "command": "-96", "start": "2018-08-13", "step": "5 d"},
+    {"id": "solarOrbiter", "command": "-144", "start": "2020-02-11", "step": "8 d"},
+    {"id": "bepiColombo", "command": "-121", "start": "2018-10-21", "step": "10 d"},
+    {"id": "juno", "command": "-61", "start": "2011-08-06", "step": "12 d"},
+    {"id": "europaClipper", "command": "-159", "start": "2024-10-15", "step": "8 d"},
+    {"id": "juice", "command": "-28", "start": "2023-04-15", "step": "10 d"},
+    {"id": "lucy", "command": "-49", "start": "2021-10-17", "step": "10 d"},
+    {"id": "psyche", "command": "-255", "start": "2023-10-14", "step": "10 d"},
+    {"id": "osirisApex", "command": "-64", "start": "2016-09-09", "step": "15 d"},
+    {"id": "hera", "command": "-91", "start": "2024-10-08", "step": "8 d"},
+    {"id": "hayabusa2", "command": "-37", "start": "2014-12-04", "step": "15 d"},
+    {"id": "starman", "command": "-143205", "start": "2018-02-08", "step": "12 d"},
+    {"id": "jwst", "command": "-170", "start": "2021-12-26", "step": "12 d"},
+    {"id": "gaia", "command": "-139479", "start": "2013-12-20", "step": "15 d"},
+    {"id": "euclid", "command": "-680", "start": "2023-07-02", "step": "12 d"},
+    {"id": "pioneer10", "command": "-23", "start": "1972-03-04", "step": "40 d"},
+    {"id": "pioneer11", "command": "-24", "start": "1973-04-07", "step": "40 d"},
+    {"id": "perseverance", "command": "-168", "start": "2020-07-30", "step": "20 d"},
+    {"id": "curiosity", "command": "-76", "start": "2011-11-26", "step": "30 d"},
+    {"id": "maven", "command": "-202", "start": "2013-11-18", "step": "20 d"},
+    {"id": "marsExpress", "command": "-41", "start": "2003-06-03", "step": "30 d"},
+    {"id": "hope", "command": "-62", "start": "2020-07-20", "step": "20 d"},
 ]
 
 MONTHS = {
@@ -113,32 +130,70 @@ def parse_states(result: str) -> dict:
     return rows
 
 
+def shift_days(iso: str, days: int) -> str:
+    year, month, day = (int(p) for p in iso.split("-"))
+    return (date(year, month, day) + timedelta(days=days)).isoformat()
+
+
+def clamp_from_message(message: str, start: str, stop: str) -> tuple[str, str] | None:
+    """Horizons names the first or last instant it can actually compute."""
+    months = {name.lower(): num for name, num in MONTHS.items()}
+    after = re.search(r"after A\.D\. (\d{4})-([A-Za-z]{3})-(\d{2})", message)
+    prior = re.search(r"prior to A\.D\. (\d{4})-([A-Za-z]{3})-(\d{2})", message)
+    if after:
+        year, mon, day = int(after.group(1)), months[after.group(2).lower()], int(after.group(3))
+        stop = (date(year, mon, day) - timedelta(days=1)).isoformat()
+    if prior:
+        year, mon, day = int(prior.group(1)), months[prior.group(2).lower()], int(prior.group(3))
+        start = (date(year, mon, day) + timedelta(days=1)).isoformat()
+    if not after and not prior:
+        return None
+    if start >= stop:
+        return None
+    return start, stop
+
+
+def fetch_target(spec: dict, stop: str) -> dict:
+    start = spec["start"]
+    last_error = "unknown"
+    for _ in range(4):
+        try:
+            return parse_states(fetch_text(spec["command"], start, stop, spec["step"]))
+        except Exception as exc:
+            last_error = str(exc)
+            adjusted = clamp_from_message(last_error, start, stop)
+            if adjusted is None:
+                start = shift_days(start, 2)
+                if start >= stop:
+                    break
+                continue
+            start, stop = adjusted
+    raise RuntimeError(last_error)
+
+
 def main() -> int:
     stop = today()
-    probes = {}
+    previous = {}
+    if OUT.exists():
+        try:
+            previous = json.loads(OUT.read_text(encoding="utf-8")).get("probes") or {}
+        except Exception:
+            previous = {}
+    probes = dict(previous)
+    failed = []
     for spec in TARGETS:
         print(f"Fetching {spec['id']} ({spec['command']}) {spec['start']} → {stop}", flush=True)
-        start = spec["start"]
         try:
-            text = fetch_text(spec["command"], start, stop, spec["step"])
+            probes[spec["id"]] = fetch_target(spec, stop)
         except Exception as exc:
-            message = str(exc)
-            print(f"  retrying {spec['id']} one day later ({message[:160]})", file=sys.stderr)
-            year, month, day = (int(p) for p in start.split("-"))
-            start = (date(year, month, day) + timedelta(days=2)).isoformat()
-            try:
-                text = fetch_text(spec["command"], start, stop, spec["step"])
-            except Exception as again:
-                print(f"FAILED {spec['id']}: {again}", file=sys.stderr)
-                return 1
-        try:
-            probes[spec["id"]] = parse_states(text)
-        except Exception as exc:
+            failed.append(spec["id"])
             print(f"FAILED {spec['id']}: {exc}", file=sys.stderr)
-            return 1
+            if spec["id"] in previous:
+                print(f"  kept previous {spec['id']} track", file=sys.stderr)
+            continue
         print(f"  {len(probes[spec['id']]['t'])} samples, last {probes[spec['id']]['t'][-1]}")
-        time.sleep(1.0)
-
+        time.sleep(0.6)
+    missing = [spec["id"] for spec in TARGETS if spec["id"] not in probes]
     document = {
         "updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "source": "https://ssd.jpl.nasa.gov/api/horizons.api",
@@ -149,6 +204,11 @@ def main() -> int:
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(document, separators=(",", ":")) + "\n", encoding="utf-8")
     print(f"Wrote {OUT} ({OUT.stat().st_size} bytes)")
+    if missing:
+        print(f"Missing tracks with no backup: {', '.join(missing)}", file=sys.stderr)
+        return 1
+    if failed:
+        print(f"Kept previous tracks for: {', '.join(failed)}")
     return 0
 
 
