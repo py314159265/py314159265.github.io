@@ -1,0 +1,42 @@
+name: Update probe positions
+
+on:
+  schedule:
+    # Once a day, after the morning rush, so Horizons is usually quiet
+    - cron: "40 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-probes
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch Horizons states
+        run: python scripts/fetch_probes.py
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- data/probes.json; then
+            echo "No data change; skipping commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/probes.json
+          git commit -m "Update probe positions $(date -u +'%Y-%m-%dT%H:%MZ')"
+          git push
