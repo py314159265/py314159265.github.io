@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T21:06:37Z",
+ "updated": "2026-11-25T23:03:58Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
   {
@@ -63,7 +63,7 @@
     "orbit_abbrev": "LEO"
    },
    "pad": {
-    "name": "Unknown Pad",
+    "name": "Rocket Lab Launch Complex 1B",
     "location": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
     "country": "New Zealand"
    },
