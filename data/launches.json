@@ -1,42 +1,7 @@
 {
- "updated": "2026-11-26T09:20:17Z",
+ "updated": "2026-11-26T11:06:45Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
-  {
-   "id": "b00f0e9a-48d6-4f26-9cb5-7d19169ff7c4",
-   "slug": "long-march-2d-unknown-payload",
-   "name": "Long March 2D | Unknown Payload",
-   "net": "2026-11-26T09:35:00Z",
-   "net_precision": "HR",
-   "window_start": "2026-11-26T09:30:00Z",
-   "window_end": "2026-11-26T09:52:00Z",
-   "status": {
-    "id": 1,
-    "name": "Go for Launch",
-    "abbrev": "Go"
-   },
-   "provider": {
-    "name": "China Aerospace Science and Technology Corporation",
-    "abbrev": "CASC"
-   },
-   "rocket": "Long March 2D",
-   "mission": {
-    "name": "Unknown Payload",
-    "type": "Unknown",
-    "description": "Details TBD.",
-    "orbit": "Unknown",
-    "orbit_abbrev": "N/A"
-   },
-   "pad": {
-    "name": "Launch Complex 3 (LC-3/LA-1)",
-    "location": "Xichang Satellite Launch Center, People's Republic of China",
-    "country": "China"
-   },
-   "webcast_live": false,
-   "webcasts": [],
-   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193719.jpeg",
-   "image_credit": null
-  },
   {
    "id": "2093e4fc-ac8c-4296-a1b5-deececee6a72",
    "slug": "electron-night-owls-never-sleep-strix-launch-14",
@@ -1092,6 +1057,41 @@
     "name": "1 x Pelican satellite",
     "type": "Earth Science",
     "description": "Payload consists of a single Pelican high-resolution imaging satellite for Planet Labs Germany.",
+    "orbit": "Sun-Synchronous Orbit",
+    "orbit_abbrev": "SSO"
+   },
+   "pad": {
+    "name": "Orbital Launch Pad",
+    "location": "Andøya Spaceport",
+    "country": "Norway"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/spectrum_on_the_image_thumbnail_20250321072643.jpeg",
+   "image_credit": "Isar Aerospace | Robin Brillert, Wingmen Media"
+  },
+  {
+   "id": "dff42a2e-f047-48d7-b260-3888d3a4fe33",
+   "slug": "spectrum-at-astra-and-others-spectrum-flight-3",
+   "name": "Spectrum | AT-Astra and Others (Spectrum Flight 3)",
+   "net": "2026-12-31T00:00:00Z",
+   "net_precision": "Q4",
+   "window_start": "2026-12-31T00:00:00Z",
+   "window_end": "2026-12-31T00:00:00Z",
+   "status": {
+    "id": 2,
+    "name": "To Be Determined",
+    "abbrev": "TBD"
+   },
+   "provider": {
+    "name": "Isar Aerospace",
+    "abbrev": "ISAR"
+   },
+   "rocket": "Spectrum",
+   "mission": {
+    "name": "AT-Astra and Others (Spectrum Flight 3)",
+    "type": "Technology",
+    "description": "Third test flight of the Isar Spectrum launch vehicle. This launch will carry various satellites including R-Space’s AT-Astra/IOD-01, which will perform in-orbit demonstrations for ENPULSION, SUNBOOSTER GmbH, and Synopsis Planet.",
     "orbit": "Sun-Synchronous Orbit",
     "orbit_abbrev": "SSO"
    },
