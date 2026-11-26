@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T11:06:45Z",
+ "updated": "2026-11-26T13:32:16Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
   {
@@ -145,6 +145,20 @@
      "publisher": "X",
      "type": "Official Webcast",
      "live": false
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=CLULlErcxF4",
+     "title": "SpaceX Launches Falcon 9 with USSF-380",
+     "publisher": "NASASpaceflight",
+     "type": "Unofficial Webcast",
+     "live": false
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=xpfmP-4EGIw",
+     "title": "GO! - SpaceX - Falcon 9 - USSF-380 - SLC-4E - Vandenberg SFB, CA - Space Affairs Live",
+     "publisher": "SPACE AFFAIRS",
+     "type": "Unofficial Re-stream",
+     "live": false
     }
    ],
    "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_liftof_image_thumbnail_20260816171423.jpeg",
@@ -183,6 +197,13 @@
    "webcast_live": false,
    "webcasts": [
     {
+     "url": "https://www.youtube.com/watch?v=wp27QzrSj1s",
+     "title": "SpaceX Launches Falcon 9 with CRS Cygnus NG-25",
+     "publisher": "NASASpaceflight",
+     "type": "Unofficial Webcast",
+     "live": false
+    },
+    {
      "url": "https://x.com/i/broadcasts/2gqOaJVRyzQolq",
      "title": "NG-25 Mission",
      "publisher": "X",
@@ -192,13 +213,6 @@
     {
      "url": "https://plus.nasa.gov/scheduled-video/nasas-northrop-grumman-commercial-resupply-services-25-launch/",
      "title": "NASA’s Northrop Grumman Commercial Resupply Services 25 Launch",
-     "publisher": "NASA",
-     "type": "Official Webcast",
-     "live": false
-    },
-    {
-     "url": "https://www.youtube.com/watch?v=YLrybIli73I",
-     "title": "NASA's Northrop Grumman Commercial Resupply Services 25 Launch",
      "publisher": "NASA",
      "type": "Official Webcast",
      "live": false
