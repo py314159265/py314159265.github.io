@@ -1,50 +1,7 @@
 {
- "updated": "2026-11-26T23:07:36Z",
+ "updated": "2026-11-27T01:30:32Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
-  {
-   "id": "2093e4fc-ac8c-4296-a1b5-deececee6a72",
-   "slug": "electron-night-owls-never-sleep-strix-launch-14",
-   "name": "Electron | Night Owls Never Sleep (StriX Launch 14)",
-   "net": "2026-11-27T00:05:00Z",
-   "net_precision": "MIN",
-   "window_start": "2026-11-27T00:00:00Z",
-   "window_end": "2026-11-27T00:05:00Z",
-   "status": {
-    "id": 1,
-    "name": "Go for Launch",
-    "abbrev": "Go"
-   },
-   "provider": {
-    "name": "Rocket Lab",
-    "abbrev": "RL"
-   },
-   "rocket": "Electron",
-   "mission": {
-    "name": "Night Owls Never Sleep (StriX Launch 14)",
-    "type": "Earth Science",
-    "description": "Synthetic aperture radar satellite for Japanese Earth imaging company Synspective.",
-    "orbit": "Low Earth Orbit",
-    "orbit_abbrev": "LEO"
-   },
-   "pad": {
-    "name": "Rocket Lab Launch Complex 1B",
-    "location": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
-    "country": "New Zealand"
-   },
-   "webcast_live": false,
-   "webcasts": [
-    {
-     "url": "https://www.youtube.com/watch?v=p75NOkFoyXs",
-     "title": "Rocket Lab Launch - Night Owls Never Sleep",
-     "publisher": "Rocket Lab",
-     "type": "Official Webcast",
-     "live": false
-    }
-   ],
-   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193613.jpeg",
-   "image_credit": null
-  },
   {
    "id": "a6421db3-7c8a-4cf7-a659-cec195140f7f",
    "slug": "long-march-6a-unknown-payload",
@@ -1116,6 +1073,41 @@
     "description": "Third test flight of the Isar Spectrum launch vehicle. This launch will carry various satellites including R-Space’s AT-Astra/IOD-01, which will perform in-orbit demonstrations for ENPULSION, SUNBOOSTER GmbH, and Synopsis Planet.",
     "orbit": "Sun-Synchronous Orbit",
     "orbit_abbrev": "SSO"
+   },
+   "pad": {
+    "name": "Orbital Launch Pad",
+    "location": "Andøya Spaceport",
+    "country": "Norway"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/spectrum_on_the_image_thumbnail_20250321072643.jpeg",
+   "image_credit": "Isar Aerospace | Robin Brillert, Wingmen Media"
+  },
+  {
+   "id": "b48e32c5-3776-4684-a956-5ea4df032e90",
+   "slug": "spectrum-yndeo-3",
+   "name": "Spectrum | ΣYNDEO-3",
+   "net": "2026-12-31T00:00:00Z",
+   "net_precision": "Q4",
+   "window_start": "2026-12-31T00:00:00Z",
+   "window_end": "2026-12-31T00:00:00Z",
+   "status": {
+    "id": 2,
+    "name": "To Be Determined",
+    "abbrev": "TBD"
+   },
+   "provider": {
+    "name": "Isar Aerospace",
+    "abbrev": "ISAR"
+   },
+   "rocket": "Spectrum",
+   "mission": {
+    "name": "ΣYNDEO-3",
+    "type": "Technology",
+    "description": "ΣYNDEO-3 is a satellite built by Redwire Corporation for the European Union/European Space Agency (ESA)’s In-Orbit Demonstration and In-Orbit Validation Programme (IOD/IOV), which will carry 10 different technological demonstration payload from institutions of Spain, France, Germany, Italy, Luxembourg and the European Commission. The satellite is built on Redwire's Hammerhead spacecraft platform.",
+    "orbit": "Low Earth Orbit",
+    "orbit_abbrev": "LEO"
    },
    "pad": {
     "name": "Orbital Launch Pad",
