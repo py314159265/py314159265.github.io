@@ -21,7 +21,7 @@ This is a static site (HTML, CSS, and plain JavaScript) with no backend, no data
 1. Push these files to the `main` branch of `py314159265.github.io`.
 2. Open the repository **Settings → Pages**.
 3. Under **Source**, choose **Deploy from a branch**, branch `main`, folder `/ (root)`, then **Save**.
-4. The site should be live within a few minutes at `https://py314159265.github.io`. For a custom domain such as seagle.xyz, enter it under **Custom domain** on the same page and set DNS.
+4. The site should be live within a few minutes at `https://py314159265.github.io`. For a custom domain such as example.com, enter it under **Custom domain** on the same page and set DNS.
 
 ## How the data is updated
 
