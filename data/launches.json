@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T17:19:44Z",
+ "updated": "2026-11-27T19:09:20Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
   {
@@ -84,10 +84,10 @@
      "live": false
     },
     {
-     "url": "https://www.youtube.com/watch?v=xpfmP-4EGIw",
-     "title": "GO! - SpaceX - Falcon 9 - USSF-380 - SLC-4E - Vandenberg SFB, CA - Space Affairs Live",
-     "publisher": "SPACE AFFAIRS",
-     "type": "Unofficial Re-stream",
+     "url": "https://www.youtube.com/watch?v=IwYSJ4ne7GM",
+     "title": "SpaceX Falcon 9 rocket launches U.S. Space Force satellites from Vandenberg, California",
+     "publisher": "Spaceflight Now",
+     "type": "Unofficial Webcast",
      "live": false
     }
    ],
