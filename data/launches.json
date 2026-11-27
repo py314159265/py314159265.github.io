@@ -1,42 +1,7 @@
 {
- "updated": "2026-11-27T13:27:41Z",
+ "updated": "2026-11-27T15:08:08Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
-  {
-   "id": "a6421db3-7c8a-4cf7-a659-cec195140f7f",
-   "slug": "long-march-6a-unknown-payload",
-   "name": "Long March 6A | Unknown Payload",
-   "net": "2026-11-27T13:00:00Z",
-   "net_precision": "HR",
-   "window_start": "2026-11-27T12:53:00Z",
-   "window_end": "2026-11-27T13:15:00Z",
-   "status": {
-    "id": 1,
-    "name": "Go for Launch",
-    "abbrev": "Go"
-   },
-   "provider": {
-    "name": "China Aerospace Science and Technology Corporation",
-    "abbrev": "CASC"
-   },
-   "rocket": "Long March 6A",
-   "mission": {
-    "name": "Unknown Payload",
-    "type": "Unknown",
-    "description": "Details TBD.",
-    "orbit": "Unknown",
-    "orbit_abbrev": "N/A"
-   },
-   "pad": {
-    "name": "Launch Complex 9A",
-    "location": "Taiyuan Satellite Launch Center, People's Republic of China",
-    "country": "China"
-   },
-   "webcast_live": false,
-   "webcasts": [],
-   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/long_march_6a__image_thumbnail_20251209050224.jpeg",
-   "image_credit": "CCTV"
-  },
   {
    "id": "13270554-4bdb-42ae-916f-1bb54492204f",
    "slug": "long-march-6c-unknown-payload",
@@ -1118,6 +1083,41 @@
    "webcasts": [],
    "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/themis_t1h_on_t_image_thumbnail_20250919095336.jpeg",
    "image_credit": "ArianeGroup"
+  },
+  {
+   "id": "f9a8c9f6-5dc4-4e83-9876-2a51140ec806",
+   "slug": "electron-iqps-launch-11",
+   "name": "Electron | iQPS Launch 11",
+   "net": "2026-12-31T00:00:00Z",
+   "net_precision": "Y",
+   "window_start": "2026-12-31T00:00:00Z",
+   "window_end": "2026-12-31T00:00:00Z",
+   "status": {
+    "id": 2,
+    "name": "To Be Determined",
+    "abbrev": "TBD"
+   },
+   "provider": {
+    "name": "Rocket Lab",
+    "abbrev": "RL"
+   },
+   "rocket": "Electron",
+   "mission": {
+    "name": "iQPS Launch 11",
+    "type": "Earth Science",
+    "description": "Synthetic aperture radar Earth observation satellite for Japanese Earth imaging company iQPS.",
+    "orbit": "Low Earth Orbit",
+    "orbit_abbrev": "LEO"
+   },
+   "pad": {
+    "name": "Unknown Pad",
+    "location": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
+    "country": "New Zealand"
+   },
+   "webcast_live": false,
+   "webcasts": [],
+   "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305193613.jpeg",
+   "image_credit": null
   }
  ]
 }
