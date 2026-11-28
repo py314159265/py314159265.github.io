@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-28T05:11:36Z",
+ "updated": "2026-11-28T07:27:30Z",
  "source": "https://thespacedevs.com/llapi",
  "launches": [
   {
@@ -41,8 +41,8 @@
    "id": "b0d27def-0a88-44c3-a947-1fd5b8503e2c",
    "slug": "falcon-9-block-5-ussf-380",
    "name": "Falcon 9 Block 5 | USSF-380",
-   "net": "2026-11-29T04:39:00Z",
-   "net_precision": "MIN",
+   "net": "2026-11-29T04:39:03Z",
+   "net_precision": "SEC",
    "window_start": "2026-11-29T04:39:00Z",
    "window_end": "2026-11-29T08:39:00Z",
    "status": {
